@@ -48,12 +48,12 @@ export default function BestsellersSection() {
             <Link key={product.name} href={product.href} className="group">
               <div className="flex flex-col gap-6 rounded-[2rem] border border-white/10 bg-[#231f1d] p-6 md:p-8">
                 {/* Image */}
-                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-[radial-gradient(circle_at_top,#f7ead9_0%,#ead2b2_55%,#dcc1a0_100%)]">
+                <div className="relative aspect-[4/5]">
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-contain p-8 transition-transform duration-700 group-hover:scale-105"
+                    className="object-contain transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
 

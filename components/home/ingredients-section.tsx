@@ -3,23 +3,23 @@ import { Droplets, Leaf, Sun, Heart } from "lucide-react"
 const ingredients = [
   {
     icon: Droplets,
-    title: "The Vert",
-    description: "Apporte des notes vegetales et une fraicheur naturelle dans chaque bouteille.",
+    title: "Thes Bio + Sucre Bio",
+    description: "Une base simple et propre: un melange de thes bio et de sucre bio.",
   },
   {
     icon: Leaf,
-    title: "Gingembre",
-    description: "Ajoute du peps et un profil aromatique vif pour une degustation dynamique.",
+    title: "SCOBY Vivant",
+    description: "Une symbiose naturelle de bacteries, levures, enzymes et ferments lactiques.",
   },
   {
     icon: Sun,
-    title: "Citron",
-    description: "Renforce l'equilibre sucre-acidite et apporte une finale fraiche.",
+    title: "Fermentation 13 a 20 Jours",
+    description: "Un vrai kombucha 100% fermente sur souches, de A a Z, selon les regles de l'art.",
   },
   {
     icon: Heart,
-    title: "Culture Vivante",
-    description: "Notre SCOBY pilote une fermentation lente pour developper gout et caractere.",
+    title: "Naturellement Riche",
+    description: "Bulles naturelles, acide gluconique > 1 g/L et ingredients 100% bio.",
   },
 ]
 
@@ -30,11 +30,8 @@ export default function IngredientsSection() {
         {/* Section Title */}
         <div className="text-center mb-20">
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#761218] font-medium mb-4">
-            Ingredients Cles
+            Les essentiels D-tox
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#F9D9B9] text-balance">
-            Ce Qu'il Y A Dedans
-          </h2>
         </div>
 
         {/* Ingredients Grid */}

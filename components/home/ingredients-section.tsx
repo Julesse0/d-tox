@@ -32,7 +32,7 @@ export default function IngredientsSection() {
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#761218] font-medium mb-4">
             Ingredients Cles
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#F9D9B9] text-balance">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#F9D9B9] text-balance">
             Ce Qu'il Y A Dedans
           </h2>
         </div>
@@ -45,7 +45,7 @@ export default function IngredientsSection() {
                 <ingredient.icon className="h-6 w-6 text-[#761218]" />
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="font-serif text-xl font-semibold text-[#F9D9B9]">
+                <h3 className="font-serif text-xl font-bold text-[#F9D9B9]">
                   {ingredient.title}
                 </h3>
                 <p className="font-sans font-light text-sm leading-relaxed text-[#F9D9B9]/60">

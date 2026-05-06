@@ -11,7 +11,7 @@
   --card-foreground: #1a1a1a;
   --popover: #ffffff;
   --popover-foreground: #1a1a1a;
-  --primary: #704919;
+  --primary: #be2c34;
   --primary-foreground: #ffffff;
   --secondary: #f6f1e8;
   --secondary-foreground: #1a1a1a;
@@ -19,12 +19,12 @@
   --muted-foreground: #5a4a3a;
   --accent: #b7a680;
   --accent-foreground: #1a1a1a;
-  --destructive: #704919;
-  --destructive-foreground: #ffffff;
+  --destructive: #f6bf5a;
+  --destructive-foreground: #1a1a1a;
   --border: #d9ccb7;
   --input: #d9ccb7;
-  --ring: #826730;
-  --chart-1: #704919;
+  --ring: #be2c34;
+  --chart-1: #f6bf5a;
   --chart-2: #b7a680;
   --chart-3: #1a1a1a;
   --chart-4: #9b8455;
@@ -32,16 +32,16 @@
   --radius: 0.25rem;
   --sidebar: #1a1a1a;
   --sidebar-foreground: #f6f1e8;
-  --sidebar-primary: #704919;
+  --sidebar-primary: #be2c34;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #2a2a2a;
   --sidebar-accent-foreground: #f6f1e8;
   --sidebar-border: #333333;
-  --sidebar-ring: #826730;
+  --sidebar-ring: #be2c34;
 
   --brand-ink: #1a1a1a;
-  --brand-rock: #704919;
-  --brand-earth: #826730;
+  --brand-rock: #f6bf5a;
+  --brand-earth: #d99a35;
   --brand-champagne: #b7a680;
   --brand-cream: #f6f1e8;
   --brand-panel: #ffffff;
@@ -50,8 +50,9 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-roboto-condensed), 'Roboto Condensed', sans-serif;
-  --font-serif: var(--font-playfair), 'Playfair Display', serif;
+  --font-sans: var(--font-montserrat), 'Montserrat', sans-serif;
+  --font-serif: var(--font-montserrat), 'Montserrat', sans-serif;
+  --font-display: var(--font-league-spartan), 'League Spartan', sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -112,7 +113,7 @@ html {
 
 .leaflet-container {
   background: #f3ebde;
-  font-family: var(--font-roboto-condensed), 'Roboto Condensed', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
 }
 
 .leaflet-control-attribution {
@@ -122,7 +123,7 @@ html {
 }
 
 .leaflet-control-attribution a {
-  color: #704919 !important;
+  color: #f6bf5a !important;
 }
 
 .leaflet-control-zoom {

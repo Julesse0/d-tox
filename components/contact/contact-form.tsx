@@ -18,12 +18,12 @@ export default function ContactForm() {
   return (
     <div
       id="formulaire"
-      className="scroll-mt-32 rounded-lg border border-[rgba(112,73,25,0.12)] bg-white/90 p-6 shadow-[0_14px_34px_rgba(36,28,20,0.06)] sm:p-8"
+      className="scroll-mt-32 rounded-lg border border-[rgba(246,191,90,0.12)] bg-white/90 p-6 shadow-[0_14px_34px_rgba(36,28,20,0.06)] sm:p-8"
     >
       <p className="font-sans text-xs font-medium uppercase tracking-[0.28em] text-[var(--brand-rock)]">
         Formulaire
       </p>
-      <h2 className="mt-3 font-serif text-3xl font-bold text-[var(--brand-ink)] sm:text-4xl">
+      <h2 className="mt-3 font-serif text-3xl font-extrabold text-[var(--brand-ink)] sm:text-4xl">
         Envoyez-nous un message
       </h2>
       <p className="mt-3 max-w-lg font-sans text-base leading-relaxed text-[rgba(36,28,20,0.68)]">
@@ -43,7 +43,7 @@ export default function ContactForm() {
             id="name"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="h-12 w-full rounded-md border border-[rgba(112,73,25,0.16)] bg-[rgba(183,166,128,0.12)] px-4 font-sans text-sm text-[var(--brand-ink)] placeholder:text-[rgba(36,28,20,0.42)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
+            className="h-12 w-full rounded-md border border-[rgba(246,191,90,0.16)] bg-[rgba(183,166,128,0.12)] px-4 font-sans text-sm text-[var(--brand-ink)] placeholder:text-[rgba(36,28,20,0.42)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
             placeholder="Nom complet"
             required
           />
@@ -61,7 +61,7 @@ export default function ContactForm() {
             id="email"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="h-12 w-full rounded-md border border-[rgba(112,73,25,0.16)] bg-[rgba(183,166,128,0.12)] px-4 font-sans text-sm text-[var(--brand-ink)] placeholder:text-[rgba(36,28,20,0.42)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
+            className="h-12 w-full rounded-md border border-[rgba(246,191,90,0.16)] bg-[rgba(183,166,128,0.12)] px-4 font-sans text-sm text-[var(--brand-ink)] placeholder:text-[rgba(36,28,20,0.42)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
             placeholder="email@exemple.com"
             required
           />
@@ -79,7 +79,7 @@ export default function ContactForm() {
             id="subject"
             value={formData.subject}
             onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-            className="h-12 w-full rounded-md border border-[rgba(112,73,25,0.16)] bg-[rgba(183,166,128,0.12)] px-4 font-sans text-sm text-[var(--brand-ink)] placeholder:text-[rgba(36,28,20,0.42)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
+            className="h-12 w-full rounded-md border border-[rgba(246,191,90,0.16)] bg-[rgba(183,166,128,0.12)] px-4 font-sans text-sm text-[var(--brand-ink)] placeholder:text-[rgba(36,28,20,0.42)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
             placeholder="Distribution, partenariat, question produit..."
           />
         </div>
@@ -96,7 +96,7 @@ export default function ContactForm() {
             rows={7}
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            className="min-h-[190px] w-full resize-none rounded-md border border-[rgba(112,73,25,0.16)] bg-[rgba(183,166,128,0.12)] px-4 py-4 font-sans text-sm text-[var(--brand-ink)] placeholder:text-[rgba(36,28,20,0.42)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
+            className="min-h-[190px] w-full resize-none rounded-md border border-[rgba(246,191,90,0.16)] bg-[rgba(183,166,128,0.12)] px-4 py-4 font-sans text-sm text-[var(--brand-ink)] placeholder:text-[rgba(36,28,20,0.42)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
             placeholder="Parlez-nous de votre besoin..."
             required
           />
@@ -104,7 +104,7 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="mt-2 inline-flex w-fit items-center justify-center gap-2 rounded-md bg-[var(--brand-rock)] px-8 py-3.5 font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-[var(--brand-earth)]"
+          className="mt-2 inline-flex w-fit items-center justify-center gap-2 rounded-md bg-[#be2c34] px-8 py-3.5 font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#9f2229]"
         >
           Envoyer
           <Send className="h-4 w-4" />

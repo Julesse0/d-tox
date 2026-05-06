@@ -23,7 +23,7 @@ export default function BlogCard({ post, featured = false }: { post: BlogPost; f
         <div className="flex flex-col justify-between gap-6">
           <div className="space-y-4">
             <div className="flex flex-wrap items-center gap-3">
-              <span className="rounded-md bg-[var(--brand-rock)] px-3 py-2 font-sans text-[10px] uppercase tracking-[0.24em] text-white">
+              <span className="rounded-md bg-[var(--brand-rock)] px-3 py-2 font-sans text-[10px] uppercase tracking-[0.24em] text-[var(--brand-ink)]">
                 {post.sectionLabel}
               </span>
               <span className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.16em] text-[rgba(36,28,20,0.46)]">
@@ -31,7 +31,7 @@ export default function BlogCard({ post, featured = false }: { post: BlogPost; f
                 {post.dateLabel}
               </span>
             </div>
-            <h2 className="font-serif text-3xl font-semibold text-[var(--brand-ink)] transition-colors group-hover:text-[var(--brand-rock)] md:text-4xl">
+            <h2 className="font-serif text-3xl font-bold text-[var(--brand-ink)] transition-colors group-hover:text-[var(--brand-rock)] md:text-4xl">
               {post.title}
             </h2>
             <p className="max-w-2xl font-sans text-base leading-relaxed text-[rgba(36,28,20,0.68)]">{post.excerpt}</p>
@@ -62,7 +62,7 @@ export default function BlogCard({ post, featured = false }: { post: BlogPost; f
 
       <div className="flex flex-1 flex-col gap-4">
         <div className="flex flex-wrap items-center gap-3">
-          <span className="rounded-md border border-[rgba(112,73,25,0.12)] bg-[rgba(183,166,128,0.14)] px-3 py-1.5 font-sans text-[10px] uppercase tracking-[0.2em] text-[var(--brand-rock)]">
+          <span className="rounded-md border border-[rgba(246,191,90,0.12)] bg-[rgba(183,166,128,0.14)] px-3 py-1.5 font-sans text-[10px] uppercase tracking-[0.2em] text-[var(--brand-rock)]">
             {post.sectionLabel}
           </span>
           <span className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.16em] text-[rgba(36,28,20,0.46)]">
@@ -71,7 +71,7 @@ export default function BlogCard({ post, featured = false }: { post: BlogPost; f
           </span>
         </div>
 
-        <h3 className="font-serif text-2xl font-semibold text-[var(--brand-ink)] transition-colors group-hover:text-[var(--brand-rock)]">
+        <h3 className="font-serif text-2xl font-bold text-[var(--brand-ink)] transition-colors group-hover:text-[var(--brand-rock)]">
           {post.title}
         </h3>
         <p className="flex-1 font-sans text-sm leading-relaxed text-[rgba(36,28,20,0.66)]">{post.excerpt}</p>

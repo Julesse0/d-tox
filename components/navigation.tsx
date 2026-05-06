@@ -53,7 +53,7 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
   const isDark = variant === "dark"
   const textColor = isDark ? "text-[#F6F1E8]" : "text-[#1A1A1A]"
   const bgColor = isDark ? "bg-[#1A1A1A]" : "bg-[#F6F1E8]"
-  const hoverColor = isDark ? "hover:text-white" : "hover:text-[#704919]"
+  const hoverColor = isDark ? "hover:text-white" : "hover:text-[#f6bf5a]"
   const dropdownBg = isDark ? "bg-[#2A241E]" : "bg-white"
   const dropdownText = isDark ? "text-[#F6F1E8]" : "text-[#1A1A1A]"
   const dropdownHover = isDark ? "hover:bg-[#342d26]" : "hover:bg-[#F3E9DA]"
@@ -110,7 +110,7 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
                     <div className={`min-w-56 ${dropdownBg} py-2 shadow-lg`}>
                       <Link
                         href={link.href}
-                        className={`block border-b border-[#704919]/10 px-5 py-2.5 text-xs font-sans uppercase tracking-[0.2em] ${dropdownText} ${dropdownHover} transition-colors`}
+                        className={`block border-b border-[#f6bf5a]/10 px-5 py-2.5 text-xs font-sans uppercase tracking-[0.2em] ${dropdownText} ${dropdownHover} transition-colors`}
                       >
                         Voir {link.label}
                       </Link>
@@ -141,7 +141,7 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
       </div>
 
       {mobileOpen && (
-        <div className={`lg:hidden ${bgColor} border-t border-[#704919]/20`}>
+        <div className={`lg:hidden ${bgColor} border-t border-[#f6bf5a]/20`}>
           <div className="px-6 py-4 flex flex-col gap-2">
             {navLinks.map((link) => (
               <div key={link.label}>

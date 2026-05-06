@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="flex flex-col gap-4">
-            <h3 className="font-serif text-3xl font-bold tracking-wider">D-tox</h3>
+            <h3 className="font-serif text-3xl font-extrabold tracking-wider">D-tox</h3>
             <p className="font-sans font-light text-sm leading-relaxed text-[#F6F1E8]/70">
               Kombucha artisanal brasse avec des ingredients naturels et une fermentation vivante.
             </p>
@@ -76,7 +76,7 @@ export default function Footer() {
             <h4 className="font-sans text-xs uppercase tracking-widest font-medium text-[#F6F1E8]">Contact</h4>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-3">
-                <Mail className="h-4 w-4 text-[#826730]" />
+                <Mail className="h-4 w-4 text-[#d99a35]" />
                 <a
                   href={`mailto:${siteContact.email}`}
                   className="font-sans font-light text-sm text-[#F6F1E8]/60 hover:text-[#B7A680] transition-colors"
@@ -85,11 +85,11 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-[#826730]" />
+                <Phone className="h-4 w-4 text-[#d99a35]" />
                 <span className="font-sans font-light text-sm text-[#F6F1E8]/60">{siteContact.phone}</span>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin className="h-4 w-4 text-[#826730]" />
+                <MapPin className="h-4 w-4 text-[#d99a35]" />
                 <span className="font-sans font-light text-sm text-[#F6F1E8]/60">{siteContact.cityLabel}</span>
               </div>
             </div>

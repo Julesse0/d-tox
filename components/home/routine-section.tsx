@@ -46,7 +46,7 @@ export default function RoutineSection() {
               <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#761218] font-medium mb-4">
                 Notre Savoir-Faire
               </p>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#F9D9B9] text-balance">
+              <h2 className="font-serif text-4xl md:text-5xl font-extrabold text-[#F9D9B9] text-balance">
                 Les Etapes D-tox
               </h2>
             </div>
@@ -55,12 +55,12 @@ export default function RoutineSection() {
               {steps.map((step) => (
                 <div key={step.number} className="flex items-start gap-6 group">
                   <div className="flex-shrink-0">
-                    <span className="font-serif text-4xl font-bold text-[#761218]/60 group-hover:text-[#761218] transition-colors">
+                    <span className="font-serif text-4xl font-extrabold text-[#761218]/60 group-hover:text-[#761218] transition-colors">
                       {step.number}
                     </span>
                   </div>
                   <div className="flex flex-col gap-2 pt-1">
-                    <h3 className="font-serif text-2xl font-semibold text-[#F9D9B9]">
+                    <h3 className="font-serif text-2xl font-bold text-[#F9D9B9]">
                       {step.title}
                     </h3>
                     <p className="font-sans font-light text-sm leading-relaxed text-[#F9D9B9]/60">

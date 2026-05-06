@@ -11,7 +11,7 @@ interface ProductCardProps {
 export default function ProductCard({ name, description, image, href }: ProductCardProps) {
   return (
     <Link href={href} className="group flex flex-col">
-      <div className="relative mb-6 aspect-[4/5] overflow-hidden rounded-lg border border-[#704919]/10 bg-[linear-gradient(160deg,#fffdf9_0%,#f1e7d9_58%,#e3cfb1_100%)]">
+      <div className="relative mb-6 aspect-[4/5] overflow-hidden rounded-lg border border-[#f6bf5a]/10 bg-[linear-gradient(160deg,#fffdf9_0%,#f1e7d9_58%,#e3cfb1_100%)]">
         <Image
           src={image}
           alt={name}
@@ -21,7 +21,7 @@ export default function ProductCard({ name, description, image, href }: ProductC
       </div>
 
       <div className="flex flex-col gap-3 text-center">
-        <h3 className="font-serif text-lg md:text-xl font-semibold text-[#1A1A1A] uppercase tracking-wide group-hover:text-[#761218] transition-colors text-balance">
+        <h3 className="font-serif text-lg md:text-xl font-bold text-[#1A1A1A] uppercase tracking-wide group-hover:text-[#761218] transition-colors text-balance">
           {name}
         </h3>
         <p className="font-sans font-light text-sm leading-relaxed text-[#1A1A1A]/60 max-w-sm mx-auto">

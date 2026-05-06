@@ -1,18 +1,18 @@
 import type { Metadata, Viewport } from 'next'
-import { Roboto_Condensed, Playfair_Display } from 'next/font/google'
+import { League_Spartan, Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const robotoCondensed = Roboto_Condensed({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
-  variable: '--font-roboto-condensed',
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-montserrat',
 })
 
-const playfairDisplay = Playfair_Display({
+const leagueSpartan = League_Spartan({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-playfair',
+  weight: ['700', '800'],
+  variable: '--font-league-spartan',
 })
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="fr" className={`${robotoCondensed.variable} ${playfairDisplay.variable}`}>
+    <html lang="fr" className={`${montserrat.variable} ${leagueSpartan.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <Analytics />

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, ExternalLink, Megaphone, Newspaper, UtensilsCrossed } from "lucide-react"
 
@@ -58,26 +59,38 @@ export default function EditorialCategoriesGrid() {
             <div className="space-y-5">
               <div className="flex items-start justify-between gap-4">
                 <div className="space-y-2">
-                  <p className="font-sans text-[10px] font-medium uppercase tracking-[0.26em] text-[#704919]">
+                  <p className="font-sans text-[10px] font-medium uppercase tracking-[0.26em] text-[#f6bf5a]">
                     {config.eyebrow}
                   </p>
-                  <h3 className="font-serif text-3xl font-semibold text-[#1A1A1A]">{meta.title}</h3>
+                  <h3 className="font-serif text-3xl font-bold text-[#1A1A1A]">{meta.title}</h3>
                 </div>
-                <div className="flex h-11 w-11 items-center justify-center rounded-md bg-[#B7A680]/20 text-[#704919]">
+                <div className="flex h-11 w-11 items-center justify-center rounded-md bg-[#B7A680]/20 text-[#f6bf5a]">
                   <Icon className="h-5 w-5" />
                 </div>
               </div>
 
               <p className="font-sans text-sm leading-relaxed text-[#1A1A1A]/68">{config.shortDescription}</p>
 
-              <div className="rounded-[0.9rem] border border-[#704919]/10 bg-[#B7A680]/10 px-4 py-3">
-                <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[#826730]">
+              <div className="rounded-[0.9rem] border border-[#f6bf5a]/10 bg-[#B7A680]/10 px-4 py-3">
+                <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[#d99a35]">
                   {totalItems} contenu{totalItems > 1 ? "s" : ""}
                 </p>
                 {leadPost ? (
-                  <div className="mt-3 space-y-2">
-                    <p className="font-serif text-xl text-[#1A1A1A]">{leadPost.title}</p>
-                    <p className="font-sans text-sm leading-relaxed text-[#1A1A1A]/66">{leadPost.excerpt}</p>
+                  <div className="mt-3 flex gap-4">
+                    <div className="relative h-24 w-20 shrink-0 overflow-hidden">
+                      <Image
+                        src={leadPost.previewImage}
+                        alt={leadPost.title}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="min-w-0 space-y-2">
+                      <p className="font-serif text-xl leading-tight text-[#1A1A1A]">{leadPost.title}</p>
+                      <p className="line-clamp-3 font-sans text-sm leading-relaxed text-[#1A1A1A]/66">
+                        {leadPost.excerpt}
+                      </p>
+                    </div>
                   </div>
                 ) : (
                   <p className="mt-3 font-sans text-sm leading-relaxed text-[#1A1A1A]/66">
@@ -88,7 +101,7 @@ export default function EditorialCategoriesGrid() {
 
               {section === "reseaux" && (
                 <div className="space-y-3">
-                  <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[#826730]">
+                  <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[#d99a35]">
                     Liens presse
                   </p>
                   {pressLinks.length > 0 ? (
@@ -99,15 +112,15 @@ export default function EditorialCategoriesGrid() {
                           href={link.href}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex items-start justify-between gap-3 rounded-md border border-[#704919]/10 bg-white/70 px-4 py-3 transition-colors hover:border-[#704919]/30"
+                          className="flex items-start justify-between gap-3 rounded-md border border-[#f6bf5a]/10 bg-white/70 px-4 py-3 transition-colors hover:border-[#f6bf5a]/30"
                         >
                           <div>
                             <p className="font-serif text-lg text-[#1A1A1A]">{link.title}</p>
-                            <p className="mt-1 font-sans text-xs uppercase tracking-[0.18em] text-[#826730]">
+                            <p className="mt-1 font-sans text-xs uppercase tracking-[0.18em] text-[#d99a35]">
                               {link.publication}
                             </p>
                           </div>
-                          <ExternalLink className="mt-1 h-4 w-4 shrink-0 text-[#704919]" />
+                          <ExternalLink className="mt-1 h-4 w-4 shrink-0 text-[#f6bf5a]" />
                         </a>
                       ))}
                     </div>
@@ -118,7 +131,7 @@ export default function EditorialCategoriesGrid() {
 
             <Link
               href={meta.href}
-              className="mt-8 inline-flex items-center gap-2 font-sans text-[11px] font-medium uppercase tracking-[0.2em] text-[#704919] transition-colors hover:text-[#826730]"
+              className="mt-8 inline-flex items-center gap-2 font-sans text-[11px] font-medium uppercase tracking-[0.2em] text-[#f6bf5a] transition-colors hover:text-[#d99a35]"
             >
               Ouvrir la rubrique
               <ArrowRight className="h-4 w-4" />

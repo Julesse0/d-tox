@@ -10,13 +10,13 @@ const timelineMilestones = [
     year: "2006",
     title: "Premier Engouement",
     description: "La demande explose a Aix, alors qu'Eisso ne produit encore que 110L par mois.",
-    accent: "#704919",
+    accent: "#f6bf5a",
   },
   {
     year: "2007",
     title: "Naissance De D-TOX",
     description: "Creation de l'entreprise et depot officiel de la marque.",
-    accent: "#826730",
+    accent: "#d99a35",
   },
   {
     year: "2009",
@@ -34,13 +34,13 @@ const timelineMilestones = [
     year: "2019",
     title: "Reconnaissance UE",
     description: "D-TOX devient le premier kombucha reconnu complement alimentaire dans l'UE.",
-    accent: "#704919",
+    accent: "#f6bf5a",
   },
   {
     year: "2022",
     title: "Medaille De Bronze",
     description: "Premier concours europeen de kombucha, a Bruxelles.",
-    accent: "#826730",
+    accent: "#d99a35",
   },
   {
     year: "2023",
@@ -91,7 +91,7 @@ export default function AProposPage() {
               <p className="font-sans text-xs uppercase tracking-[0.3em] text-[var(--brand-rock)] font-medium">
                 A Propos
               </p>
-              <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#1A1A1A] text-balance">
+              <h1 className="font-serif text-5xl md:text-6xl font-extrabold text-[#1A1A1A] text-balance">
                 Notre Histoire
               </h1>
               <div className="space-y-5 font-sans font-light text-lg leading-relaxed text-[#1A1A1A]/60">
@@ -123,17 +123,17 @@ export default function AProposPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -left-4 h-20 w-20 border-b border-l border-[rgba(112,73,25,0.34)]" />
+              <div className="absolute -bottom-4 -left-4 h-20 w-20 border-b border-l border-[rgba(246,191,90,0.34)]" />
             </div>
           </div>
         </div>
       </section>
 
       <section id="chronologie" className="px-6 pb-16 lg:px-8">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[1.45rem] border border-[rgba(36,28,20,0.08)] bg-[var(--brand-ink)] px-5 py-10 shadow-[0_20px_60px_rgba(0,0,0,0.12)] sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[1.45rem] border border-[rgba(36,28,20,0.08)] bg-[#be2c34] px-5 py-10 shadow-[0_20px_60px_rgba(0,0,0,0.12)] sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="font-sans text-xs font-medium uppercase tracking-[0.3em] text-[var(--brand-champagne)]">Chronologie</p>
-            <h2 className="mt-3 font-serif text-3xl font-bold text-[#f6f1e8] md:text-4xl">Les grandes dates</h2>
+            <h2 className="mt-3 font-serif text-3xl font-extrabold text-[#f6f1e8] md:text-4xl">Les grandes dates</h2>
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:hidden">
@@ -151,7 +151,7 @@ export default function AProposPage() {
                     <div className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: milestone.accent }} />
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="font-serif text-3xl font-bold leading-none text-[#1A1A1A]">{milestone.year}</span>
+                    <span className="font-serif text-3xl font-extrabold leading-none text-[#1A1A1A]">{milestone.year}</span>
                     <span className="h-px w-6" style={{ backgroundColor: `${milestone.accent}55` }} />
                   </div>
                 </div>
@@ -166,7 +166,7 @@ export default function AProposPage() {
           </div>
 
           <div className="relative mt-10 hidden xl:block">
-            <div className="absolute left-0 right-0 top-1/2 h-[3px] -translate-y-1/2 rounded-full bg-[linear-gradient(90deg,rgba(246,241,232,0.14)_0%,rgba(246,241,232,0.42)_20%,rgba(112,73,25,0.3)_50%,rgba(246,241,232,0.42)_80%,rgba(246,241,232,0.14)_100%)]" />
+            <div className="absolute left-0 right-0 top-1/2 h-[3px] -translate-y-1/2 rounded-full bg-[linear-gradient(90deg,rgba(246,241,232,0.14)_0%,rgba(246,241,232,0.42)_20%,rgba(246,191,90,0.3)_50%,rgba(246,241,232,0.42)_80%,rgba(246,241,232,0.14)_100%)]" />
 
             <div className="grid grid-cols-8 gap-3">
               {timelineMilestones.map((milestone, index) => {
@@ -242,7 +242,7 @@ export default function AProposPage() {
               <p className="font-sans text-xs font-medium uppercase tracking-[0.3em] text-[var(--brand-rock)]">
                 Processus
               </p>
-              <h2 className="font-serif text-5xl font-bold text-[#1A1A1A] text-balance md:text-6xl">
+              <h2 className="font-serif text-5xl font-extrabold text-[#1A1A1A] text-balance md:text-6xl">
                 Processus de fabrication
               </h2>
               <div className="space-y-5 font-sans text-lg font-light leading-relaxed text-[#1A1A1A]/60">
@@ -257,7 +257,7 @@ export default function AProposPage() {
 
               <div className="grid gap-3 sm:grid-cols-3">
                 {processHighlights.map((item) => (
-                  <div key={item.label} className="border-l border-[rgba(112,73,25,0.26)] pl-4">
+                  <div key={item.label} className="border-l border-[rgba(246,191,90,0.26)] pl-4">
                     <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand-earth)]">
                       {item.label}
                     </p>
@@ -276,7 +276,7 @@ export default function AProposPage() {
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image src={processDeck01} alt="Visuel du processus D-tox" fill className="object-cover" />
               </div>
-              <div className="absolute -bottom-4 -left-4 h-20 w-20 border-b border-l border-[rgba(112,73,25,0.34)]" />
+              <div className="absolute -bottom-4 -left-4 h-20 w-20 border-b border-l border-[rgba(246,191,90,0.34)]" />
             </div>
           </div>
         </div>

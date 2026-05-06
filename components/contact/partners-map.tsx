@@ -42,7 +42,7 @@ export default function PartnersMap() {
       <div className="mb-4 flex items-start justify-between gap-4">
         <div className="space-y-2">
           <p className="font-sans text-[10px] font-medium uppercase tracking-[0.28em] text-[#761218]">Carte France</p>
-          <h2 className="font-serif text-2xl font-bold text-[#1A1A1A] md:text-3xl">Points de presence</h2>
+          <h2 className="font-serif text-2xl font-extrabold text-[#1A1A1A] md:text-3xl">Points de presence</h2>
           <p className="max-w-xl font-sans text-sm font-light leading-relaxed text-[#1A1A1A]/62">
             Une vue compacte du reseau en France, avec les ateliers, distributeurs et grossistes dans les zones cles.
           </p>
@@ -94,7 +94,7 @@ export default function PartnersMap() {
                   <Popup>
                     <div className="space-y-2">
                       <p className="font-sans text-[11px] uppercase tracking-[0.22em] text-[#761218]">{location.role}</p>
-                      <h3 className="font-serif text-lg font-semibold text-[#1A1A1A]">{location.name}</h3>
+                      <h3 className="font-serif text-lg font-bold text-[#1A1A1A]">{location.name}</h3>
                       <p className="font-sans text-sm text-[#1A1A1A]/72">
                         {location.city}, {location.country}
                       </p>

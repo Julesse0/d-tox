@@ -55,7 +55,7 @@ export default async function BlogArticlePage({
 
           {isRecipe ? (
             <div className="grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] gap-4 text-center sm:gap-6">
-              <h1 className="font-serif text-3xl font-bold text-[var(--brand-ink)] text-balance md:text-4xl lg:text-5xl">
+              <h1 className="font-serif text-3xl font-extrabold text-[var(--brand-ink)] text-balance md:text-4xl lg:text-5xl">
                 {post.title}
               </h1>
 
@@ -114,11 +114,11 @@ export default async function BlogArticlePage({
               <div className="space-y-8">
                 <div className="space-y-4">
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="rounded-md bg-[var(--brand-rock)] px-3 py-2 font-sans text-[10px] uppercase tracking-[0.24em] text-white">
+                    <span className="rounded-md bg-[var(--brand-rock)] px-3 py-2 font-sans text-[10px] uppercase tracking-[0.24em] text-[var(--brand-ink)]">
                       {post.sectionLabel}
                     </span>
                     {post.legacyCategory && (
-                      <span className="rounded-md border border-[rgba(112,73,25,0.12)] bg-[rgba(183,166,128,0.12)] px-3 py-2 font-sans text-[10px] uppercase tracking-[0.2em] text-[var(--brand-earth)]">
+                      <span className="rounded-md border border-[rgba(246,191,90,0.12)] bg-[rgba(183,166,128,0.12)] px-3 py-2 font-sans text-[10px] uppercase tracking-[0.2em] text-[var(--brand-earth)]">
                         {post.legacyCategory}
                       </span>
                     )}
@@ -128,7 +128,7 @@ export default async function BlogArticlePage({
                     </span>
                   </div>
 
-                  <h1 className="font-serif text-5xl font-bold text-[var(--brand-ink)] text-balance md:text-6xl">
+                  <h1 className="font-serif text-5xl font-extrabold text-[var(--brand-ink)] text-balance md:text-6xl">
                     {post.title}
                   </h1>
                   <p className="max-w-2xl font-sans text-lg leading-relaxed text-[rgba(36,28,20,0.66)]">{post.excerpt}</p>

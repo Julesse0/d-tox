@@ -1,11 +1,9 @@
-"use client"
-
-import { useState } from "react"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Send, User } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, User } from "lucide-react"
 
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import PartnersSection from "@/components/partners-section"
+import ContactForm from "@/components/contact/contact-form"
 import { siteContact, socialLinks } from "@/lib/site-content"
 
 const socialIconMap = {
@@ -15,18 +13,6 @@ const socialIconMap = {
 } as const
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Form submission logic here
-  }
-
   return (
     <main className="min-h-screen bg-[var(--brand-cream)]">
       <Navigation variant="light" />
@@ -52,7 +38,7 @@ export default function ContactPage() {
       />
 
       <section className="px-6 pb-16 lg:px-8">
-        <div className="mx-auto max-w-7xl rounded-[1.45rem] border border-[var(--brand-line)] bg-[linear-gradient(145deg,rgba(255,250,243,0.96),rgba(183,166,128,0.16))] p-6 shadow-[0_24px_60px_rgba(36,28,20,0.08)] sm:p-8 lg:p-10">
+        <div className="mx-auto max-w-7xl rounded-lg border border-[var(--brand-line)] bg-[linear-gradient(145deg,rgba(255,250,243,0.96),rgba(183,166,128,0.16))] p-6 shadow-[0_18px_44px_rgba(36,28,20,0.08)] sm:p-8 lg:p-10">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)]">
             <div className="space-y-8">
               <div className="space-y-4">
@@ -67,7 +53,7 @@ export default function ContactPage() {
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
-                <article className="rounded-[1rem] border border-[rgba(112,73,25,0.12)] bg-white/82 p-5 shadow-[0_14px_34px_rgba(36,28,20,0.04)]">
+                <article className="rounded-lg border border-[rgba(112,73,25,0.12)] bg-white/82 p-5 shadow-[0_14px_34px_rgba(36,28,20,0.04)]">
                   <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[var(--brand-rock)] text-white">
                       <MapPin className="h-4 w-4" />
@@ -87,7 +73,7 @@ export default function ContactPage() {
                   </div>
                 </article>
 
-                <article className="rounded-[1rem] border border-[rgba(112,73,25,0.12)] bg-white/82 p-5 shadow-[0_14px_34px_rgba(36,28,20,0.04)]">
+                <article className="rounded-lg border border-[rgba(112,73,25,0.12)] bg-white/82 p-5 shadow-[0_14px_34px_rgba(36,28,20,0.04)]">
                   <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[var(--brand-ink)] text-[#f6f1e8]">
                       <Phone className="h-4 w-4" />
@@ -102,7 +88,7 @@ export default function ContactPage() {
                   </div>
                 </article>
 
-                <article className="rounded-[1rem] border border-[rgba(112,73,25,0.12)] bg-white/82 p-5 shadow-[0_14px_34px_rgba(36,28,20,0.04)]">
+                <article className="rounded-lg border border-[rgba(112,73,25,0.12)] bg-white/82 p-5 shadow-[0_14px_34px_rgba(36,28,20,0.04)]">
                   <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[var(--brand-rock)] text-white">
                       <User className="h-4 w-4" />
@@ -116,7 +102,7 @@ export default function ContactPage() {
                   </div>
                 </article>
 
-                <article className="rounded-[1rem] border border-[rgba(112,73,25,0.12)] bg-white/82 p-5 shadow-[0_14px_34px_rgba(36,28,20,0.04)]">
+                <article className="rounded-lg border border-[rgba(112,73,25,0.12)] bg-white/82 p-5 shadow-[0_14px_34px_rgba(36,28,20,0.04)]">
                   <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[var(--brand-ink)] text-[#f6f1e8]">
                       <Mail className="h-4 w-4" />
@@ -136,7 +122,7 @@ export default function ContactPage() {
                 </article>
               </div>
 
-              <div className="rounded-[1.15rem] bg-[var(--brand-ink)] p-6 text-[#f6f1e8] shadow-[0_18px_46px_rgba(36,28,20,0.12)]">
+              <div className="rounded-lg bg-[var(--brand-ink)] p-6 text-[#f6f1e8] shadow-[0_18px_46px_rgba(36,28,20,0.12)]">
                 <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand-champagne)]">
                   Communaute
                 </p>
@@ -166,95 +152,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div
-              id="formulaire"
-              className="scroll-mt-32 rounded-[1.25rem] border border-[rgba(112,73,25,0.12)] bg-white/86 p-6 shadow-[0_18px_46px_rgba(36,28,20,0.06)] sm:p-8"
-            >
-              <p className="font-sans text-xs font-medium uppercase tracking-[0.28em] text-[var(--brand-rock)]">Formulaire</p>
-              <h2 className="mt-3 font-serif text-3xl font-bold text-[var(--brand-ink)] sm:text-4xl">
-                Envoyez-nous un message
-              </h2>
-              <p className="mt-3 max-w-lg font-sans text-base leading-relaxed text-[rgba(36,28,20,0.68)]">
-                Une question sur nos saveurs, la distribution ou un partenariat ? Ecrivez-nous directement ici.
-              </p>
-
-              <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-5">
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="name"
-                    className="font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-[rgba(36,28,20,0.62)]"
-                  >
-                    Votre nom*
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="h-12 w-full rounded-md border border-[rgba(112,73,25,0.12)] bg-[rgba(183,166,128,0.12)] px-4 font-sans text-sm text-[var(--brand-ink)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
-                    placeholder="Nom complet"
-                    required
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="email"
-                    className="font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-[rgba(36,28,20,0.62)]"
-                  >
-                    Votre email*
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="h-12 w-full rounded-md border border-[rgba(112,73,25,0.12)] bg-[rgba(183,166,128,0.12)] px-4 font-sans text-sm text-[var(--brand-ink)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
-                    placeholder="email@exemple.com"
-                    required
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="subject"
-                    className="font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-[rgba(36,28,20,0.62)]"
-                  >
-                    Sujet
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    value={formData.subject}
-                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="h-12 w-full rounded-md border border-[rgba(112,73,25,0.12)] bg-[rgba(183,166,128,0.12)] px-4 font-sans text-sm text-[var(--brand-ink)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
-                    placeholder="Distribution, partenariat, question produit..."
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="message"
-                    className="font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-[rgba(36,28,20,0.62)]"
-                  >
-                    Votre message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={7}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="min-h-[190px] w-full rounded-[1rem] border border-[rgba(112,73,25,0.12)] bg-[rgba(183,166,128,0.12)] px-4 py-4 font-sans text-sm text-[var(--brand-ink)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none resize-none"
-                    placeholder="Parlez-nous de votre besoin..."
-                    required
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="mt-2 inline-flex w-fit items-center justify-center gap-2 rounded-md bg-[var(--brand-rock)] px-8 py-3.5 font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-[var(--brand-earth)]"
-                >
-                  Envoyer
-                  <Send className="h-4 w-4" />
-                </button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>

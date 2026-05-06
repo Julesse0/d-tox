@@ -2,6 +2,7 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import EditorialProductShowcase from "@/components/editorial-product-showcase"
 
+import medal2023Image from "@/assets/medal-2023-2.png"
 import { siteImages } from "@/lib/site-content"
 
 export default function DtoxPage() {
@@ -24,19 +25,20 @@ export default function DtoxPage() {
             imageAlt: "Bouteille D-tox Original 1L",
             tag: "Format Hero",
             description:
-              "Fermentation 8 a 15 jours sur souches de A-Z, dans les regles de l'art, comme du fait maison : 100% RAW KOMBUCHA.",
+              "Un kombucha brut, vivant et non pasteurise, fermente 8 a 15 jours sur des souches selectionnees de A a Z, dans un esprit artisanal proche du fait maison.",
+            awardImage: medal2023Image,
+            awardAlt: "Medaille D-tox 2023",
             styleNote: "",
             tastingNote: "",
             detailItems: [
-              "Reconnu complement alimentaire",
-              "Gout sans precedent, rafraichissant, desalterant, non medicamenteux",
-              "Ingredients 100% bio",
-              "Methodes de fabrication rigoureuses HACCP",
-              "Non aromatise, non pasteurise",
-              "Taux exceptionnel d'acide gluconique : 15 Gr/L !",
-              "Tres longue DDM : J + 18 mois !",
-              "Bouteille en r-PET 100% recycle & recyclable, excluant les risques d'explosion",
-              "Bilan CO2 minimal en PET",
+              "Reconnu complement alimentaire pour accompagner une consommation bien-etre au quotidien.",
+              "Gout unique, rafraichissant et desalterant, sans approche medicamenteuse.",
+              "Ingredients 100% bio, sans aromatisation et sans pasteurisation.",
+              "Methodes de fabrication rigoureuses, suivies selon les principes HACCP.",
+              "Taux exceptionnel d'acide gluconique : 15 g/L.",
+              "Tres longue DDM : jusqu'a J + 18 mois.",
+              "Bouteille en r-PET 100% recycle et recyclable, choisie pour eviter les risques d'explosion.",
+              "Choix du PET pour un bilan CO2 plus leger.",
             ],
           },
           {
@@ -47,19 +49,20 @@ export default function DtoxPage() {
             imageAlt: "Bouteille D-tox Original 33cl",
             tag: "Petit Format",
             description:
-              "Fermentation 8 a 15 jours sur souches de A-Z, dans les regles de l'art, comme du fait maison : 100% RAW KOMBUCHA.",
+              "Le meme kombucha brut et vivant que le format 1L, dans une version plus nomade, fermente 8 a 15 jours selon le process D-TOX.",
+            awardImage: medal2023Image,
+            awardAlt: "Medaille D-tox 2023",
             styleNote: "",
             tastingNote: "",
             detailItems: [
-              "Reconnu complement alimentaire",
-              "Gout sans precedent, rafraichissant, desalterant, non medicamenteux",
-              "Ingredients 100% bio",
-              "Methodes de fabrication rigoureuses HACCP",
-              "Non aromatise, non pasteurise",
-              "Taux exceptionnel d'acide gluconique : 15 Gr/L !",
-              "Tres longue DDM : J + 18 mois !",
-              "Bouteille en r-PET 100% recycle & recyclable, excluant les risques d'explosion",
-              "Bilan CO2 minimal en PET",
+              "Reconnu complement alimentaire pour accompagner une consommation bien-etre au quotidien.",
+              "Gout unique, rafraichissant et desalterant, sans approche medicamenteuse.",
+              "Ingredients 100% bio, sans aromatisation et sans pasteurisation.",
+              "Methodes de fabrication rigoureuses, suivies selon les principes HACCP.",
+              "Taux exceptionnel d'acide gluconique : 15 g/L.",
+              "Tres longue DDM : jusqu'a J + 18 mois.",
+              "Bouteille en r-PET 100% recycle et recyclable, choisie pour eviter les risques d'explosion.",
+              "Choix du PET pour un bilan CO2 plus leger.",
             ],
           },
         ]}

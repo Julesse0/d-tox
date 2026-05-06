@@ -1,5 +1,10 @@
 import type { StaticImageData } from "next/image"
 
+import kirRoyalImage from "@/assets/kir royal.png"
+import mojitoImage from "@/assets/mojito.png"
+import pinaColadaImage from "@/assets/pina colada.png"
+import sangriaImage from "@/assets/sangria.png"
+import sexOnTheBeachImage from "@/assets/sex on the beach.png"
 import legacyPosts from "@/data/legacy-blog.json"
 import { siteImages } from "@/lib/site-content"
 
@@ -34,6 +39,7 @@ export type BlogPost = {
   sectionLabel: string
   legacyCategory: string
   image: string | StaticImageData
+  previewImage: string | StaticImageData
   gallery: string[]
   paragraphs: string[]
 }
@@ -80,6 +86,14 @@ const fallbackImages: Record<BlogSection, string | StaticImageData> = {
   recettes: siteImages.articleRecipe,
   supports: siteImages.articleSupport,
   reseaux: siteImages.articleRoutine,
+}
+
+const imageOverrides: Record<string, StaticImageData> = {
+  "recette-cocktail-royaltox": kirRoyalImage,
+  "recette-de-cocktail-sangritox": sangriaImage,
+  "recette-de-cocktail-sex-on-the-tox": sexOnTheBeachImage,
+  "recette-de-cocktail-mojitox": mojitoImage,
+  "recette-cocktail-pina-colatox": pinaColadaImage,
 }
 
 const titleOverrides: Record<string, string> = {
@@ -191,6 +205,7 @@ export const blogPosts: BlogPost[] = rawPosts.map((post) => {
     sectionLabel: blogSectionMeta[post.section].label,
     legacyCategory: normalizeLegacyText(post.legacyCategory),
     image: post.heroImage || fallbackImages[post.section],
+    previewImage: imageOverrides[post.slug] || post.heroImage || fallbackImages[post.section],
     gallery: post.gallery,
     paragraphs,
   }

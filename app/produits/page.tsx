@@ -11,11 +11,13 @@ const collections = [
     name: "D-tox Original 1L",
     image: siteImages.dtoxBottle1L,
     href: "/produits/d-tox",
+    imageClassName: "object-contain p-10",
   },
   {
     name: "Chateau de la Crau",
     image: siteImages.chateauBottle,
     href: "/produits/chateau",
+    imageClassName: "object-contain p-2",
   },
 ]
 
@@ -42,12 +44,12 @@ export default function ProduitsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {collections.map((collection) => (
               <Link key={collection.name} href={collection.href} className="group flex flex-col">
-                <div className="relative mb-8 aspect-[3/4] overflow-hidden rounded-[1.4rem] bg-[radial-gradient(circle_at_top,#ffffff_0%,#f1e7d9_55%,#e3cfb1_100%)]">
+                <div className="relative mb-8 aspect-[3/4] overflow-hidden rounded-lg border border-[#704919]/10 bg-[linear-gradient(160deg,#fffdf9_0%,#f1e7d9_58%,#e3cfb1_100%)]">
                   <Image
                     src={collection.image}
                     alt={`Collection ${collection.name}`}
                     fill
-                    className="object-contain p-10 transition-transform duration-700 group-hover:scale-105"
+                    className={`${collection.imageClassName} transition-transform duration-700 group-hover:scale-105`}
                   />
                 </div>
                 <h2 className="mb-4 font-serif text-4xl md:text-5xl font-bold text-[#1A1A1A]">

@@ -19,19 +19,25 @@ export default function PartnersSection({
   sectionPaddingClassName = "py-24 lg:py-28",
   panelClassName = "",
 }: PartnersSectionProps) {
+  const isLightSection = sectionClassName.includes("brand-cream") || sectionClassName.includes("#F6F1E8")
+  const hasDarkPanel = panelClassName.includes("#2e2115") || panelClassName.includes("#20170f")
+  const headingColor = isLightSection && !hasDarkPanel ? "text-[#1A1A1A]" : "text-[#F6F1E8]"
+  const eyebrowColor = isLightSection && !hasDarkPanel ? "text-[#704919]" : "text-[#B7A680]"
+  const descriptionColor = isLightSection && !hasDarkPanel ? "text-[#1A1A1A]/62" : "text-[#F6F1E8]/72"
+
   return (
     <section className={`${sectionClassName} ${sectionPaddingClassName}`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className={panelClassName}>
           <div className="mb-14 flex flex-col gap-4 text-center">
-            <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#B7A680] font-medium">
+            <p className={`font-sans text-xs uppercase tracking-[0.3em] ${eyebrowColor} font-medium`}>
               {eyebrow}
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#F6F1E8] text-balance">
+            <h2 className={`font-serif text-4xl md:text-5xl font-bold ${headingColor} text-balance`}>
               {title}
             </h2>
             {description ? (
-              <p className="mx-auto max-w-2xl font-sans text-base font-light leading-relaxed text-[#F6F1E8]/62">
+              <p className={`mx-auto max-w-2xl font-sans text-base font-light leading-relaxed ${descriptionColor}`}>
                 {description}
               </p>
             ) : null}

@@ -11,8 +11,7 @@ interface ProductCardProps {
 export default function ProductCard({ name, description, image, href }: ProductCardProps) {
   return (
     <Link href={href} className="group flex flex-col">
-      {/* Image Container */}
-      <div className="relative mb-6 aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-[radial-gradient(circle_at_top,#ffffff_0%,#f5e3cb_55%,#ebcfad_100%)]">
+      <div className="relative mb-6 aspect-[4/5] overflow-hidden rounded-lg border border-[#704919]/10 bg-[linear-gradient(160deg,#fffdf9_0%,#f1e7d9_58%,#e3cfb1_100%)]">
         <Image
           src={image}
           alt={name}
@@ -21,7 +20,6 @@ export default function ProductCard({ name, description, image, href }: ProductC
         />
       </div>
 
-      {/* Product Info */}
       <div className="flex flex-col gap-3 text-center">
         <h3 className="font-serif text-lg md:text-xl font-semibold text-[#1A1A1A] uppercase tracking-wide group-hover:text-[#761218] transition-colors text-balance">
           {name}

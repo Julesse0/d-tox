@@ -13,7 +13,7 @@ export default function BlogCard({ post, featured = false }: { post: BlogPost; f
       >
         <div className="relative min-h-[320px] overflow-hidden">
           <Image
-            src={post.image}
+            src={post.previewImage}
             alt={post.title}
             fill
             className="object-contain p-6 transition-transform duration-700 group-hover:scale-105"
@@ -53,7 +53,7 @@ export default function BlogCard({ post, featured = false }: { post: BlogPost; f
     >
       <div className="relative mb-5 aspect-[4/3] overflow-hidden">
         <Image
-          src={post.image}
+          src={post.previewImage}
           alt={post.title}
           fill
           className="object-contain p-5 transition-transform duration-700 group-hover:scale-105"

@@ -16,6 +16,8 @@ type ProductVariant = {
   styleNote: string
   tastingNote: string
   detailItems?: string[]
+  awardImage?: string | StaticImageData
+  awardAlt?: string
 }
 
 type ProductSpec = {
@@ -68,7 +70,7 @@ export default function EditorialProductShowcase({
       <div className="mx-auto max-w-7xl">
         <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
           <div className="space-y-6 lg:sticky lg:top-28">
-            <div className="relative min-h-[520px] overflow-hidden rounded-[1.5rem] border border-[#1A1A1A]/10 bg-[linear-gradient(160deg,#fffdf9_0%,#f1e7d9_46%,#e3cfb1_100%)] p-8 shadow-[0_30px_80px_rgba(112,73,25,0.10)] sm:p-10">
+            <div className="relative min-h-[520px] overflow-hidden rounded-lg border border-[#1A1A1A]/10 bg-[linear-gradient(160deg,#fffdf9_0%,#f1e7d9_46%,#e3cfb1_100%)] p-8 shadow-[0_24px_56px_rgba(112,73,25,0.10)] sm:p-10">
               <div className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.82),transparent_72%)]" />
               <div className="absolute left-6 top-6 inline-flex rounded-md border border-[#1A1A1A]/10 bg-white/80 px-4 py-1.5 font-sans text-[10px] uppercase tracking-[0.28em] text-[#704919] sm:left-8 sm:top-8">
                 {selectedVariant.tag}
@@ -92,10 +94,7 @@ export default function EditorialProductShowcase({
             {specs.length > 0 ? (
               <div className="grid gap-4 sm:grid-cols-3">
                 {specs.map((spec) => (
-                  <div
-                    key={spec.label}
-                    className="rounded-[1rem] border border-[#1A1A1A]/10 bg-white/65 p-5 backdrop-blur-sm"
-                  >
+                  <div key={spec.label} className="rounded-md border border-[#1A1A1A]/10 bg-white/65 p-5 backdrop-blur-sm">
                     <p className="mb-2 font-sans text-[10px] uppercase tracking-[0.28em] text-[#704919]/70">
                       {spec.label}
                     </p>
@@ -122,7 +121,7 @@ export default function EditorialProductShowcase({
             </div>
 
             {variants.length > 1 && (
-              <div className="rounded-[1.2rem] border border-[#1A1A1A]/10 bg-white/70 p-6">
+              <div className="rounded-lg border border-[#1A1A1A]/10 bg-white/70 p-6">
                 <p className="mb-4 font-sans text-[10px] uppercase tracking-[0.3em] text-[#704919]/70">
                   Formats
                 </p>
@@ -135,7 +134,7 @@ export default function EditorialProductShowcase({
                         key={variant.id}
                         type="button"
                         onClick={() => setSelectedVariantId(variant.id)}
-                        className={`rounded-[0.95rem] border px-5 py-4 text-left transition-colors ${
+                        className={`rounded-md border px-5 py-4 text-left transition-colors ${
                           isActive
                             ? "border-[#704919] bg-[#704919] text-white"
                             : "border-[#1A1A1A]/12 bg-[#F6F1E8] text-[#1A1A1A] hover:border-[#704919]/50"
@@ -152,45 +151,62 @@ export default function EditorialProductShowcase({
               </div>
             )}
 
-            <div className="rounded-[1.35rem] bg-[#1A1A1A] p-8 text-[#F6F1E8] sm:p-10">
-              <p className="mb-3 font-sans text-[10px] uppercase tracking-[0.3em] text-[#B7A680]">
+            <div className="rounded-lg border border-[#704919]/14 bg-[linear-gradient(160deg,rgba(255,250,243,0.94),rgba(227,207,177,0.58))] p-8 text-[#1A1A1A] shadow-[0_18px_44px_rgba(112,73,25,0.08)] sm:p-10">
+              <p className="mb-3 font-sans text-[10px] uppercase tracking-[0.3em] text-[#704919]">
                 {presentationLabel}
               </p>
               <h2 className="font-serif text-3xl font-semibold text-balance sm:text-4xl">
                 {selectedVariant.name}
               </h2>
               {selectedVariant.description ? (
-                <p className="mt-4 max-w-2xl font-sans text-base font-light leading-relaxed text-[#F6F1E8]/72">
+                <p className="mt-4 max-w-2xl font-sans text-base font-light leading-relaxed text-[#1A1A1A]/68">
                   {selectedVariant.description}
                 </p>
               ) : null}
 
+              {selectedVariant.awardImage ? (
+                <div className="mt-6 flex items-center gap-4 rounded-md border border-[#704919]/14 bg-white/54 p-4">
+                  <div className="relative h-20 w-20 shrink-0">
+                    <Image
+                      src={selectedVariant.awardImage}
+                      alt={selectedVariant.awardAlt ?? "Medaille D-tox"}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <p className="font-sans text-sm font-light leading-relaxed text-[#1A1A1A]/68">
+                    Une reconnaissance qui souligne le caractere singulier de notre kombucha brut, vivant et non
+                    pasteurise.
+                  </p>
+                </div>
+              ) : null}
+
               {selectedVariant.detailItems && selectedVariant.detailItems.length > 0 ? (
-                <div className="mt-8 rounded-[1rem] border border-white/10 bg-white/4 p-6">
+                <div className="mt-8 rounded-md border border-[#704919]/14 bg-white/54 p-6">
                   <div className="grid gap-3">
                     {selectedVariant.detailItems.map((item) => (
                       <div key={item} className="flex gap-3">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B7A680]" />
-                        <p className="font-sans text-sm font-light leading-relaxed text-[#F6F1E8]/76">{item}</p>
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-sm bg-[#704919]" />
+                        <p className="font-sans text-sm font-light leading-relaxed text-[#1A1A1A]/72">{item}</p>
                       </div>
                     ))}
                   </div>
                 </div>
               ) : (
                 <div className="mt-8 grid gap-5 sm:grid-cols-2">
-                  <div className="rounded-[1rem] border border-white/10 bg-white/4 p-5">
-                    <p className="mb-2 font-sans text-[10px] uppercase tracking-[0.28em] text-[#B7A680]">
+                  <div className="rounded-md border border-[#704919]/14 bg-white/54 p-5">
+                    <p className="mb-2 font-sans text-[10px] uppercase tracking-[0.28em] text-[#704919]">
                       Allure
                     </p>
-                    <p className="font-sans text-sm font-light leading-relaxed text-[#F6F1E8]/72">
+                    <p className="font-sans text-sm font-light leading-relaxed text-[#1A1A1A]/72">
                       {selectedVariant.styleNote}
                     </p>
                   </div>
-                  <div className="rounded-[1rem] border border-white/10 bg-white/4 p-5">
-                    <p className="mb-2 font-sans text-[10px] uppercase tracking-[0.28em] text-[#B7A680]">
+                  <div className="rounded-md border border-[#704919]/14 bg-white/54 p-5">
+                    <p className="mb-2 font-sans text-[10px] uppercase tracking-[0.28em] text-[#704919]">
                       Degustation
                     </p>
-                    <p className="font-sans text-sm font-light leading-relaxed text-[#F6F1E8]/72">
+                    <p className="font-sans text-sm font-light leading-relaxed text-[#1A1A1A]/72">
                       {selectedVariant.tastingNote}
                     </p>
                   </div>
@@ -199,7 +215,7 @@ export default function EditorialProductShowcase({
             </div>
 
             {story ? (
-              <div className="rounded-[1.2rem] border border-[#1A1A1A]/10 bg-white/65 p-6 sm:p-8">
+              <div className="rounded-lg border border-[#1A1A1A]/10 bg-white/65 p-6 sm:p-8">
                 <p className="mb-4 font-sans text-[10px] uppercase tracking-[0.3em] text-[#704919]/70">
                   Ligne Editoriale
                 </p>

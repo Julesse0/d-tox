@@ -2,9 +2,6 @@ import Image from "next/image"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import processDeck01 from "@/assets/process-deck-01.jpg"
-import processDeck02 from "@/assets/process-deck-02.jpg"
-import processDeck03 from "@/assets/process-deck-03.png"
-import processDeck04 from "@/assets/process-deck-04.png"
 
 import { siteImages } from "@/lib/site-content"
 
@@ -79,13 +76,6 @@ const processParagraphs = [
   "A cette echelle de fabrication, nous sommes un des rares producteurs a fermenter integralement sur souches de A-Z, ce qui garantit cette qualite inegalee.",
   "A force de chercher la perfection, ensemble avec des laboratoires, nous avons reussi a pousser la symbiose vers une dominance bacterienne.",
   "Car c'est elle qui fabrique ce gout unique, ces bienfaits surprenants, et ces qualites de conservateur naturel.",
-]
-
-const processGallery = [
-  { image: processDeck01, alt: "Visuel du processus D-tox 1" },
-  { image: processDeck02, alt: "Visuel du processus D-tox 2" },
-  { image: processDeck03, alt: "Visuel du processus D-tox 3" },
-  { image: processDeck04, alt: "Visuel du processus D-tox 4" },
 ]
 
 export default function AProposPage() {
@@ -246,40 +236,33 @@ export default function AProposPage() {
       </section>
 
       <section id="processus" className="px-6 pb-24 lg:px-8">
-        <div className="mx-auto max-w-7xl rounded-[1.45rem] border border-[rgba(36,28,20,0.08)] bg-[linear-gradient(160deg,rgba(255,255,255,0.98),rgba(183,166,128,0.18))] p-6 shadow-[0_24px_70px_rgba(0,0,0,0.08)] sm:p-8 lg:p-10">
-          <div className="grid grid-cols-1 gap-10 xl:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] xl:items-start">
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <p className="font-sans text-xs font-medium uppercase tracking-[0.3em] text-[var(--brand-rock)]">
-                  Processus
-                </p>
-                <h2 className="font-serif text-4xl font-bold text-[#1A1A1A] md:text-5xl">
-                  Processus de fabrication
-                </h2>
-                <p className="max-w-2xl font-sans text-lg font-light leading-relaxed text-[#1A1A1A]/64">
-                  Notre process unique et artisanal : l&apos;art de la fermentation.
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+            <div className="flex flex-col gap-6">
+              <p className="font-sans text-xs font-medium uppercase tracking-[0.3em] text-[var(--brand-rock)]">
+                Processus
+              </p>
+              <h2 className="font-serif text-5xl font-bold text-[#1A1A1A] text-balance md:text-6xl">
+                Processus de fabrication
+              </h2>
+              <div className="space-y-5 font-sans text-lg font-light leading-relaxed text-[#1A1A1A]/60">
+                {processParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+                <p>
+                  Notre process unique et artisanal repose sur l&apos;art de la fermentation, avec des thes bio, du
+                  sucre bio et une symbiose vivante guidee avec precision.
                 </p>
               </div>
 
               <div className="grid gap-3 sm:grid-cols-3">
                 {processHighlights.map((item) => (
-                  <article
-                    key={item.label}
-                    className="rounded-[1rem] border border-[rgba(36,28,20,0.08)] bg-white/72 px-4 py-4 shadow-[0_10px_28px_rgba(0,0,0,0.04)]"
-                  >
+                  <div key={item.label} className="border-l border-[rgba(112,73,25,0.26)] pl-4">
                     <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand-earth)]">
                       {item.label}
                     </p>
-                    <p className="mt-3 font-sans text-sm font-light leading-6 text-[#1A1A1A]/72">{item.value}</p>
-                  </article>
-                ))}
-              </div>
-
-              <div className="space-y-4 rounded-[1.15rem] bg-[var(--brand-ink)] p-6 text-[#f6f1e8] shadow-[0_18px_50px_rgba(0,0,0,0.12)]">
-                {processParagraphs.map((paragraph) => (
-                  <p key={paragraph} className="font-sans text-base font-light leading-relaxed text-[rgba(246,241,232,0.76)]">
-                    {paragraph}
-                  </p>
+                    <p className="mt-2 font-sans text-sm font-light leading-6 text-[#1A1A1A]/70">{item.value}</p>
+                  </div>
                 ))}
               </div>
 
@@ -289,17 +272,11 @@ export default function AProposPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              {processGallery.map((item, index) => (
-                <div
-                  key={item.alt}
-                  className={`relative overflow-hidden rounded-[1rem] border border-[rgba(36,28,20,0.08)] bg-white/70 shadow-[0_18px_45px_rgba(0,0,0,0.08)] ${
-                    index === 2 ? "aspect-square" : "aspect-[1.08]"
-                  }`}
-                >
-                  <Image src={item.image} alt={item.alt} fill className="object-cover" />
-                </div>
-              ))}
+            <div className="relative mx-auto w-full max-w-[440px] lg:max-w-[460px]">
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image src={processDeck01} alt="Visuel du processus D-tox" fill className="object-cover" />
+              </div>
+              <div className="absolute -bottom-4 -left-4 h-20 w-20 border-b border-l border-[rgba(112,73,25,0.34)]" />
             </div>
           </div>
         </div>

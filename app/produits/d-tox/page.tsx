@@ -6,13 +6,15 @@ import { siteImages } from "@/lib/site-content"
 
 export default function DtoxPage() {
   return (
-    <main className="bg-[#F9D9B9] min-h-screen">
+    <main className="min-h-screen bg-[var(--brand-cream)]">
       <Navigation variant="light" />
       <EditorialProductShowcase
         eyebrow="Produit Signature"
         title="D-tox Original"
-        intro="Une page pensee comme une presentation plus mode, plus nette et plus editoriale autour de la bouteille signature."
-        story="La lecture est volontairement plus premium: grand visuel, details de collection et variation de format comme on le ferait sur une fiche de vetement. La version 1L est affichee par defaut et un bouton permet de basculer vers la 33cl."
+        intro=""
+        story=""
+        presentationLabel="Infos Produit"
+        imageFooterLabel=""
         variants={[
           {
             id: "dtox-1l",
@@ -22,11 +24,20 @@ export default function DtoxPage() {
             imageAlt: "Bouteille D-tox Original 1L",
             tag: "Format Hero",
             description:
-              "Le grand format signature de D-tox, avec une silhouette plus longue et une presence plus mode dans la composition.",
-            styleNote:
-              "Une bouteille elancee, minimaliste, qui fonctionne comme une piece forte dans une presentation produit.",
-            tastingNote:
-              "Un kombucha vivant, franc et lumineux, a presenter comme la reference centrale de la gamme.",
+              "Fermentation 8 a 15 jours sur souches de A-Z, dans les regles de l'art, comme du fait maison : 100% RAW KOMBUCHA.",
+            styleNote: "",
+            tastingNote: "",
+            detailItems: [
+              "Reconnu complement alimentaire",
+              "Gout sans precedent, rafraichissant, desalterant, non medicamenteux",
+              "Ingredients 100% bio",
+              "Methodes de fabrication rigoureuses HACCP",
+              "Non aromatise, non pasteurise",
+              "Taux exceptionnel d'acide gluconique : 15 Gr/L !",
+              "Tres longue DDM : J + 18 mois !",
+              "Bouteille en r-PET 100% recycle & recyclable, excluant les risques d'explosion",
+              "Bilan CO2 minimal en PET",
+            ],
           },
           {
             id: "dtox-33cl",
@@ -36,19 +47,24 @@ export default function DtoxPage() {
             imageAlt: "Bouteille D-tox Original 33cl",
             tag: "Petit Format",
             description:
-              "La version 33cl garde la meme identite visuelle, avec un format plus compact et plus immediat a lire dans la page.",
-            styleNote:
-              "Un rendu plus court et plus direct, parfait pour une alternative rapide sans casser l'univers premium.",
-            tastingNote:
-              "Le meme esprit D-tox dans un format plus mobile, plus simple a projeter pour une consommation individuelle.",
+              "Fermentation 8 a 15 jours sur souches de A-Z, dans les regles de l'art, comme du fait maison : 100% RAW KOMBUCHA.",
+            styleNote: "",
+            tastingNote: "",
+            detailItems: [
+              "Reconnu complement alimentaire",
+              "Gout sans precedent, rafraichissant, desalterant, non medicamenteux",
+              "Ingredients 100% bio",
+              "Methodes de fabrication rigoureuses HACCP",
+              "Non aromatise, non pasteurise",
+              "Taux exceptionnel d'acide gluconique : 15 Gr/L !",
+              "Tres longue DDM : J + 18 mois !",
+              "Bouteille en r-PET 100% recycle & recyclable, excluant les risques d'explosion",
+              "Bilan CO2 minimal en PET",
+            ],
           },
         ]}
-        specs={[
-          { label: "Collection", value: "Original" },
-          { label: "Style", value: "Minimal Premium" },
-          { label: "Rituel", value: "Au Quotidien" },
-        ]}
-        primaryCta={{ href: "/contact", label: "Nous Contacter" }}
+        specs={[]}
+        primaryCta={{ href: "/contact#formulaire", label: "Nous Contacter" }}
         secondaryCta={{ href: "/produits", label: "Retour Produits" }}
       />
 

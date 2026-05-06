@@ -5,6 +5,13 @@ import { siteImages } from "@/lib/site-content"
 
 export type BlogSection = "articles" | "recettes" | "supports" | "reseaux"
 
+export type PressLink = {
+  title: string
+  publication: string
+  href: string
+  description: string
+}
+
 type RawLegacyPost = {
   slug: string
   title: string
@@ -31,43 +38,42 @@ export type BlogPost = {
   paragraphs: string[]
 }
 
+export const blogPrimarySections: BlogSection[] = ["articles", "recettes", "reseaux"]
+
 export const blogSectionMeta = {
   all: {
-    label: "Tous",
-    title: "Blog D-tox",
-    description:
-      "Retrouve les articles historiques de DTOX4Life remis au propre dans la mise en page actuelle du site.",
+    label: "Tout lire",
+    title: "Le Journal D-tox",
+    description: "",
     href: "/blog",
   },
   articles: {
-    label: "Articles",
-    title: "Nos Articles",
-    description:
-      "Bienfaits, fermentation, microbiote et culture kombucha: toute la partie éditoriale héritée de DTOX4Life.",
+    label: "News",
+    title: "News",
+    description: "Les nouveautes D-tox, les sujets autour du kombucha et les contenus de fond les plus utiles.",
     href: "/blog/articles",
   },
   recettes: {
     label: "Recettes",
-    title: "Nos Recettes",
-    description:
-      "Les affiches cocktails et les contenus food récupérés depuis l'ancien site, réintégrés dans notre design.",
+    title: "Recettes",
+    description: "Cocktails, accords et inspirations a servir avec D-tox pour un usage plus lifestyle et convivial.",
     href: "/blog/recettes",
   },
   supports: {
-    label: "Supports",
-    title: "Nos Supports",
-    description:
-      "Conservation, emballage et informations utiles: la base pratique du blog historique est de retour.",
+    label: "Guides",
+    title: "Guides pratiques",
+    description: "Conservation, emballage et infos pratiques issues des archives D-tox.",
     href: "/blog/supports",
   },
   reseaux: {
-    label: "Réseaux",
-    title: "Presse & Réseaux",
-    description:
-      "Les contenus de notoriété et de découverte du kombucha regroupés dans une vue plus éditoriale.",
+    label: "On parle de nous",
+    title: "On parle de nous / Presse",
+    description: "",
     href: "/blog/reseaux",
   },
 } as const
+
+export const pressLinks: PressLink[] = []
 
 const fallbackImages: Record<BlogSection, string | StaticImageData> = {
   articles: siteImages.articleProcess,
@@ -78,68 +84,68 @@ const fallbackImages: Record<BlogSection, string | StaticImageData> = {
 
 const titleOverrides: Record<string, string> = {
   "que-manger-avec-le-kombucha": "Que manger avec le kombucha ?",
-  "recette-cocktail-royaltox": "Recette cocktail : Royal’TOX",
-  "recette-de-cocktail-sangritox": "Recette de cocktail : Sangri’TOX",
+  "recette-cocktail-royaltox": "Recette cocktail : Royal'TOX",
+  "recette-de-cocktail-sangritox": "Recette de cocktail : Sangri'TOX",
   "recette-de-cocktail-sex-on-the-tox": "Recette de cocktail : Sex On The TOX",
-  "recette-de-cocktail-mojitox": "Recette de cocktail : Moji’TOX",
-  "recette-cocktail-pina-colatox": "Recette cocktail : Piña Cola’TOX",
+  "recette-de-cocktail-mojitox": "Recette de cocktail : Moji'TOX",
+  "recette-cocktail-pina-colatox": "Recette cocktail : Pina Cola'TOX",
   "kombuchas-dtox-et-sucres": "Kombuchas, DTOX et sucres",
   "la-double-fermentation-du-dtox": "La double fermentation du DTOX",
-  "la-cure-dtox-comment-proceder": "La cure DTOX, comment procéder ?",
+  "la-cure-dtox-comment-proceder": "La cure DTOX, comment proceder ?",
   "le-microbiote-kesako": "Le microbiote : KESAKO ?",
   "comment-conserver-notre-produit": "Comment conserver notre produit ?",
   "le-choix-de-nos-bouteilles-en-plastique-p-e-t": "Le choix de nos bouteilles en plastique P.E.T",
   "le-pouvoir-antioxydant-du-d-tox-kombucha": "Le pouvoir antioxydant du D-TOX Kombucha",
-  "notre-mention-de-complement-alimentaire": "Notre mention de complément alimentaire",
-  "le-scoby-ou-la-mere-de-kombucha": "Le Scoby, ou la mère de kombucha",
+  "notre-mention-de-complement-alimentaire": "Notre mention de complement alimentaire",
+  "le-scoby-ou-la-mere-de-kombucha": "Le Scoby, ou la mere de kombucha",
   "le-kombucha-cest-quoi": "Le kombucha, c'est quoi ?",
 }
 
 const legacySymbolReplacements = [
-  ["â€™", "’"],
-  ["â€˜", "‘"],
-  ["â€œ", "“"],
-  ["â€", "”"],
-  ["â€“", "–"],
-  ["â€”", "—"],
-  ["â€¦", "…"],
-  ["Ã©", "é"],
-  ["Ã¨", "è"],
-  ["Ãª", "ê"],
-  ["Ã«", "ë"],
-  ["Ã ", "à"],
-  ["Ã ", "à"],
-  ["Ã¢", "â"],
-  ["Ã§", "ç"],
-  ["Ã¹", "ù"],
-  ["Ã»", "û"],
-  ["Ã´", "ô"],
-  ["Ã®", "î"],
-  ["Ã¯", "ï"],
-  ["Ã¶", "ö"],
-  ["Ã¼", "ü"],
-  ["Ã‰", "É"],
-  ["Ã€", "À"],
-  ["Ã‡", "Ç"],
-  ["Å“", "œ"],
-  ["Å’", "Œ"],
-  ["Â°", "°"],
-  ["Â«", "«"],
-  ["Â»", "»"],
-  ["Â", ""],
-  ["ðŸ¤­", ""],
-  ["ðŸ¤“", ""],
-  ["ðŸ˜‰", ""],
-  ["ðŸ˜…", ""],
-  ["ðŸ”Ž", ""],
-  ["ðŸ§", ""],
-  ["ðŸ‘ŒðŸ»", ""],
-  ["ðŸ¤šðŸ»", ""],
-  ["ðŸ’ªðŸ»", ""],
-  ["âœ…", ""],
-  ["â³", ""],
-  ["âš–ï¸", ""],
-  ["…", "…"],
+  ["Ã¢â‚¬â„¢", "'"],
+  ["Ã¢â‚¬Ëœ", "'"],
+  ["Ã¢â‚¬Å“", "\""],
+  ["Ã¢â‚¬Â", "\""],
+  ["Ã¢â‚¬â€œ", "-"],
+  ["Ã¢â‚¬â€", "-"],
+  ["Ã¢â‚¬Â¦", "..."],
+  ["ÃƒÂ©", "e"],
+  ["ÃƒÂ¨", "e"],
+  ["ÃƒÂª", "e"],
+  ["ÃƒÂ«", "e"],
+  ["ÃƒÂ ", "a"],
+  ["Ãƒ ", "a"],
+  ["ÃƒÂ¢", "a"],
+  ["ÃƒÂ§", "c"],
+  ["ÃƒÂ¹", "u"],
+  ["ÃƒÂ»", "u"],
+  ["ÃƒÂ´", "o"],
+  ["ÃƒÂ®", "i"],
+  ["ÃƒÂ¯", "i"],
+  ["ÃƒÂ¶", "o"],
+  ["ÃƒÂ¼", "u"],
+  ["Ãƒâ€°", "E"],
+  ["Ãƒâ‚¬", "A"],
+  ["Ãƒâ€¡", "C"],
+  ["Ã…â€œ", "oe"],
+  ["Ã…â€™", "OE"],
+  ["Ã‚Â°", "deg"],
+  ["Ã‚Â«", "\""],
+  ["Ã‚Â»", "\""],
+  ["Ã‚", ""],
+  ["Ã°Å¸Â¤Â­", ""],
+  ["Ã°Å¸Â¤â€œ", ""],
+  ["Ã°Å¸Ëœâ€°", ""],
+  ["Ã°Å¸Ëœâ€¦", ""],
+  ["Ã°Å¸â€Å½", ""],
+  ["Ã°Å¸Â§Â", ""],
+  ["Ã°Å¸â€˜Å’Ã°Å¸ÂÂ»", ""],
+  ["Ã°Å¸Â¤Å¡Ã°Å¸ÂÂ»", ""],
+  ["Ã°Å¸â€™ÂªÃ°Å¸ÂÂ»", ""],
+  ["Ã¢Å“â€¦", ""],
+  ["Ã¢ÂÂ³", ""],
+  ["Ã¢Å¡â€“Ã¯Â¸Â", ""],
+  ["â€¦", "..."],
 ]
 
 function normalizeLegacyText(value: string) {
@@ -159,7 +165,7 @@ function buildExcerpt(post: RawLegacyPost, paragraphs: string[]) {
 
   const cleanedExcerpt = normalizeLegacyText(post.excerpt)
 
-  return paragraphExcerpt || cleanedExcerpt || "Contenu restauré depuis l’archive DTOX4Life."
+  return paragraphExcerpt || cleanedExcerpt || "Contenu restaure depuis les archives."
 }
 
 function formatDate(value: string) {
@@ -193,10 +199,6 @@ export const blogPosts: BlogPost[] = rawPosts.map((post) => {
 export function getBlogPosts(section: BlogSection | "all" = "all") {
   if (section === "all") {
     return blogPosts
-  }
-
-  if (section === "reseaux") {
-    return blogPosts.filter((post) => post.section === "reseaux" || post.slug === "le-kombucha-cest-quoi")
   }
 
   return blogPosts.filter((post) => post.section === section)

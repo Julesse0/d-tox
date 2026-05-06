@@ -1,9 +1,18 @@
 "use client"
 
 import { useState } from "react"
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Send, User } from "lucide-react"
+
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
-import { Mail, Phone, MapPin, Instagram, Facebook, Send } from "lucide-react"
+import PartnersSection from "@/components/partners-section"
+import { siteContact, socialLinks } from "@/lib/site-content"
+
+const socialIconMap = {
+  instagram: Instagram,
+  facebook: Facebook,
+  linkedin: Linkedin,
+} as const
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -19,95 +28,196 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="bg-[#F9D9B9] min-h-screen">
+    <main className="min-h-screen bg-[var(--brand-cream)]">
       <Navigation variant="light" />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 px-6 lg:px-8">
+      <section className="px-6 pb-10 pt-32 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col gap-4 text-center">
-            <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#761218] font-medium">
-              Parlons
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mb-4 font-sans text-xs font-medium uppercase tracking-[0.32em] text-[var(--brand-rock)]">
+              Nous joindre
             </p>
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-[#1A1A1A] text-balance">
-              Contact
-            </h1>
-            <p className="font-sans font-light text-lg text-[#1A1A1A]/60 max-w-xl mx-auto leading-relaxed">
-              Une question sur nos saveurs, la distribution ou un partenariat ? Notre equipe vous repond rapidement.
-            </p>
+            <h1 className="font-serif text-5xl font-bold text-[var(--brand-ink)] md:text-6xl">Contact</h1>
           </div>
         </div>
       </section>
 
-      <section className="pb-24 px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Info Cards */}
-            <div className="flex flex-col gap-8">
-              {/* Info Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="bg-[#1A1A1A] p-8 flex flex-col gap-4">
-                  <Mail className="h-6 w-6 text-[#761218]" />
-                  <h3 className="font-serif text-lg font-semibold text-[#F9D9B9]">Email</h3>
-                  <p className="font-sans font-light text-sm text-[#F9D9B9]/60">contact@d-tox.fr</p>
-                </div>
-                <div className="bg-[#1A1A1A] p-8 flex flex-col gap-4">
-                  <Phone className="h-6 w-6 text-[#761218]" />
-                  <h3 className="font-serif text-lg font-semibold text-[#F9D9B9]">Telephone</h3>
-                  <p className="font-sans font-light text-sm text-[#F9D9B9]/60">+33 1 23 45 67 89</p>
-                </div>
-                <div className="bg-[#1A1A1A] p-8 flex flex-col gap-4">
-                  <MapPin className="h-6 w-6 text-[#761218]" />
-                  <h3 className="font-serif text-lg font-semibold text-[#F9D9B9]">Adresse</h3>
-                  <p className="font-sans font-light text-sm text-[#F9D9B9]/60">Atelier D-tox, Lille, France</p>
-                </div>
-                <div className="bg-[#1A1A1A] p-8 flex flex-col gap-4">
-                  <Instagram className="h-6 w-6 text-[#761218]" />
-                  <h3 className="font-serif text-lg font-semibold text-[#F9D9B9]">Reseaux</h3>
-                  <div className="flex items-center gap-3">
-                    <a href="#" aria-label="Instagram" className="text-[#F9D9B9]/60 hover:text-[#761218] transition-colors">
-                      <Instagram className="h-4 w-4" />
-                    </a>
-                    <a href="#" aria-label="Facebook" className="text-[#F9D9B9]/60 hover:text-[#761218] transition-colors">
-                      <Facebook className="h-4 w-4" />
-                    </a>
+      <PartnersSection
+        eyebrow="Points de vente"
+        title="Ou nous trouver"
+        description="Retrouvez D-tox chez nos partenaires et distributeurs, en ligne comme en magasin."
+        sectionClassName="bg-[var(--brand-cream)]"
+        sectionPaddingClassName="pb-16 pt-0"
+        panelClassName="rounded-[1.4rem] border border-[rgba(36,28,20,0.08)] bg-[linear-gradient(145deg,#2e2115_0%,#20170f_100%)] px-6 py-12 shadow-[0_24px_60px_rgba(36,28,20,0.16)] sm:px-8 lg:px-10"
+      />
+
+      <section className="px-6 pb-16 lg:px-8">
+        <div className="mx-auto max-w-7xl rounded-[1.45rem] border border-[var(--brand-line)] bg-[linear-gradient(145deg,rgba(255,250,243,0.96),rgba(183,166,128,0.16))] p-6 shadow-[0_24px_60px_rgba(36,28,20,0.08)] sm:p-8 lg:p-10">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)]">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <p className="font-sans text-xs font-medium uppercase tracking-[0.28em] text-[var(--brand-rock)]">
+                  Atelier Velaux
+                </p>
+                <h2 className="font-serif text-4xl font-bold text-[var(--brand-ink)] sm:text-5xl">Restons en contact</h2>
+                <p className="max-w-md font-sans text-base leading-relaxed text-[rgba(36,28,20,0.68)]">
+                  Toutes les infos utiles pour joindre D-tox rapidement, que ce soit pour une demande commerciale, un
+                  point de distribution ou une question produit.
+                </p>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <article className="rounded-[1rem] border border-[rgba(112,73,25,0.12)] bg-white/82 p-5 shadow-[0_14px_34px_rgba(36,28,20,0.04)]">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[var(--brand-rock)] text-white">
+                      <MapPin className="h-4 w-4" />
+                    </div>
+                    <div className="space-y-2">
+                      <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand-earth)]">
+                        Adresse
+                      </p>
+                      <p className="font-sans text-sm leading-relaxed text-[rgba(36,28,20,0.76)]">
+                        {siteContact.company}
+                        <br />
+                        {siteContact.addressLines[0]}
+                        <br />
+                        {siteContact.addressLines[1]}
+                      </p>
+                    </div>
                   </div>
+                </article>
+
+                <article className="rounded-[1rem] border border-[rgba(112,73,25,0.12)] bg-white/82 p-5 shadow-[0_14px_34px_rgba(36,28,20,0.04)]">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[var(--brand-ink)] text-[#f6f1e8]">
+                      <Phone className="h-4 w-4" />
+                    </div>
+                    <div className="space-y-2">
+                      <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand-earth)]">
+                        Telephone
+                      </p>
+                      <p className="font-sans text-sm leading-relaxed text-[rgba(36,28,20,0.76)]">{siteContact.phone}</p>
+                      <p className="font-sans text-sm leading-relaxed text-[rgba(36,28,20,0.76)]">Portable : {siteContact.mobile}</p>
+                    </div>
+                  </div>
+                </article>
+
+                <article className="rounded-[1rem] border border-[rgba(112,73,25,0.12)] bg-white/82 p-5 shadow-[0_14px_34px_rgba(36,28,20,0.04)]">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[var(--brand-rock)] text-white">
+                      <User className="h-4 w-4" />
+                    </div>
+                    <div className="space-y-2">
+                      <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand-earth)]">
+                        Contact France
+                      </p>
+                      <p className="font-sans text-sm leading-relaxed text-[rgba(36,28,20,0.76)]">{siteContact.contactName}</p>
+                    </div>
+                  </div>
+                </article>
+
+                <article className="rounded-[1rem] border border-[rgba(112,73,25,0.12)] bg-white/82 p-5 shadow-[0_14px_34px_rgba(36,28,20,0.04)]">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[var(--brand-ink)] text-[#f6f1e8]">
+                      <Mail className="h-4 w-4" />
+                    </div>
+                    <div className="space-y-2">
+                      <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand-earth)]">
+                        E-mail
+                      </p>
+                      <a
+                        href={`mailto:${siteContact.email}`}
+                        className="font-sans text-sm leading-relaxed text-[rgba(36,28,20,0.76)] underline-offset-4 transition-colors hover:text-[var(--brand-rock)] hover:underline"
+                      >
+                        {siteContact.email}
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div className="rounded-[1.15rem] bg-[var(--brand-ink)] p-6 text-[#f6f1e8] shadow-[0_18px_46px_rgba(36,28,20,0.12)]">
+                <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand-champagne)]">
+                  Communaute
+                </p>
+                <h3 className="mt-3 font-serif text-3xl font-semibold">Suivez-nous</h3>
+                <p className="mt-3 max-w-sm font-sans text-sm leading-relaxed text-[rgba(246,241,232,0.72)]">
+                  Retrouvez nos actualites, nos produits et nos prises de parole sur les reseaux de la marque.
+                </p>
+
+                <div className="mt-5 flex items-center gap-3">
+                  {socialLinks.map((social) => {
+                    const Icon = socialIconMap[social.platform]
+
+                    return (
+                      <a
+                        key={social.platform}
+                        href={social.href}
+                        aria-label={social.platform}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex h-10 w-10 items-center justify-center rounded-md border border-white/12 bg-white/5 text-[#f6f1e8] transition-colors hover:border-[var(--brand-champagne)] hover:bg-[var(--brand-champagne)] hover:text-[var(--brand-ink)]"
+                      >
+                        <Icon className="h-4 w-4" />
+                      </a>
+                    )
+                  })}
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="bg-white p-8 lg:p-10">
-              <h2 className="font-serif text-2xl font-bold text-[#1A1A1A] mb-8">Envoyez-nous un message</h2>
-              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <div
+              id="formulaire"
+              className="scroll-mt-32 rounded-[1.25rem] border border-[rgba(112,73,25,0.12)] bg-white/86 p-6 shadow-[0_18px_46px_rgba(36,28,20,0.06)] sm:p-8"
+            >
+              <p className="font-sans text-xs font-medium uppercase tracking-[0.28em] text-[var(--brand-rock)]">Formulaire</p>
+              <h2 className="mt-3 font-serif text-3xl font-bold text-[var(--brand-ink)] sm:text-4xl">
+                Envoyez-nous un message
+              </h2>
+              <p className="mt-3 max-w-lg font-sans text-base leading-relaxed text-[rgba(36,28,20,0.68)]">
+                Une question sur nos saveurs, la distribution ou un partenariat ? Ecrivez-nous directement ici.
+              </p>
+
+              <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="name" className="font-sans text-xs uppercase tracking-widest text-[#1A1A1A]/60 font-medium">
-                    Nom complet
+                  <label
+                    htmlFor="name"
+                    className="font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-[rgba(36,28,20,0.62)]"
+                  >
+                    Votre nom*
                   </label>
                   <input
                     type="text"
                     id="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full border border-[#1A1A1A]/10 bg-transparent px-4 py-3 font-sans font-light text-sm text-[#1A1A1A] focus:border-[#761218] focus:outline-none transition-colors"
+                    className="h-12 w-full rounded-md border border-[rgba(112,73,25,0.12)] bg-[rgba(183,166,128,0.12)] px-4 font-sans text-sm text-[var(--brand-ink)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
+                    placeholder="Nom complet"
                     required
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="font-sans text-xs uppercase tracking-widest text-[#1A1A1A]/60 font-medium">
-                    Email
+                  <label
+                    htmlFor="email"
+                    className="font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-[rgba(36,28,20,0.62)]"
+                  >
+                    Votre email*
                   </label>
                   <input
                     type="email"
                     id="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full border border-[#1A1A1A]/10 bg-transparent px-4 py-3 font-sans font-light text-sm text-[#1A1A1A] focus:border-[#761218] focus:outline-none transition-colors"
+                    className="h-12 w-full rounded-md border border-[rgba(112,73,25,0.12)] bg-[rgba(183,166,128,0.12)] px-4 font-sans text-sm text-[var(--brand-ink)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
+                    placeholder="email@exemple.com"
                     required
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="subject" className="font-sans text-xs uppercase tracking-widest text-[#1A1A1A]/60 font-medium">
+                  <label
+                    htmlFor="subject"
+                    className="font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-[rgba(36,28,20,0.62)]"
+                  >
                     Sujet
                   </label>
                   <input
@@ -115,31 +225,63 @@ export default function ContactPage() {
                     id="subject"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full border border-[#1A1A1A]/10 bg-transparent px-4 py-3 font-sans font-light text-sm text-[#1A1A1A] focus:border-[#761218] focus:outline-none transition-colors"
-                    required
+                    className="h-12 w-full rounded-md border border-[rgba(112,73,25,0.12)] bg-[rgba(183,166,128,0.12)] px-4 font-sans text-sm text-[var(--brand-ink)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none"
+                    placeholder="Distribution, partenariat, question produit..."
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="message" className="font-sans text-xs uppercase tracking-widest text-[#1A1A1A]/60 font-medium">
-                    Message
+                  <label
+                    htmlFor="message"
+                    className="font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-[rgba(36,28,20,0.62)]"
+                  >
+                    Votre message
                   </label>
                   <textarea
                     id="message"
-                    rows={5}
+                    rows={7}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full border border-[#1A1A1A]/10 bg-transparent px-4 py-3 font-sans font-light text-sm text-[#1A1A1A] focus:border-[#761218] focus:outline-none transition-colors resize-none"
+                    className="min-h-[190px] w-full rounded-[1rem] border border-[rgba(112,73,25,0.12)] bg-[rgba(183,166,128,0.12)] px-4 py-4 font-sans text-sm text-[var(--brand-ink)] transition-colors focus:border-[var(--brand-rock)] focus:bg-white focus:outline-none resize-none"
+                    placeholder="Parlez-nous de votre besoin..."
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 bg-[#761218] text-white px-8 py-4 font-sans text-sm uppercase tracking-widest font-medium hover:bg-[#8f1a21] transition-colors mt-2"
+                  className="mt-2 inline-flex w-fit items-center justify-center gap-2 rounded-md bg-[var(--brand-rock)] px-8 py-3.5 font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-[var(--brand-earth)]"
                 >
                   Envoyer
                   <Send className="h-4 w-4" />
                 </button>
               </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-20 lg:px-8 lg:pb-24">
+        <div className="mx-auto max-w-7xl rounded-[1.35rem] border border-[var(--brand-line)] bg-[var(--brand-panel)] p-4 shadow-[0_20px_48px_rgba(36,28,20,0.08)] sm:p-5">
+          <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="font-sans text-[10px] font-medium uppercase tracking-[0.28em] text-[var(--brand-rock)]">
+                Adresse
+              </p>
+              <h2 className="mt-2 font-serif text-3xl font-bold text-[var(--brand-ink)]">Nous trouver</h2>
+            </div>
+            <p className="max-w-md font-sans text-sm leading-relaxed text-[rgba(36,28,20,0.66)]">
+              Notre atelier et point de contact principal restent bases a Velaux.
+            </p>
+          </div>
+
+          <div className="overflow-hidden rounded-[1rem] border border-[rgba(112,73,25,0.12)]">
+            <div className="h-[280px] w-full sm:h-[340px] lg:h-[380px]">
+              <iframe
+                title="Carte D-tox Velaux"
+                src={siteContact.mapEmbedUrl}
+                className="h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>

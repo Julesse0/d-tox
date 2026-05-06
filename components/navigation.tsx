@@ -1,10 +1,19 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { useState, type FocusEvent } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
 
-const navLinks = [
+import siteLogo from "@/assets/Plan de travail 2LOGO v1.png"
+
+type NavLink = {
+  label: string
+  href: string
+  children?: Array<{ label: string; href: string }>
+}
+
+const navLinks: NavLink[] = [
   {
     label: "Nos Produits",
     href: "/produits",
@@ -17,10 +26,9 @@ const navLinks = [
     label: "Blog",
     href: "/blog",
     children: [
-      { label: "Nos Articles", href: "/blog/articles" },
-      { label: "Nos Recettes", href: "/blog/recettes" },
-      { label: "Nos Reseaux", href: "/blog/reseaux" },
-      { label: "Nos Supports", href: "/blog/supports" },
+      { label: "News", href: "/blog/articles" },
+      { label: "Recettes", href: "/blog/recettes" },
+      { label: "On parle de nous / Presse", href: "/blog/reseaux" },
     ],
   },
   {
@@ -28,8 +36,8 @@ const navLinks = [
     href: "/a-propos",
     children: [
       { label: "Notre Histoire", href: "/a-propos#histoire" },
-      { label: "Nos Equipes", href: "/a-propos#equipes" },
-      { label: "Nos Valeurs", href: "/a-propos#valeurs" },
+      { label: "Chronologie", href: "/a-propos#chronologie" },
+      { label: "Processus", href: "/a-propos#processus" },
     ],
   },
   {
@@ -43,12 +51,12 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
   const isDark = variant === "dark"
-  const textColor = isDark ? "text-[#F9D9B9]" : "text-[#1A1A1A]"
-  const bgColor = isDark ? "bg-[#1A1A1A]" : "bg-[#F9D9B9]"
-  const hoverColor = isDark ? "hover:text-white" : "hover:text-[#761218]"
-  const dropdownBg = isDark ? "bg-[#2a2a2a]" : "bg-white"
-  const dropdownText = isDark ? "text-[#F9D9B9]" : "text-[#1A1A1A]"
-  const dropdownHover = isDark ? "hover:bg-[#3a3a3a]" : "hover:bg-[#F9D9B9]"
+  const textColor = isDark ? "text-[#F6F1E8]" : "text-[#1A1A1A]"
+  const bgColor = isDark ? "bg-[#1A1A1A]" : "bg-[#F6F1E8]"
+  const hoverColor = isDark ? "hover:text-white" : "hover:text-[#704919]"
+  const dropdownBg = isDark ? "bg-[#2A241E]" : "bg-white"
+  const dropdownText = isDark ? "text-[#F6F1E8]" : "text-[#1A1A1A]"
+  const dropdownHover = isDark ? "hover:bg-[#342d26]" : "hover:bg-[#F3E9DA]"
 
   const closeDropdown = (event: FocusEvent<HTMLDivElement>) => {
     if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
@@ -60,12 +68,17 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
     <nav className={`fixed top-0 left-0 right-0 z-50 ${bgColor}/95 backdrop-blur-md`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className={`font-serif text-2xl font-bold tracking-wider ${textColor}`}>
-            D-tox
+          <Link href="/" className="relative block h-12 w-24">
+            <Image
+              src={siteLogo}
+              alt="D-tox"
+              fill
+              priority
+              className="object-contain"
+              sizes="96px"
+            />
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <div
@@ -97,7 +110,7 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
                     <div className={`min-w-56 ${dropdownBg} py-2 shadow-lg`}>
                       <Link
                         href={link.href}
-                        className={`block border-b border-[#761218]/10 px-5 py-2.5 text-xs font-sans uppercase tracking-[0.2em] ${dropdownText} ${dropdownHover} transition-colors`}
+                        className={`block border-b border-[#704919]/10 px-5 py-2.5 text-xs font-sans uppercase tracking-[0.2em] ${dropdownText} ${dropdownHover} transition-colors`}
                       >
                         Voir {link.label}
                       </Link>
@@ -117,7 +130,6 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
             ))}
           </div>
 
-          {/* Mobile Toggle */}
           <button
             className={`lg:hidden ${textColor}`}
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -128,9 +140,8 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {mobileOpen && (
-        <div className={`lg:hidden ${bgColor} border-t border-[#761218]/20`}>
+        <div className={`lg:hidden ${bgColor} border-t border-[#704919]/20`}>
           <div className="px-6 py-4 flex flex-col gap-2">
             {navLinks.map((link) => (
               <div key={link.label}>

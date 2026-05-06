@@ -4,59 +4,72 @@ import { ArrowLeft } from "lucide-react"
 import Footer from "@/components/footer"
 import Navigation from "@/components/navigation"
 import BlogCard from "@/components/blog/blog-card"
-import { blogSectionMeta, getBlogPosts, type BlogSection } from "@/lib/blog"
+import EditorialCategoriesGrid from "@/components/editorial-categories-grid"
+import { blogPrimarySections, blogSectionMeta, getBlogPosts, type BlogSection } from "@/lib/blog"
 
 export default function BlogListPage({ section = "all" }: { section?: BlogSection | "all" }) {
   const posts = getBlogPosts(section)
   const [featured, ...rest] = posts
   const activeMeta = blogSectionMeta[section]
+  const filterKeys = section === "supports" ? ["all", ...blogPrimarySections, "supports"] : ["all", ...blogPrimarySections]
 
   return (
-    <main className="min-h-screen bg-[#F9D9B9]">
+    <main className="min-h-screen bg-[var(--brand-cream)]">
       <Navigation variant="light" />
 
-      <section className="px-6 pb-12 pt-32 lg:px-8">
+      <section className="px-6 pb-10 pt-32 lg:px-8">
         <div className="mx-auto max-w-7xl">
           {section !== "all" && (
             <Link
               href="/blog"
-              className="mb-8 inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.22em] text-[#761218]"
+              className="mb-8 inline-flex items-center gap-2 font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-[var(--brand-rock)]"
             >
               <ArrowLeft className="h-3.5 w-3.5" />
-              Retour au blog
+              Retour au journal
             </Link>
           )}
 
-          <div className="flex flex-col gap-4 text-center">
-            <p className="font-sans text-xs font-medium uppercase tracking-[0.32em] text-[#761218]">Archive DTOX4Life</p>
-            <h1 className="font-serif text-5xl font-bold text-[#1A1A1A] text-balance md:text-6xl lg:text-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mb-4 font-sans text-xs font-medium uppercase tracking-[0.3em] text-[var(--brand-rock)]">
+              Editorial
+            </p>
+            <h1 className="font-serif text-5xl font-bold text-[var(--brand-ink)] text-balance md:text-6xl lg:text-7xl">
               {activeMeta.title}
             </h1>
-            <p className="mx-auto max-w-3xl font-sans text-lg font-light leading-relaxed text-[#1A1A1A]/62">
-              {activeMeta.description}
-            </p>
+            {activeMeta.description ? (
+              <p className="mt-4 font-sans text-lg leading-relaxed text-[rgba(36,28,20,0.66)]">
+                {activeMeta.description}
+              </p>
+            ) : null}
           </div>
         </div>
       </section>
 
-      <section className="px-6 pb-10 lg:px-8">
+      {section === "all" && (
+        <section className="px-6 pb-8 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <EditorialCategoriesGrid />
+          </div>
+        </section>
+      )}
+
+      <section className="px-6 pb-10 pt-2 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3">
-          {(Object.keys(blogSectionMeta) as Array<keyof typeof blogSectionMeta>).map((key) => {
-            const sectionKey = key === "all" ? "all" : key
-            const count = getBlogPosts(sectionKey).length
+          {filterKeys.map((key) => {
+            const count = getBlogPosts(key as BlogSection | "all").length
             const isActive = key === section
 
             return (
               <Link
                 key={key}
-                href={blogSectionMeta[key].href}
-                className={`rounded-full px-5 py-3 font-sans text-xs uppercase tracking-[0.22em] transition-colors ${
+                href={blogSectionMeta[key as keyof typeof blogSectionMeta].href}
+                className={`rounded-md px-4 py-3 font-sans text-[11px] font-medium uppercase tracking-[0.2em] transition-colors ${
                   isActive
-                    ? "bg-[#761218] text-white"
-                    : "border border-[#1A1A1A]/12 text-[#1A1A1A] hover:border-[#761218] hover:text-[#761218]"
+                    ? "bg-[var(--brand-rock)] text-white"
+                    : "border border-[rgba(112,73,25,0.12)] bg-[var(--brand-panel)] text-[var(--brand-ink)] hover:border-[rgba(112,73,25,0.3)] hover:text-[var(--brand-rock)]"
                 }`}
               >
-                {blogSectionMeta[key].label} ({count})
+                {blogSectionMeta[key as keyof typeof blogSectionMeta].label} ({count})
               </Link>
             )
           })}
@@ -69,7 +82,7 @@ export default function BlogListPage({ section = "all" }: { section?: BlogSectio
             <div className="space-y-8">
               <BlogCard post={featured} featured />
               {rest.length > 0 && (
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
                   {rest.map((post) => (
                     <BlogCard key={post.slug} post={post} />
                   ))}
@@ -77,11 +90,8 @@ export default function BlogListPage({ section = "all" }: { section?: BlogSectio
               )}
             </div>
           ) : (
-            <div className="rounded-[2rem] border border-[#1A1A1A]/10 bg-white/70 px-8 py-16 text-center">
-              <h2 className="font-serif text-3xl font-semibold text-[#1A1A1A]">Aucun billet dans cette rubrique</h2>
-              <p className="mx-auto mt-4 max-w-2xl font-sans text-base font-light leading-relaxed text-[#1A1A1A]/62">
-                Cette section de l’archive DTOX4Life ne contenait pas encore de contenu exploitable.
-              </p>
+            <div className="rounded-[1.3rem] border border-[var(--brand-line)] bg-[rgba(255,250,243,0.76)] px-8 py-16 text-center">
+              <h2 className="font-serif text-3xl font-semibold text-[var(--brand-ink)]">Aucun billet dans cette rubrique</h2>
             </div>
           )}
         </div>

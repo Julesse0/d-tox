@@ -6,13 +6,15 @@ import { siteImages } from "@/lib/site-content"
 
 export default function ChateauPage() {
   return (
-    <main className="bg-[#F9D9B9] min-h-screen">
+    <main className="min-h-screen bg-[var(--brand-cream)]">
       <Navigation variant="light" />
       <EditorialProductShowcase
         eyebrow="Edition Premium"
         title="Chateau de la Crau"
-        intro="Une lecture plus couture et plus ceremonielle, avec une mise en page qui presente la bouteille comme une piece d'exception."
-        story="Ici la page fonctionne comme un lookbook: beaucoup d'air, une grande image detouree et une narration plus lente pour installer le cote premium du produit."
+        intro=""
+        story=""
+        presentationLabel="Infos Produit"
+        imageFooterLabel=""
         variants={[
           {
             id: "chateau-main",
@@ -22,19 +24,25 @@ export default function ChateauPage() {
             imageAlt: "Bouteille Chateau de la Crau",
             tag: "Cuvee Premium",
             description:
-              "La silhouette sombre et la coiffe doree donnent a la bouteille une presence plus habillee, presque ceremonielle.",
-            styleNote:
-              "Un visuel plus mode, plus editorial, pense comme une piece de collection sur fond clair.",
-            tastingNote:
-              "Une cuvee plus solennelle et gastronomique, a raconter comme une experience a part entiere.",
+              "La meme recette & process que le D-TOX classique mais avec une fermentation plus poussee et une presentation encore plus singuliere.",
+            styleNote: "",
+            tastingNote: "",
+            detailItems: [
+              "La meme recette & process que le D-TOX classique mais :",
+              "Fermentation plus poussee (+30%)",
+              "Donc logiquement plus de bienfaits que le D-TOX",
+              "Filtration totale des levures",
+              "Lui donnant un aspect clair",
+              "Et ultra stable a la conservation en ambiant, DLUO : J + 18 mois !",
+              "Injection de fines bulles",
+              "Ingredients 100% bio, Demeter pour les thes",
+              "Taux d'alcool moyen 1.8% vol - a consommer avec moderation",
+              "Un packaging sublime et inedit, a la hauteur du produit",
+            ],
           },
         ]}
-        specs={[
-          { label: "Collection", value: "Chateau" },
-          { label: "Style", value: "Editorial Luxe" },
-          { label: "Moment", value: "Degustation" },
-        ]}
-        primaryCta={{ href: "/contact", label: "Nous Contacter" }}
+        specs={[]}
+        primaryCta={{ href: "/contact#formulaire", label: "Nous Contacter" }}
         secondaryCta={{ href: "/produits", label: "Retour Produits" }}
       />
 

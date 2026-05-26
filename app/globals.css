@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #f6f1e8;
+  --background: #fff9eb;
   --foreground: #1a1a1a;
   --card: #ffffff;
   --card-foreground: #1a1a1a;
@@ -13,45 +13,46 @@
   --popover-foreground: #1a1a1a;
   --primary: #be2c34;
   --primary-foreground: #ffffff;
-  --secondary: #f6f1e8;
+  --secondary: #ffecbc;
   --secondary-foreground: #1a1a1a;
-  --muted: #ede3d4;
-  --muted-foreground: #5a4a3a;
-  --accent: #b7a680;
+  --muted: #fff0c9;
+  --muted-foreground: #425466;
+  --accent: #ffecbc;
   --accent-foreground: #1a1a1a;
-  --destructive: #f6bf5a;
+  --destructive: #be2c34;
   --destructive-foreground: #1a1a1a;
-  --border: #d9ccb7;
-  --input: #d9ccb7;
+  --border: #111827;
+  --input: #111827;
   --ring: #be2c34;
-  --chart-1: #f6bf5a;
-  --chart-2: #b7a680;
+  --chart-1: #ffecbc;
+  --chart-2: #be2c34;
   --chart-3: #1a1a1a;
-  --chart-4: #9b8455;
-  --chart-5: #d9ccb7;
+  --chart-4: #fff9eb;
+  --chart-5: #ffffff;
   --radius: 0.25rem;
   --sidebar: #1a1a1a;
-  --sidebar-foreground: #f6f1e8;
+  --sidebar-foreground: #fff9eb;
   --sidebar-primary: #be2c34;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #2a2a2a;
-  --sidebar-accent-foreground: #f6f1e8;
+  --sidebar-accent-foreground: #fff9eb;
   --sidebar-border: #333333;
   --sidebar-ring: #be2c34;
 
-  --brand-ink: #1a1a1a;
-  --brand-rock: #f6bf5a;
-  --brand-earth: #d99a35;
-  --brand-champagne: #b7a680;
-  --brand-cream: #f6f1e8;
+  --brand-ink: #000000;
+  --brand-rock: #be2c34;
+  --brand-red: #be2c34;
+  --brand-earth: #be2c34;
+  --brand-champagne: #fff9eb;
+  --brand-cream: #fff9eb;
   --brand-panel: #ffffff;
-  --brand-wash: #efe6d8;
-  --brand-line: #d9ccb7;
+  --brand-wash: #ffecbc;
+  --brand-line: rgba(0, 0, 0, 0.14);
 }
 
 @theme inline {
-  --font-sans: var(--font-montserrat), 'Montserrat', sans-serif;
-  --font-serif: var(--font-montserrat), 'Montserrat', sans-serif;
+  --font-sans: var(--font-montserrat), 'Google Sans', 'Montserrat', sans-serif;
+  --font-serif: var(--font-montserrat), 'Google Sans', 'Montserrat', sans-serif;
   --font-display: var(--font-league-spartan), 'League Spartan', sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
@@ -112,18 +113,18 @@ html {
 }
 
 .leaflet-container {
-  background: #f3ebde;
+  background: #fff9eb;
   font-family: var(--font-montserrat), 'Montserrat', sans-serif;
 }
 
 .leaflet-control-attribution {
-  background: rgba(246, 241, 232, 0.92) !important;
-  color: rgba(26, 26, 26, 0.72) !important;
+  background: rgba(255, 249, 235, 0.92) !important;
+  color: rgba(0, 0, 0, 0.72) !important;
   font-size: 11px !important;
 }
 
 .leaflet-control-attribution a {
-  color: #f6bf5a !important;
+  color: #be2c34 !important;
 }
 
 .leaflet-control-zoom {
@@ -135,8 +136,8 @@ html {
 
 .leaflet-control-zoom a {
   background: rgba(26, 26, 26, 0.94) !important;
-  color: #f6f1e8 !important;
-  border-bottom: 1px solid rgba(246, 241, 232, 0.12) !important;
+  color: #fff9eb !important;
+  border-bottom: 1px solid rgba(255, 249, 235, 0.12) !important;
 }
 
 .leaflet-control-zoom a:last-child {

@@ -8,7 +8,7 @@ import medal2023Image from "@/assets/medal-2023-2.png"
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-[#F6F1E8]">
+    <section className="relative flex min-h-screen items-center overflow-hidden bg-[#FFF9EB]">
       <div className="absolute inset-0">
         <Image
           src={fondHomeImage}
@@ -17,28 +17,25 @@ export default function HeroSection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(246,241,232,0.72)_0%,rgba(246,241,232,0.34)_42%,rgba(246,241,232,0)_72%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,249,235,0.74)_0%,rgba(255,249,235,0.36)_42%,rgba(255,249,235,0)_72%)]" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 pt-32 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,0.75fr)]">
           <div className="flex max-w-3xl flex-col items-start gap-8 text-left">
             <div className="flex flex-col gap-4">
-              <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#B7A680] font-medium">
+              <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#be2c34] font-semibold">
                 Kombucha Artisanal
               </p>
-              <h1 className="font-[var(--font-league-spartan)] text-6xl font-normal leading-none tracking-tight text-[#1A1A1A] text-balance md:text-7xl lg:text-8xl">
-                DT<span className="text-[#be2c34]">Ö</span>X
+              <h1 className="font-[var(--font-league-spartan)] text-6xl font-normal leading-none tracking-tight text-[#000000] text-balance md:text-7xl lg:text-8xl">
+                DT<span className="text-[#be2c34]">&Ouml;</span>X
               </h1>
-              <p className="max-w-2xl font-sans font-light text-lg md:text-xl text-[#1A1A1A]/68 leading-relaxed">
-                {"Kombucha vivant, brasse avec soin pour une pause plus chaleureuse, plus accessible et pleine de caractere."}
-              </p>
             </div>
 
             <div className="flex">
               <Link
                 href="/produits"
-                className="inline-flex items-center justify-center gap-2 bg-[#be2c34] px-8 py-4 font-sans text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-[#9f2229]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#be2c34] px-8 py-4 font-sans text-sm font-semibold text-white transition-colors hover:bg-[#9f2229]"
               >
                 Voir Nos Produits
                 <ArrowRight className="h-4 w-4" />
@@ -51,7 +48,7 @@ export default function HeroSection() {
               <div className="relative h-32 w-32 sm:h-40 sm:w-40 lg:h-52 lg:w-52">
                 <Image
                   src={medal2023Image}
-                  alt="Medaille D-tox 2023"
+                  alt="Médaille D-tox 2023"
                   fill
                   className="object-contain drop-shadow-[0_18px_34px_rgba(36,28,20,0.18)]"
                   priority
@@ -60,7 +57,7 @@ export default function HeroSection() {
               <div className="relative h-32 w-32 sm:h-40 sm:w-40 lg:h-52 lg:w-52">
                 <Image
                   src={reviewMedalImage}
-                  alt="Medaille D-tox review"
+                  alt="Médaille D-tox review"
                   fill
                   className="object-contain drop-shadow-[0_18px_34px_rgba(36,28,20,0.18)]"
                   priority
@@ -73,7 +70,7 @@ export default function HeroSection() {
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
         <span className="font-sans text-[10px] uppercase tracking-widest text-[#1A1A1A]/38">Defiler</span>
-        <div className="w-px h-8 bg-[#f6bf5a]/24" />
+        <div className="w-px h-8 bg-[#be2c34]/24" />
       </div>
     </section>
   )

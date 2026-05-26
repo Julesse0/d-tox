@@ -6,17 +6,17 @@ const steps = [
   {
     number: "01",
     title: "Infusion",
-    description: "Nous infusons des ingredients naturels pour construire la base aromatique.",
+    description: "Nous infusons des ingrédients naturels pour construire la base aromatique.",
   },
   {
     number: "02",
     title: "Fermentation",
-    description: "Le the sucre fermente avec notre culture vivante pour creer un kombucha equilibre.",
+    description: "Le thé sucré fermente avec notre culture vivante pour créer un kombucha équilibré.",
   },
   {
     number: "03",
     title: "Mise en Bouteille",
-    description: "Chaque lot est controle avant embouteillage pour garantir fraicheur et constance.",
+    description: "Chaque lot est contrôlé avant embouteillage pour garantir fraîcheur et constance.",
   },
 ]
 
@@ -36,18 +36,18 @@ export default function RoutineSection() {
               />
             </div>
             {/* Decorative accent */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 border-t border-l border-[#761218]/40" />
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b border-r border-[#761218]/40" />
+            <div className="absolute -top-4 -left-4 w-24 h-24 border-t border-l border-[#be2c34]/40" />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b border-r border-[#be2c34]/40" />
           </div>
 
           {/* Steps */}
           <div className="flex flex-col gap-6">
             <div className="mb-8">
-              <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#761218] font-medium mb-4">
+              <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#be2c34] font-medium mb-4">
                 Notre Savoir-Faire
               </p>
               <h2 className="font-serif text-4xl md:text-5xl font-extrabold text-[#F9D9B9] text-balance">
-                Les Etapes D-tox
+                Les Étapes D-tox
               </h2>
             </div>
 
@@ -55,7 +55,7 @@ export default function RoutineSection() {
               {steps.map((step) => (
                 <div key={step.number} className="flex items-start gap-6 group">
                   <div className="flex-shrink-0">
-                    <span className="font-serif text-4xl font-extrabold text-[#761218]/60 group-hover:text-[#761218] transition-colors">
+                    <span className="font-serif text-4xl font-extrabold text-[#be2c34]/60 group-hover:text-[#be2c34] transition-colors">
                       {step.number}
                     </span>
                   </div>

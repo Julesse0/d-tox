@@ -31,7 +31,7 @@ export default function BlogListPage({ section = "all" }: { section?: BlogSectio
 
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 font-sans text-xs font-medium uppercase tracking-[0.3em] text-[var(--brand-rock)]">
-              Editorial
+              Éditorial
             </p>
             <h1 className="font-serif text-5xl font-extrabold text-[var(--brand-ink)] text-balance md:text-6xl lg:text-7xl">
               {activeMeta.title}
@@ -66,7 +66,7 @@ export default function BlogListPage({ section = "all" }: { section?: BlogSectio
                 className={`rounded-md px-4 py-3 font-sans text-[11px] font-medium uppercase tracking-[0.2em] transition-colors ${
                   isActive
                     ? "bg-[var(--brand-rock)] text-[var(--brand-ink)]"
-                    : "border border-[rgba(246,191,90,0.12)] bg-[var(--brand-panel)] text-[var(--brand-ink)] hover:border-[rgba(246,191,90,0.3)] hover:text-[var(--brand-rock)]"
+                    : "border border-[rgba(190,44,52,0.12)] bg-[var(--brand-panel)] text-[var(--brand-ink)] hover:border-[rgba(190,44,52,0.3)] hover:text-[var(--brand-rock)]"
                 }`}
               >
                 {blogSectionMeta[key as keyof typeof blogSectionMeta].label} ({count})

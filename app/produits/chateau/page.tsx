@@ -9,8 +9,8 @@ export default function ChateauPage() {
     <main className="min-h-screen bg-[var(--brand-cream)]">
       <Navigation variant="light" />
       <EditorialProductShowcase
-        eyebrow="Edition Premium"
-        title="Chateau de la Crau"
+        eyebrow="Édition Premium"
+        title="Château de la Crau"
         intro=""
         story=""
         presentationLabel="Infos Produit"
@@ -18,24 +18,24 @@ export default function ChateauPage() {
         variants={[
           {
             id: "chateau-main",
-            name: "Chateau de la Crau",
-            buttonLabel: "Edition Signature",
+            name: "Château de la Crau",
+            buttonLabel: "Édition Signature",
             image: siteImages.chateauBottle,
-            imageAlt: "Bouteille Chateau de la Crau",
-            tag: "Cuvee Premium",
+            imageAlt: "Bouteille Château de la Crau",
+            tag: "Cuvée Premium",
             description:
-              "Une cuvee premium issue du savoir-faire D-TOX, travaillee avec une fermentation plus longue, une texture plus fine et une presentation a la hauteur de son caractere.",
+              "Une cuvée premium issue du savoir-faire D-TOX, travaillée avec une fermentation plus longue, une texture plus fine et une présentation à la hauteur de son caractère.",
             styleNote: "",
             tastingNote: "",
             detailItems: [
-              "Base de recette et process fideles au D-TOX classique, avec une fermentation prolongee de 30%.",
-              "Profil plus mature, plus stable et naturellement riche en benefices de fermentation.",
-              "Filtration totale des levures pour obtenir une robe claire et elegante.",
-              "Stabilite optimale a temperature ambiante avec une DLUO jusqu'a J + 18 mois.",
-              "Injection de fines bulles pour une degustation plus delicate.",
-              "Ingredients 100% bio, avec des thes certifies Demeter.",
-              "Taux d'alcool moyen : 1,8% vol. A consommer avec moderation.",
-              "Packaging premium, singulier et soigne, pense pour accompagner le niveau du produit.",
+              "Base de recette et process fidèles au D-TOX classique, avec une fermentation prolongée de 30%.",
+              "Profil plus mature, plus stable et naturellement riche en bénéfices de fermentation.",
+              "Filtration totale des levures pour obtenir une robe claire et élégante.",
+              "Stabilité optimale à température ambiante avec une DLUO jusqu'à J + 18 mois.",
+              "Injection de fines bulles pour une dégustation plus délicate.",
+              "Ingrédients 100% bio, avec des thés certifiés Demeter.",
+              "Taux d'alcool moyen : 1,8% vol. À consommer avec modération.",
+              "Packaging premium, singulier et soigné, pensé pour accompagner le niveau du produit.",
             ],
           },
         ]}

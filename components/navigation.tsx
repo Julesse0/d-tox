@@ -19,7 +19,7 @@ const navLinks: NavLink[] = [
     href: "/produits",
     children: [
       { label: "D-tox Original 1L", href: "/produits/d-tox" },
-      { label: "Chateau de la Crau", href: "/produits/chateau" },
+      { label: "Château de la Crau", href: "/produits/chateau" },
     ],
   },
   {
@@ -32,7 +32,7 @@ const navLinks: NavLink[] = [
     ],
   },
   {
-    label: "A Propos",
+    label: "À Propos",
     href: "/a-propos",
     children: [
       { label: "Notre Histoire", href: "/a-propos#histoire" },
@@ -51,12 +51,12 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
   const isDark = variant === "dark"
-  const textColor = isDark ? "text-[#F6F1E8]" : "text-[#1A1A1A]"
-  const bgColor = isDark ? "bg-[#1A1A1A]" : "bg-[#F6F1E8]"
-  const hoverColor = isDark ? "hover:text-white" : "hover:text-[#f6bf5a]"
-  const dropdownBg = isDark ? "bg-[#2A241E]" : "bg-white"
-  const dropdownText = isDark ? "text-[#F6F1E8]" : "text-[#1A1A1A]"
-  const dropdownHover = isDark ? "hover:bg-[#342d26]" : "hover:bg-[#F3E9DA]"
+  const textColor = isDark ? "text-[#FFF9EB]" : "text-[#1A1A1A]"
+  const bgColor = isDark ? "bg-[#1A1A1A]" : "bg-[#FFF9EB]"
+  const hoverColor = isDark ? "hover:text-[#FFECBC]" : "hover:text-[#be2c34]"
+  const dropdownBg = isDark ? "bg-[#1A1A1A]" : "bg-white"
+  const dropdownText = isDark ? "text-[#FFF9EB]" : "text-[#1A1A1A]"
+  const dropdownHover = isDark ? "hover:bg-[#be2c34]" : "hover:bg-[#FFECBC]"
 
   const closeDropdown = (event: FocusEvent<HTMLDivElement>) => {
     if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
@@ -110,7 +110,7 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
                     <div className={`min-w-56 ${dropdownBg} py-2 shadow-lg`}>
                       <Link
                         href={link.href}
-                        className={`block border-b border-[#f6bf5a]/10 px-5 py-2.5 text-xs font-sans uppercase tracking-[0.2em] ${dropdownText} ${dropdownHover} transition-colors`}
+                        className={`block border-b border-black/10 px-5 py-2.5 text-xs font-sans uppercase tracking-[0.2em] ${dropdownText} ${dropdownHover} transition-colors`}
                       >
                         Voir {link.label}
                       </Link>
@@ -141,7 +141,7 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
       </div>
 
       {mobileOpen && (
-        <div className={`lg:hidden ${bgColor} border-t border-[#f6bf5a]/20`}>
+        <div className={`lg:hidden ${bgColor} border-t border-black/10`}>
           <div className="px-6 py-4 flex flex-col gap-2">
             {navLinks.map((link) => (
               <div key={link.label}>

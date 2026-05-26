@@ -17,6 +17,29 @@ function dtox_image(string $name): string
     return dtox_asset('images/' . ltrim($name, '/'));
 }
 
+function dtox_media_url(string $path, string $fallback = ''): string
+{
+    $value = trim($path);
+    if ($value === '') {
+        $value = $fallback;
+    }
+
+    if ($value === '') {
+        return '';
+    }
+
+    if (strpos($value, 'http://') === 0 || strpos($value, 'https://') === 0) {
+        return $value;
+    }
+
+    $value = ltrim($value, '/');
+    if (strpos($value, 'legacy-blog/') === 0 || strpos($value, 'legacy-wp-uploads/') === 0) {
+        return dtox_asset($value);
+    }
+
+    return dtox_image($value);
+}
+
 function dtox_theme_option(string $key, string $fallback = ''): string
 {
     $value = get_theme_mod('dtox_' . $key, $fallback);

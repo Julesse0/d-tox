@@ -21,11 +21,13 @@ add_action('after_setup_theme', function (): void {
 });
 
 add_action('wp_enqueue_scripts', function (): void {
+    wp_enqueue_style('dtox-vitrine-fonts', 'https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;800&family=Montserrat:wght@400;600;700;800&display=swap', [], null);
     wp_enqueue_style('dtox-vitrine-theme', dtox_asset('css/theme.css'), [], DTOX_THEME_VERSION);
     wp_enqueue_script('dtox-vitrine-theme', dtox_asset('js/theme.js'), [], DTOX_THEME_VERSION, true);
 });
 
-add_action('init', function (): void {
+function dtox_register_content_types(): void
+{
     register_post_type('dtox_product', [
         'labels' => [
             'name' => 'Produits D-tox',
@@ -80,13 +82,16 @@ add_action('init', function (): void {
         'show_in_rest' => true,
     ]);
 
-    foreach (['dtox_image', 'dtox_gallery_image', 'dtox_tag', 'dtox_url', 'dtox_logo', 'dtox_section', 'dtox_legacy_image'] as $key) {
-        register_post_meta('', $key, [
-            'type' => 'string',
-            'single' => true,
-            'show_in_rest' => true,
-            'sanitize_callback' => 'sanitize_text_field',
-        ]);
+    $string_meta = ['dtox_image', 'dtox_gallery_image', 'dtox_tag', 'dtox_url', 'dtox_logo', 'dtox_section', 'dtox_legacy_image'];
+    foreach (['dtox_product', 'dtox_partner', 'dtox_blog'] as $post_type) {
+        foreach ($string_meta as $key) {
+            register_post_meta($post_type, $key, [
+                'type' => 'string',
+                'single' => true,
+                'show_in_rest' => true,
+                'sanitize_callback' => 'sanitize_text_field',
+            ]);
+        }
     }
 
     register_post_meta('dtox_product', 'dtox_items', [
@@ -95,7 +100,9 @@ add_action('init', function (): void {
         'show_in_rest' => true,
         'sanitize_callback' => 'wp_kses_post',
     ]);
-});
+}
+
+add_action('init', 'dtox_register_content_types');
 
 add_action('add_meta_boxes', function (): void {
     add_meta_box('dtox_details', 'Détails D-tox', 'dtox_render_details_metabox', ['dtox_product', 'dtox_partner', 'dtox_blog'], 'normal', 'default');

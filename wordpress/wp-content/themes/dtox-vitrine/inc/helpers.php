@@ -116,3 +116,25 @@ function dtox_get_blog_posts(?string $section = null, int $limit = -1): array
 
     return get_posts($args);
 }
+
+function dtox_blog_card_image(WP_Post $post): string
+{
+    $preview_map = [
+        'recette-cocktail-royaltox' => 'kir-royal.png',
+        'recette-de-cocktail-sangritox' => 'sangria.png',
+        'recette-de-cocktail-sex-on-the-tox' => 'sex-on-the-beach.png',
+        'recette-de-cocktail-mojitox' => 'mojito.png',
+        'recette-cocktail-pina-colatox' => 'pina-colada.png',
+    ];
+
+    if (isset($preview_map[$post->post_name])) {
+        return dtox_media_url($preview_map[$post->post_name]);
+    }
+
+    return dtox_media_url(dtox_meta($post->ID, 'dtox_legacy_image', 'hero.jpg'));
+}
+
+function dtox_blog_hero_image(WP_Post $post): string
+{
+    return dtox_media_url(dtox_meta($post->ID, 'dtox_legacy_image', 'hero.jpg'));
+}

@@ -100,6 +100,8 @@ function dtox_register_content_types(): void
         'show_in_rest' => true,
         'sanitize_callback' => 'wp_kses_post',
     ]);
+
+    add_rewrite_rule('^blog/(articles|recettes|reseaux|supports)/?$', 'index.php?dtox_blog_section=$matches[1]', 'top');
 }
 
 add_action('init', 'dtox_register_content_types');

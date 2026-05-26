@@ -1,0 +1,28 @@
+services:
+  wordpress:
+    image: wordpress:6.5-php8.2-apache
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: dtox
+      WORDPRESS_DB_PASSWORD: dtox
+      WORDPRESS_DB_NAME: dtox
+      WORDPRESS_DEBUG: "1"
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: dtox
+      MYSQL_USER: dtox
+      MYSQL_PASSWORD: dtox
+      MYSQL_ROOT_PASSWORD: dtoxroot
+    volumes:
+      - dtox-db:/var/lib/mysql
+
+volumes:
+  dtox-db:

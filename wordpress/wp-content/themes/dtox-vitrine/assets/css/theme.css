@@ -555,6 +555,257 @@ p {
   object-fit: contain;
 }
 
+.page-hero--compact {
+  padding-bottom: 4rem;
+}
+
+.page-hero p:not(.eyebrow) {
+  max-width: 48rem;
+  margin-inline: auto;
+  color: rgba(26, 26, 26, 0.66);
+  font-size: 1.08rem;
+}
+
+.products-archive {
+  padding-top: 2rem;
+}
+
+.product-grid--archive .product-card__image {
+  aspect-ratio: 1 / 1;
+}
+
+.product-card--large {
+  gap: 1.1rem;
+}
+
+.product-card__tag {
+  color: var(--dtox-red);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.product-card em {
+  color: var(--dtox-red);
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.product-detail {
+  padding: 9rem 0 6rem;
+}
+
+.product-detail__grid {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.9fr) minmax(0, 1fr);
+  gap: clamp(2rem, 7vw, 6rem);
+  align-items: center;
+}
+
+.product-detail__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: clamp(28rem, 58vw, 42rem);
+  background: linear-gradient(180deg, #fffaf0, #f2dfbd);
+}
+
+.product-detail__media > img:first-child {
+  width: min(64%, 24rem);
+  height: clamp(24rem, 52vw, 36rem);
+  object-fit: contain;
+}
+
+.product-detail__medal {
+  position: absolute;
+  right: clamp(1rem, 4vw, 3rem);
+  bottom: clamp(1rem, 4vw, 3rem);
+  width: clamp(5rem, 9vw, 8rem);
+  height: clamp(5rem, 9vw, 8rem);
+  object-fit: contain;
+}
+
+.product-detail__intro {
+  color: rgba(26, 26, 26, 0.72);
+  font-size: 1.05rem;
+}
+
+.check-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: var(--dtox-red);
+}
+
+.product-note__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 24rem);
+  gap: 3rem;
+  align-items: center;
+}
+
+.product-note img {
+  width: 100%;
+  height: 24rem;
+  object-fit: contain;
+}
+
+.split-story__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(18rem, 0.78fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.split-story__grid--reverse {
+  grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 0.92fr);
+}
+
+.split-story__content p:not(.eyebrow) {
+  color: rgba(26, 26, 26, 0.68);
+  font-size: 1.02rem;
+}
+
+.split-story__image {
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: var(--dtox-white);
+  padding: 0.75rem;
+}
+
+.split-story__image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.split-story__image--small {
+  max-width: 34rem;
+}
+
+.split-story__image--small img {
+  aspect-ratio: 1 / 1.05;
+}
+
+.timeline-section {
+  background: var(--dtox-white);
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(9rem, 1fr));
+  gap: 1.25rem;
+  overflow-x: auto;
+  padding: 2rem 0 1rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 17.625rem;
+  height: 1px;
+  background: rgba(190, 44, 52, 0.25);
+}
+
+.timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-rows: 14rem 3.25rem 14rem;
+  min-width: 10rem;
+}
+
+.timeline__item:nth-child(even) {
+  padding-top: 0;
+}
+
+.timeline__year {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  width: 6rem;
+  height: 3.25rem;
+  border-radius: 999px;
+  background: var(--dtox-red);
+  color: var(--dtox-white);
+  font-weight: 800;
+  grid-row: 2;
+  box-shadow: 0 14px 28px rgba(190, 44, 52, 0.22);
+}
+
+.timeline__card {
+  position: relative;
+  grid-row: 1;
+  align-self: end;
+  min-height: 14rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: var(--dtox-cream);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  box-shadow: var(--dtox-shadow);
+}
+
+.timeline__item:nth-child(even) .timeline__card {
+  grid-row: 3;
+  align-self: start;
+}
+
+.timeline__card::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 1px;
+  height: 2rem;
+  background: rgba(190, 44, 52, 0.25);
+}
+
+.timeline__item:nth-child(even) .timeline__card::before {
+  top: auto;
+  bottom: 100%;
+}
+
+.timeline__card h3 {
+  color: var(--dtox-red);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.timeline__card p {
+  color: rgba(26, 26, 26, 0.68);
+  font-size: 0.94rem;
+}
+
 @media (max-width: 980px) {
   .container,
   .site-header__inner {
@@ -618,6 +869,45 @@ p {
   .partners-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .product-detail__grid,
+  .product-note__grid,
+  .split-story__grid,
+  .split-story__grid--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
+    overflow: visible;
+    padding-top: 1rem;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline__item,
+  .timeline__item:nth-child(even) {
+    grid-template-columns: 6rem 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding-top: 0;
+  }
+
+  .timeline__year,
+  .timeline__card,
+  .timeline__item:nth-child(even) .timeline__card {
+    grid-row: auto;
+  }
+
+  .timeline__card::before,
+  .timeline__item:nth-child(even) .timeline__card::before {
+    left: -1rem;
+    top: 1.6rem;
+    width: 1rem;
+    height: 1px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -666,5 +956,27 @@ p {
 
   .partner-card {
     height: 6rem;
+  }
+
+  .product-detail {
+    padding-top: 7rem;
+  }
+
+  .product-detail__media {
+    min-height: 28rem;
+  }
+
+  .timeline__item,
+  .timeline__item:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline__year {
+    justify-self: start;
+  }
+
+  .timeline__card::before,
+  .timeline__item:nth-child(even) .timeline__card::before {
+    display: none;
   }
 }

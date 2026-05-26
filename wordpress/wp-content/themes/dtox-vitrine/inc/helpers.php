@@ -7,6 +7,13 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+if (!function_exists('wp_body_open')) {
+    function wp_body_open(): void
+    {
+        do_action('wp_body_open');
+    }
+}
+
 function dtox_asset(string $path): string
 {
     return DTOX_THEME_URI . '/assets/' . ltrim($path, '/');

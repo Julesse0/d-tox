@@ -8,3 +8,12 @@ node_modules/
 .next/
 .env*.local
 .DS_Store
+
+# Local WordPress runtime files
+.codex-temp/
+wordpress/*.zip
+wordpress/wp-content/index.php
+wordpress/wp-content/languages/
+wordpress/wp-content/plugins/
+wordpress/wp-content/themes/index.php
+wordpress/wp-content/themes/twentytwenty*/

@@ -91,8 +91,11 @@ $partner_defaults = dtox_default_partners();
                     <p><?php echo esc_html($section['text']); ?></p>
                     <?php if ($lead) : ?>
                         <div class="blog-section-card__lead">
-                            <strong><?php echo esc_html(get_the_title($lead)); ?></strong>
-                            <span><?php echo esc_html(wp_trim_words(get_the_excerpt($lead), 18)); ?></span>
+                            <img src="<?php echo esc_url(dtox_blog_card_image($lead)); ?>" alt="<?php echo esc_attr(get_the_title($lead)); ?>">
+                            <span>
+                                <strong><?php echo esc_html(get_the_title($lead)); ?></strong>
+                                <small><?php echo esc_html(wp_trim_words(get_the_excerpt($lead), 18)); ?></small>
+                            </span>
                         </div>
                     <?php endif; ?>
                     <a class="text-link" href="<?php echo esc_url(dtox_get_page_url('blog/' . $section['slug'])); ?>">Ouvrir la rubrique</a>

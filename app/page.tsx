@@ -16,8 +16,8 @@ export default function HomePage() {
       <EditorialSection />
       <HomeContactSection />
       <PartnersSection
-        sectionClassName="bg-[#f6bf5a]"
-        panelClassName="rounded-lg border border-[rgba(36,28,20,0.08)] bg-[rgba(255,250,243,0.92)] px-6 py-12 shadow-[0_18px_44px_rgba(36,28,20,0.08)] sm:px-8 lg:px-10"
+        sectionClassName="bg-[#FFECBC]"
+        panelClassName="rounded-lg border border-black/10 bg-white px-6 py-12 shadow-[0_18px_44px_rgba(0,0,0,0.06)] sm:px-8 lg:px-10"
       />
       <CTASection />
       <Footer />

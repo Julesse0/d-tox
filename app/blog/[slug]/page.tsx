@@ -76,7 +76,7 @@ export default async function BlogArticlePage({
                   className={`relative overflow-hidden ${
                     isTextFocusedSection
                       ? "min-h-[300px] sm:min-h-[340px] lg:min-h-[380px]"
-                      : "min-h-[460px] rounded-[1.35rem] border border-[var(--brand-line)] bg-[linear-gradient(180deg,#fffaf3_0%,#efe3d1_100%)]"
+                      : "min-h-[460px] rounded-[1.35rem] border border-[var(--brand-line)] bg-[linear-gradient(180deg,#FFF9EB_0%,#FFECBC_100%)]"
                   }`}
                 >
                   <Image
@@ -118,7 +118,7 @@ export default async function BlogArticlePage({
                       {post.sectionLabel}
                     </span>
                     {post.legacyCategory && (
-                      <span className="rounded-md border border-[rgba(246,191,90,0.12)] bg-[rgba(183,166,128,0.12)] px-3 py-2 font-sans text-[10px] uppercase tracking-[0.2em] text-[var(--brand-earth)]">
+                      <span className="rounded-md border border-[rgba(190,44,52,0.12)] bg-[rgba(255,236,188,0.12)] px-3 py-2 font-sans text-[10px] uppercase tracking-[0.2em] text-[var(--brand-earth)]">
                         {post.legacyCategory}
                       </span>
                     )}
@@ -146,10 +146,10 @@ export default async function BlogArticlePage({
                   ) : (
                     <div className="space-y-4">
                       <p className="font-sans text-base leading-relaxed text-[rgba(36,28,20,0.76)]">
-                        Cette recette venait du blog historique DTOX4Life et etait surtout presentee sous forme de visuel.
+                        Cette recette venait du blog historique DTÖX4Life et etait surtout presentee sous forme de visuel.
                       </p>
                       <p className="font-sans text-base leading-relaxed text-[rgba(36,28,20,0.76)]">
-                        L'affiche d'origine a ete reintegree ici pour conserver l'esprit du contenu dans une mise en page
+                        L'affiche d'origine a été réintégrée ici pour conserver l'esprit du contenu dans une mise en page
                         plus claire.
                       </p>
                     </div>

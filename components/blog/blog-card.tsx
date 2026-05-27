@@ -62,7 +62,7 @@ export default function BlogCard({ post, featured = false }: { post: BlogPost; f
 
       <div className="flex flex-1 flex-col gap-4">
         <div className="flex flex-wrap items-center gap-3">
-          <span className="rounded-md border border-[rgba(246,191,90,0.12)] bg-[rgba(183,166,128,0.14)] px-3 py-1.5 font-sans text-[10px] uppercase tracking-[0.2em] text-[var(--brand-rock)]">
+          <span className="rounded-md border border-[rgba(190,44,52,0.12)] bg-[rgba(255,236,188,0.14)] px-3 py-1.5 font-sans text-[10px] uppercase tracking-[0.2em] text-[var(--brand-rock)]">
             {post.sectionLabel}
           </span>
           <span className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.16em] text-[rgba(36,28,20,0.46)]">

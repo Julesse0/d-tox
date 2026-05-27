@@ -11,7 +11,7 @@ export default function DtoxPage() {
       <Navigation variant="light" />
       <EditorialProductShowcase
         eyebrow="Produit Signature"
-        title="D-tox Original"
+        title="DTÖX Original"
         intro=""
         story=""
         presentationLabel="Infos Produit"
@@ -19,50 +19,50 @@ export default function DtoxPage() {
         variants={[
           {
             id: "dtox-1l",
-            name: "D-tox Original 1L",
+            name: "DTÖX Original 1L",
             buttonLabel: "Version 1L",
             image: siteImages.dtoxBottle1L,
-            imageAlt: "Bouteille D-tox Original 1L",
+            imageAlt: "Bouteille DTÖX Original 1L",
             tag: "Format Hero",
             description:
-              "Un kombucha brut, vivant et non pasteurise, fermente 8 a 15 jours sur des souches selectionnees de A a Z, dans un esprit artisanal proche du fait maison.",
+              "Un kombucha brut, vivant et non pasteurisé, fermenté 8 à 15 jours sur des souches sélectionnées de A à Z, dans un esprit artisanal proche du fait maison.",
             awardImage: medal2023Image,
-            awardAlt: "Medaille D-tox 2023",
+            awardAlt: "Médaille DTÖX 2023",
             styleNote: "",
             tastingNote: "",
             detailItems: [
-              "Reconnu complement alimentaire pour accompagner une consommation bien-etre au quotidien.",
-              "Gout unique, rafraichissant et desalterant, sans approche medicamenteuse.",
-              "Ingredients 100% bio, sans aromatisation et sans pasteurisation.",
-              "Methodes de fabrication rigoureuses, suivies selon les principes HACCP.",
+              "Reconnu complément alimentaire pour accompagner une consommation bien-être au quotidien.",
+              "Goût unique, rafraîchissant et désaltérant, sans approche médicamenteuse.",
+              "Ingrédients 100% bio, sans aromatisation et sans pasteurisation.",
+              "Méthodes de fabrication rigoureuses, suivies selon les principes HACCP.",
               "Taux exceptionnel d'acide gluconique : 15 g/L.",
-              "Tres longue DDM : jusqu'a J + 18 mois.",
-              "Bouteille en r-PET 100% recycle et recyclable, choisie pour eviter les risques d'explosion.",
-              "Choix du PET pour un bilan CO2 plus leger.",
+              "Très longue DDM : jusqu'à J + 18 mois.",
+              "Bouteille en r-PET 100% recyclé et recyclable, choisie pour éviter les risques d'explosion.",
+              "Choix du PET pour un bilan CO2 plus léger.",
             ],
           },
           {
             id: "dtox-33cl",
-            name: "D-tox Original 33cl",
+            name: "DTÖX Original 33cl",
             buttonLabel: "Voir la version 33cl",
             image: siteImages.dtoxBottle33,
-            imageAlt: "Bouteille D-tox Original 33cl",
+            imageAlt: "Bouteille DTÖX Original 33cl",
             tag: "Petit Format",
             description:
-              "Le meme kombucha brut et vivant que le format 1L, dans une version plus nomade, fermente 8 a 15 jours selon le process D-TOX.",
+              "Le même kombucha brut et vivant que le format 1L, dans une version plus nomade, fermenté 8 à 15 jours selon le process DTÖX.",
             awardImage: medal2023Image,
-            awardAlt: "Medaille D-tox 2023",
+            awardAlt: "Médaille DTÖX 2023",
             styleNote: "",
             tastingNote: "",
             detailItems: [
-              "Reconnu complement alimentaire pour accompagner une consommation bien-etre au quotidien.",
-              "Gout unique, rafraichissant et desalterant, sans approche medicamenteuse.",
-              "Ingredients 100% bio, sans aromatisation et sans pasteurisation.",
-              "Methodes de fabrication rigoureuses, suivies selon les principes HACCP.",
+              "Reconnu complément alimentaire pour accompagner une consommation bien-être au quotidien.",
+              "Goût unique, rafraîchissant et désaltérant, sans approche médicamenteuse.",
+              "Ingrédients 100% bio, sans aromatisation et sans pasteurisation.",
+              "Méthodes de fabrication rigoureuses, suivies selon les principes HACCP.",
               "Taux exceptionnel d'acide gluconique : 15 g/L.",
-              "Tres longue DDM : jusqu'a J + 18 mois.",
-              "Bouteille en r-PET 100% recycle et recyclable, choisie pour eviter les risques d'explosion.",
-              "Choix du PET pour un bilan CO2 plus leger.",
+              "Très longue DDM : jusqu'à J + 18 mois.",
+              "Bouteille en r-PET 100% recyclé et recyclable, choisie pour éviter les risques d'explosion.",
+              "Choix du PET pour un bilan CO2 plus léger.",
             ],
           },
         ]}

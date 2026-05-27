@@ -41,14 +41,14 @@ export default function PartnersMap() {
     <div className="rounded-[1.9rem] border border-[#1A1A1A]/10 bg-[linear-gradient(165deg,rgba(255,255,255,0.92),rgba(245,225,199,0.78))] p-4 shadow-[0_18px_50px_rgba(0,0,0,0.07)] sm:p-5">
       <div className="mb-4 flex items-start justify-between gap-4">
         <div className="space-y-2">
-          <p className="font-sans text-[10px] font-medium uppercase tracking-[0.28em] text-[#761218]">Carte France</p>
-          <h2 className="font-serif text-2xl font-extrabold text-[#1A1A1A] md:text-3xl">Points de presence</h2>
+          <p className="font-sans text-[10px] font-medium uppercase tracking-[0.28em] text-[#be2c34]">Carte France</p>
+          <h2 className="font-serif text-2xl font-extrabold text-[#1A1A1A] md:text-3xl">Points de présence</h2>
           <p className="max-w-xl font-sans text-sm font-light leading-relaxed text-[#1A1A1A]/62">
-            Une vue compacte du reseau en France, avec les ateliers, distributeurs et grossistes dans les zones cles.
+            Une vue compacte du réseau en France, avec les ateliers, distributeurs et grossistes dans les zones clés.
           </p>
         </div>
 
-        <span className="rounded-full border border-[#761218]/12 bg-[#761218]/8 px-3 py-2 font-sans text-[10px] uppercase tracking-[0.22em] text-[#761218]">
+        <span className="rounded-full border border-[#be2c34]/12 bg-[#be2c34]/8 px-3 py-2 font-sans text-[10px] uppercase tracking-[0.22em] text-[#be2c34]">
           {partnerMapLocations.length} points
         </span>
       </div>
@@ -84,8 +84,8 @@ export default function PartnersMap() {
                     click: () => setActiveLocationId(location.id),
                   }}
                   pathOptions={{
-                    color: isActive ? "#F9D9B9" : isDtox ? "#1A1A1A" : "#761218",
-                    fillColor: isActive || isDtox ? "#761218" : "#1A1A1A",
+                    color: isActive ? "#F9D9B9" : isDtox ? "#1A1A1A" : "#be2c34",
+                    fillColor: isActive || isDtox ? "#be2c34" : "#1A1A1A",
                     fillOpacity: 0.95,
                     weight: isActive ? 3 : 2,
                   }}
@@ -93,7 +93,7 @@ export default function PartnersMap() {
                 >
                   <Popup>
                     <div className="space-y-2">
-                      <p className="font-sans text-[11px] uppercase tracking-[0.22em] text-[#761218]">{location.role}</p>
+                      <p className="font-sans text-[11px] uppercase tracking-[0.22em] text-[#be2c34]">{location.role}</p>
                       <h3 className="font-serif text-lg font-bold text-[#1A1A1A]">{location.name}</h3>
                       <p className="font-sans text-sm text-[#1A1A1A]/72">
                         {location.city}, {location.country}
@@ -104,7 +104,7 @@ export default function PartnersMap() {
                           href={location.href}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.18em] text-[#761218]"
+                          className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.18em] text-[#be2c34]"
                         >
                           Voir le site
                           <ExternalLink className="h-3.5 w-3.5" />
@@ -126,7 +126,7 @@ export default function PartnersMap() {
           className={`rounded-full px-4 py-2 font-sans text-[11px] uppercase tracking-[0.18em] transition-colors ${
             activeLocationId === null
               ? "bg-[#1A1A1A] text-[#F9D9B9]"
-              : "border border-[#1A1A1A]/12 bg-white/72 text-[#1A1A1A] hover:border-[#761218] hover:text-[#761218]"
+              : "border border-[#1A1A1A]/12 bg-white/72 text-[#1A1A1A] hover:border-[#be2c34] hover:text-[#be2c34]"
           }`}
         >
           Vue France
@@ -142,8 +142,8 @@ export default function PartnersMap() {
               onClick={() => setActiveLocationId(location.id)}
               className={`inline-flex items-center gap-2 rounded-full px-4 py-2 font-sans text-[11px] uppercase tracking-[0.18em] transition-colors ${
                 isActive
-                  ? "bg-[#761218] text-white"
-                  : "border border-[#1A1A1A]/12 bg-white/72 text-[#1A1A1A] hover:border-[#761218] hover:text-[#761218]"
+                  ? "bg-[#be2c34] text-white"
+                  : "border border-[#1A1A1A]/12 bg-white/72 text-[#1A1A1A] hover:border-[#be2c34] hover:text-[#be2c34]"
               }`}
             >
               <MapPin className="h-3.5 w-3.5" />

@@ -16,8 +16,8 @@ const leagueSpartan = League_Spartan({
 })
 
 export const metadata: Metadata = {
-  title: 'D-tox | Kombucha Artisanal',
-  description: 'D-tox - Kombucha artisanal brasse en France. Saveurs naturelles, fermentation vivante et energie au quotidien.',
+  title: 'DTÖX | Kombucha Artisanal',
+  description: 'DTÖX - Kombucha artisanal brassé en France. Saveurs naturelles, fermentation vivante et énergie au quotidien.',
 }
 
 export const viewport: Viewport = {

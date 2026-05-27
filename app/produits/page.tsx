@@ -8,13 +8,13 @@ import { siteImages } from "@/lib/site-content"
 
 const collections = [
   {
-    name: "D-tox Original 1L",
+    name: "DTÖX Original 1L",
     image: siteImages.dtoxBottle1L,
     href: "/produits/d-tox",
     imageClassName: "object-contain p-10",
   },
   {
-    name: "Chateau de la Crau",
+    name: "Château de la Crau",
     image: siteImages.chateauBottle,
     href: "/produits/chateau",
     imageClassName: "object-contain p-2",
@@ -23,14 +23,14 @@ const collections = [
 
 export default function ProduitsPage() {
   return (
-    <main className="bg-[#F6F1E8] min-h-screen">
+    <main className="bg-[#FFF9EB] min-h-screen">
       <Navigation variant="light" />
 
       <section className="pt-32 pb-16 px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col gap-4 text-center">
-            <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#f6bf5a] font-medium">
-              Selection
+            <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#be2c34] font-medium">
+              Sélection
             </p>
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#1A1A1A] text-balance">
               Nos Produits
@@ -44,7 +44,7 @@ export default function ProduitsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {collections.map((collection) => (
               <Link key={collection.name} href={collection.href} className="group flex flex-col">
-                <div className="relative mb-8 aspect-[3/4] overflow-hidden rounded-lg border border-[#f6bf5a]/10 bg-[linear-gradient(160deg,#fffdf9_0%,#f1e7d9_58%,#e3cfb1_100%)]">
+                <div className="relative mb-8 aspect-[3/4] overflow-hidden rounded-lg border border-[#be2c34]/10 bg-[linear-gradient(160deg,#fffdf9_0%,#FFF9EB_58%,#FFECBC_100%)]">
                   <Image
                     src={collection.image}
                     alt={`Collection ${collection.name}`}
@@ -55,8 +55,8 @@ export default function ProduitsPage() {
                 <h2 className="mb-4 font-serif text-4xl md:text-5xl font-extrabold text-[#1A1A1A]">
                   {collection.name}
                 </h2>
-                <span className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-[#f6bf5a] group-hover:gap-3 transition-all">
-                  Decouvrir
+                <span className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-[#be2c34] group-hover:gap-3 transition-all">
+                  Découvrir
                   <ArrowRight className="h-3 w-3" />
                 </span>
               </Link>

@@ -21,12 +21,14 @@ export default function PartnersSection({
 }: PartnersSectionProps) {
   const isLightSection =
     sectionClassName.includes("brand-cream") ||
-    sectionClassName.includes("#F6F1E8") ||
-    sectionClassName.includes("#f6bf5a")
+    sectionClassName.includes("#FFF9EB") ||
+    sectionClassName.includes("#FFF9EB") ||
+    sectionClassName.includes("#FFECBC") ||
+    sectionClassName.includes("#be2c34")
   const hasDarkPanel = panelClassName.includes("#2e2115") || panelClassName.includes("#20170f")
-  const headingColor = isLightSection && !hasDarkPanel ? "text-[#1A1A1A]" : "text-[#F6F1E8]"
-  const eyebrowColor = isLightSection && !hasDarkPanel ? "text-[#f6bf5a]" : "text-[#B7A680]"
-  const descriptionColor = isLightSection && !hasDarkPanel ? "text-[#1A1A1A]/62" : "text-[#F6F1E8]/72"
+  const headingColor = isLightSection && !hasDarkPanel ? "text-[#1A1A1A]" : "text-[#FFF9EB]"
+  const eyebrowColor = isLightSection && !hasDarkPanel ? "text-[#be2c34]" : "text-[#FFECBC]"
+  const descriptionColor = isLightSection && !hasDarkPanel ? "text-[#1A1A1A]/62" : "text-[#FFF9EB]/72"
 
   return (
     <section className={`${sectionClassName} ${sectionPaddingClassName}`}>
@@ -53,7 +55,7 @@ export default function PartnersSection({
                 href={partner.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex h-[86px] w-[calc(50%-0.375rem)] items-center justify-center rounded-lg border border-white/10 bg-[linear-gradient(145deg,rgba(255,255,255,0.96),rgba(243,233,218,0.92))] p-4 shadow-[0_12px_34px_rgba(0,0,0,0.14)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_46px_rgba(0,0,0,0.2)] sm:h-[94px] sm:w-[calc(33.333%-0.5rem)] lg:h-[98px] lg:w-[calc(20%-0.6rem)] 2xl:h-[84px] 2xl:w-[calc(12.5%-0.65625rem)] 2xl:p-3"
+                className="group flex h-[86px] w-[calc(50%-0.375rem)] items-center justify-center rounded-lg border border-black/10 bg-white p-4 shadow-[0_12px_34px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_46px_rgba(0,0,0,0.1)] sm:h-[94px] sm:w-[calc(33.333%-0.5rem)] lg:h-[98px] lg:w-[calc(20%-0.6rem)] 2xl:h-[84px] 2xl:w-[calc(12.5%-0.65625rem)] 2xl:p-3"
               >
                 <div className="relative mx-auto h-12 w-full max-w-[132px] sm:h-14 sm:max-w-[150px] 2xl:h-11 2xl:max-w-[118px]">
                   <Image

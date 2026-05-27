@@ -138,8 +138,9 @@ p {
   position: fixed;
   inset: 0 0 auto;
   z-index: 100;
-  background: rgba(255, 249, 235, 0.95);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 249, 235, 0.42);
+  -webkit-backdrop-filter: blur(16px) saturate(1.08);
+  backdrop-filter: blur(16px) saturate(1.08);
 }
 
 .site-header__inner {
@@ -1560,7 +1561,9 @@ body .contact-info-grid article {
 
 /* Pixel parity pass against the React storefront. */
 .site-header {
-  background: rgba(255, 249, 235, 0.95) !important;
+  background: rgba(255, 249, 235, 0.42) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(1.08);
+  backdrop-filter: blur(16px) saturate(1.08);
   box-shadow: none;
 }
 

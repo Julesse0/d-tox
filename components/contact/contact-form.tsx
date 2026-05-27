@@ -18,12 +18,12 @@ export default function ContactForm() {
   return (
     <div
       id="formulaire"
-      className="scroll-mt-32 rounded-lg border border-black/10 bg-white p-6 shadow-[0_14px_34px_rgba(0,0,0,0.05)] sm:p-8"
+      className="scroll-mt-24 rounded-lg border border-black/10 bg-white p-4 shadow-[0_14px_34px_rgba(0,0,0,0.05)] sm:scroll-mt-32 sm:p-8"
     >
       <p className="font-sans text-xs font-medium uppercase tracking-[0.28em] text-[var(--brand-rock)]">
         Formulaire
       </p>
-      <h2 className="mt-3 font-serif text-3xl font-extrabold text-[var(--brand-ink)] sm:text-4xl">
+      <h2 className="mt-3 font-serif text-2xl font-extrabold text-[var(--brand-ink)] sm:text-3xl md:text-4xl">
         Envoyez-nous un message
       </h2>
       <p className="mt-3 max-w-lg font-sans text-base leading-relaxed text-[rgba(36,28,20,0.68)]">
@@ -104,7 +104,7 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="mt-2 inline-flex w-fit items-center justify-center gap-2 rounded-full bg-[#be2c34] px-8 py-3.5 font-sans text-[11px] font-semibold text-white transition-colors hover:bg-[#9f2229]"
+          className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#be2c34] px-8 py-3.5 font-sans text-[11px] font-semibold text-white transition-colors hover:bg-[#9f2229] sm:w-fit"
         >
           Envoyer
           <Send className="h-4 w-4" />

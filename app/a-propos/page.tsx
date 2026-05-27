@@ -84,17 +84,17 @@ export default function AProposPage() {
       <Navigation variant="light" />
 
       {/* Hero */}
-      <section id="histoire" className="pt-32 pb-20 px-6 lg:px-8">
+      <section id="histoire" className="px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-32 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col gap-6">
               <p className="font-sans text-xs uppercase tracking-[0.3em] text-[var(--brand-rock)] font-medium">
                 À Propos
               </p>
-              <h1 className="font-serif text-5xl md:text-6xl font-extrabold text-[#1A1A1A] text-balance">
+              <h1 className="font-serif text-4xl font-extrabold text-[#1A1A1A] text-balance sm:text-5xl md:text-6xl">
                 Notre Histoire
               </h1>
-              <div className="space-y-5 font-sans font-light text-lg leading-relaxed text-[#1A1A1A]/60">
+              <div className="space-y-4 font-sans text-base font-light leading-relaxed text-[#1A1A1A]/60 sm:space-y-5 sm:text-lg">
                 <p>
                   2004, Eisso boit son premier verre de kombucha, fabriqué par sa mère. Elle en fabrique depuis
                   quelques années mais Eisso ne voulait jamais goûter à ce truc monstrueux. Puis, le buvant en cure
@@ -115,7 +115,7 @@ export default function AProposPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[3/4]">
                 <Image
                   src={siteImages.aboutStory}
                   alt="L'histoire de DTÖX"
@@ -129,11 +129,11 @@ export default function AProposPage() {
         </div>
       </section>
 
-      <section id="chronologie" className="px-6 pb-16 lg:px-8">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-lg border border-black/10 bg-white px-5 py-10 shadow-[0_18px_50px_rgba(0,0,0,0.06)] sm:px-6 lg:px-8">
+      <section id="chronologie" className="px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-lg border border-black/10 bg-white px-4 py-10 shadow-[0_18px_50px_rgba(0,0,0,0.06)] sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.3em] text-[#be2c34]">Chronologie</p>
-            <h2 className="mt-3 font-serif text-3xl font-extrabold text-[#1A1A1A] md:text-4xl">Les grandes dates</h2>
+            <h2 className="mt-3 font-serif text-3xl font-extrabold text-[#1A1A1A] sm:text-4xl">Les grandes dates</h2>
           </div>
 
           <div className="mt-10">
@@ -171,11 +171,11 @@ export default function AProposPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:hidden">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:hidden">
               {timelineMilestones.map((milestone, index) => (
                 <article
                   key={`${milestone.year}-${index}`}
-                  className="grid grid-cols-[auto_1fr] gap-4 rounded-lg border border-black/10 bg-[#FFF9EB] p-4 shadow-[0_12px_30px_rgba(0,0,0,0.05)]"
+                  className="grid grid-cols-[auto_1fr] gap-3 rounded-lg border border-black/10 bg-[#FFF9EB] p-4 shadow-[0_12px_30px_rgba(0,0,0,0.05)] sm:gap-4"
                 >
                   <div className="flex flex-col items-center">
                     <div className="flex h-12 min-w-20 items-center justify-center rounded-full bg-[#be2c34] px-4 font-sans text-sm font-bold text-white">
@@ -198,17 +198,17 @@ export default function AProposPage() {
         </div>
       </section>
 
-      <section id="processus" className="px-6 pb-24 lg:px-8">
+      <section id="processus" className="px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col gap-6">
               <p className="font-sans text-xs font-medium uppercase tracking-[0.3em] text-[var(--brand-rock)]">
                 Processus
               </p>
-              <h2 className="font-serif text-5xl font-extrabold text-[#1A1A1A] text-balance md:text-6xl">
+              <h2 className="font-serif text-4xl font-extrabold text-[#1A1A1A] text-balance sm:text-5xl md:text-6xl">
                 Processus de fabrication
               </h2>
-              <div className="space-y-5 font-sans text-lg font-light leading-relaxed text-[#1A1A1A]/60">
+              <div className="space-y-4 font-sans text-base font-light leading-relaxed text-[#1A1A1A]/60 sm:space-y-5 sm:text-lg">
                 {processParagraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
@@ -229,7 +229,7 @@ export default function AProposPage() {
                 ))}
               </div>
 
-              <p className="max-w-2xl font-serif text-2xl italic leading-relaxed text-[#1A1A1A]/80">
+              <p className="max-w-2xl font-serif text-xl italic leading-relaxed text-[#1A1A1A]/80 sm:text-2xl">
                 En fait il suffit de bien regarder la nature pour qu&apos;elle puisse s&apos;exprimer de la meilleure
                 facon.
               </p>

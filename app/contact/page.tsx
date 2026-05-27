@@ -17,13 +17,13 @@ export default function ContactPage() {
     <main className="min-h-screen bg-[var(--brand-cream)]">
       <Navigation variant="light" />
 
-      <section className="px-6 pb-10 pt-32 lg:px-8">
+      <section className="px-4 pb-10 pt-24 sm:px-6 sm:pt-32 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 font-sans text-xs font-medium uppercase tracking-[0.32em] text-[var(--brand-rock)]">
               Nous joindre
             </p>
-            <h1 className="font-serif text-5xl font-extrabold text-[var(--brand-ink)] md:text-6xl">Contact</h1>
+            <h1 className="font-serif text-4xl font-extrabold text-[var(--brand-ink)] sm:text-5xl md:text-6xl">Contact</h1>
           </div>
         </div>
       </section>
@@ -34,18 +34,18 @@ export default function ContactPage() {
         description="Retrouvez DTÖX chez nos partenaires et distributeurs, en ligne comme en magasin."
         sectionClassName="bg-[var(--brand-cream)]"
         sectionPaddingClassName="pb-16 pt-0"
-        panelClassName="rounded-lg border border-black/10 bg-[#FFECBC] px-6 py-12 shadow-[0_18px_44px_rgba(0,0,0,0.06)] sm:px-8 lg:px-10"
+        panelClassName="rounded-lg border border-black/10 bg-[#FFECBC] px-4 py-10 shadow-[0_18px_44px_rgba(0,0,0,0.06)] sm:px-8 sm:py-12 lg:px-10"
       />
 
-      <section className="px-6 pb-16 lg:px-8">
-        <div className="mx-auto max-w-7xl rounded-lg border border-[var(--brand-line)] bg-white p-6 shadow-[0_18px_44px_rgba(0,0,0,0.06)] sm:p-8 lg:p-10">
+      <section className="px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl rounded-lg border border-[var(--brand-line)] bg-white p-4 shadow-[0_18px_44px_rgba(0,0,0,0.06)] sm:p-8 lg:p-10">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)]">
             <div className="space-y-8">
               <div className="space-y-4">
                 <p className="font-sans text-xs font-medium uppercase tracking-[0.28em] text-[var(--brand-rock)]">
                   Atelier Velaux
                 </p>
-                <h2 className="font-serif text-4xl font-extrabold text-[var(--brand-ink)] sm:text-5xl">Restons en contact</h2>
+                <h2 className="font-serif text-3xl font-extrabold text-[var(--brand-ink)] sm:text-4xl lg:text-5xl">Restons en contact</h2>
                 <p className="max-w-md font-sans text-base leading-relaxed text-[rgba(36,28,20,0.68)]">
                   Toutes les infos utiles pour joindre DTÖX rapidement, que ce soit pour une demande commerciale, un
                   point de distribution ou une question produit.
@@ -53,7 +53,7 @@ export default function ContactPage() {
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
-                <article className="rounded-lg border border-black/10 bg-[#FFF9EB] p-5 shadow-[0_14px_34px_rgba(0,0,0,0.04)]">
+                <article className="rounded-lg border border-black/10 bg-[#FFF9EB] p-4 shadow-[0_14px_34px_rgba(0,0,0,0.04)] sm:p-5">
                   <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[#be2c34] text-white">
                       <MapPin className="h-4 w-4" />
@@ -73,7 +73,7 @@ export default function ContactPage() {
                   </div>
                 </article>
 
-                <article className="rounded-lg border border-black/10 bg-[#FFF9EB] p-5 shadow-[0_14px_34px_rgba(0,0,0,0.04)]">
+                <article className="rounded-lg border border-black/10 bg-[#FFF9EB] p-4 shadow-[0_14px_34px_rgba(0,0,0,0.04)] sm:p-5">
                   <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[var(--brand-ink)] text-[#FFF9EB]">
                       <Phone className="h-4 w-4" />
@@ -88,7 +88,7 @@ export default function ContactPage() {
                   </div>
                 </article>
 
-                <article className="rounded-lg border border-black/10 bg-[#FFF9EB] p-5 shadow-[0_14px_34px_rgba(0,0,0,0.04)]">
+                <article className="rounded-lg border border-black/10 bg-[#FFF9EB] p-4 shadow-[0_14px_34px_rgba(0,0,0,0.04)] sm:p-5">
                   <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[#be2c34] text-white">
                       <User className="h-4 w-4" />
@@ -102,7 +102,7 @@ export default function ContactPage() {
                   </div>
                 </article>
 
-                <article className="rounded-lg border border-black/10 bg-[#FFF9EB] p-5 shadow-[0_14px_34px_rgba(0,0,0,0.04)]">
+                <article className="rounded-lg border border-black/10 bg-[#FFF9EB] p-4 shadow-[0_14px_34px_rgba(0,0,0,0.04)] sm:p-5">
                   <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[var(--brand-ink)] text-[#FFF9EB]">
                       <Mail className="h-4 w-4" />
@@ -122,7 +122,7 @@ export default function ContactPage() {
                 </article>
               </div>
 
-              <div className="rounded-lg bg-[#FFECBC] p-6 text-[#1A1A1A] shadow-[0_18px_46px_rgba(0,0,0,0.06)]">
+              <div className="rounded-lg bg-[#FFECBC] p-5 text-[#1A1A1A] shadow-[0_18px_46px_rgba(0,0,0,0.06)] sm:p-6">
                 <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--brand-champagne)]">
                   Communauté
                 </p>
@@ -157,7 +157,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-20 lg:px-8 lg:pb-24">
+      <section className="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24">
         <div className="mx-auto max-w-7xl rounded-[1.35rem] border border-[var(--brand-line)] bg-[var(--brand-panel)] p-4 shadow-[0_20px_48px_rgba(36,28,20,0.08)] sm:p-5">
           <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>

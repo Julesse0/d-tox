@@ -38,8 +38,8 @@ export default async function BlogArticlePage({
       <article
         className={
           isRecipe
-            ? "h-[100svh] overflow-hidden px-4 pb-4 pt-24 sm:px-6 sm:pb-6 lg:px-8"
-            : "px-6 pb-24 pt-32 lg:px-8"
+            ? "min-h-[100svh] px-4 pb-10 pt-24 sm:px-6 sm:pb-12 sm:pt-28 lg:h-[100svh] lg:overflow-hidden lg:px-8"
+            : "px-4 pb-16 pt-24 sm:px-6 sm:pb-24 sm:pt-32 lg:px-8"
         }
       >
         <div className={`mx-auto ${isRecipe ? "flex h-full max-w-5xl flex-col" : "max-w-6xl"}`}>
@@ -55,12 +55,12 @@ export default async function BlogArticlePage({
 
           {isRecipe ? (
             <div className="grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] gap-4 text-center sm:gap-6">
-              <h1 className="font-serif text-3xl font-extrabold text-[var(--brand-ink)] text-balance md:text-4xl lg:text-5xl">
+              <h1 className="font-serif text-2xl font-extrabold text-[var(--brand-ink)] text-balance sm:text-3xl md:text-4xl lg:text-5xl">
                 {post.title}
               </h1>
 
-              <div className="relative mx-auto min-h-0 w-full max-w-[42rem] rounded-[1.3rem] border border-[var(--brand-line)] bg-[rgba(255,250,243,0.76)]">
-                <Image src={post.image} alt={post.title} fill className="object-contain p-6" priority />
+              <div className="relative mx-auto aspect-[3/4] min-h-0 w-full max-w-[42rem] rounded-lg border border-[var(--brand-line)] bg-[rgba(255,250,243,0.76)] lg:aspect-auto">
+                <Image src={post.image} alt={post.title} fill className="object-contain p-4 sm:p-6" priority />
               </div>
             </div>
           ) : (
@@ -75,15 +75,15 @@ export default async function BlogArticlePage({
                 <div
                   className={`relative overflow-hidden ${
                     isTextFocusedSection
-                      ? "min-h-[300px] sm:min-h-[340px] lg:min-h-[380px]"
-                      : "min-h-[460px] rounded-[1.35rem] border border-[var(--brand-line)] bg-[linear-gradient(180deg,#FFF9EB_0%,#FFECBC_100%)]"
+                      ? "min-h-[240px] sm:min-h-[340px] lg:min-h-[380px]"
+                      : "min-h-[320px] rounded-lg border border-[var(--brand-line)] bg-[linear-gradient(180deg,#FFF9EB_0%,#FFECBC_100%)] sm:min-h-[460px]"
                   }`}
                 >
                   <Image
                     src={post.image}
                     alt={post.title}
                     fill
-                    className={isTextFocusedSection ? "object-contain" : "object-contain p-8 sm:p-10"}
+                    className={isTextFocusedSection ? "object-contain" : "object-contain p-5 sm:p-10"}
                     priority
                   />
                 </div>
@@ -128,13 +128,13 @@ export default async function BlogArticlePage({
                     </span>
                   </div>
 
-                  <h1 className="font-serif text-5xl font-extrabold text-[var(--brand-ink)] text-balance md:text-6xl">
+                  <h1 className="font-serif text-4xl font-extrabold text-[var(--brand-ink)] text-balance sm:text-5xl md:text-6xl">
                     {post.title}
                   </h1>
                   <p className="max-w-2xl font-sans text-lg leading-relaxed text-[rgba(36,28,20,0.66)]">{post.excerpt}</p>
                 </div>
 
-                <div className="rounded-[1.25rem] border border-[var(--brand-line)] bg-[rgba(255,250,243,0.76)] p-6 sm:p-8">
+                <div className="rounded-lg border border-[var(--brand-line)] bg-[rgba(255,250,243,0.76)] p-5 sm:p-8">
                   {hasBody ? (
                     <div className="space-y-5">
                       {post.paragraphs.map((paragraph, index) => (

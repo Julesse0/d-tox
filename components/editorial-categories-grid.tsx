@@ -42,7 +42,7 @@ const sectionConfig: Record<
 
 export default function EditorialCategoriesGrid() {
   return (
-    <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-3">
       {blogPrimarySections.map((section) => {
         const meta = blogSectionMeta[section]
         const config = sectionConfig[section]
@@ -54,7 +54,7 @@ export default function EditorialCategoriesGrid() {
         return (
           <article
             key={section}
-            className="flex h-full flex-col justify-between rounded-lg border border-black/10 bg-white p-6 shadow-[0_18px_40px_rgba(0,0,0,0.06)]"
+            className="flex h-full flex-col justify-between rounded-lg border border-black/10 bg-white p-4 shadow-[0_18px_40px_rgba(0,0,0,0.06)] sm:p-6"
           >
             <div className="space-y-5">
               <div className="flex items-start justify-between gap-4">
@@ -62,7 +62,7 @@ export default function EditorialCategoriesGrid() {
                   <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.26em] text-[#be2c34]">
                     {config.eyebrow}
                   </p>
-                  <h3 className="font-serif text-3xl font-bold text-[#1A1A1A]">{meta.title}</h3>
+                  <h3 className="font-serif text-2xl font-bold text-[#1A1A1A] sm:text-3xl">{meta.title}</h3>
                 </div>
                 <div className="flex h-11 w-11 items-center justify-center rounded-md bg-[#FFECBC] text-[#be2c34]">
                   <Icon className="h-5 w-5" />
@@ -76,8 +76,8 @@ export default function EditorialCategoriesGrid() {
                   {totalItems} contenu{totalItems > 1 ? "s" : ""}
                 </p>
                 {leadPost ? (
-                  <div className="mt-3 flex gap-4">
-                    <div className="relative h-24 w-20 shrink-0 overflow-hidden">
+                  <div className="mt-3 flex gap-3 sm:gap-4">
+                    <div className="relative h-20 w-16 shrink-0 overflow-hidden sm:h-24 sm:w-20">
                       <Image
                         src={leadPost.previewImage}
                         alt={leadPost.title}
@@ -86,7 +86,7 @@ export default function EditorialCategoriesGrid() {
                       />
                     </div>
                     <div className="min-w-0 space-y-2">
-                      <p className="font-serif text-xl leading-tight text-[#1A1A1A]">{leadPost.title}</p>
+                      <p className="font-serif text-lg leading-tight text-[#1A1A1A] sm:text-xl">{leadPost.title}</p>
                       <p className="line-clamp-3 font-sans text-sm leading-relaxed text-[#1A1A1A]/66">
                         {leadPost.excerpt}
                       </p>

@@ -6,8 +6,8 @@ import { siteContact } from "@/lib/site-content"
 export default function Footer() {
   return (
     <footer className="border-t border-black/10 bg-[#FFF9EB] text-[#1A1A1A]">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <div className="flex flex-col gap-4">
             <h3 className="font-serif text-3xl font-extrabold tracking-wider">DTÖX</h3>
             <p className="font-sans font-light text-sm leading-relaxed text-[#1A1A1A]/70">
@@ -96,11 +96,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-black/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-12 flex flex-col items-center justify-between gap-5 border-t border-black/10 pt-8 text-center md:mt-16 md:flex-row md:text-left">
           <p className="font-sans font-light text-xs text-[#1A1A1A]/45">
             {"(c) 2026 DTÖX. Tous droits reserves."}
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 md:justify-end">
             <Link href="#" className="font-sans font-light text-xs text-[#1A1A1A]/45 hover:text-[#be2c34] transition-colors">
               Mentions Legales
             </Link>

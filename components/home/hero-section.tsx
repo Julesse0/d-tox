@@ -27,7 +27,7 @@ export default function HeroSection() {
               <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#be2c34] font-semibold">
                 Kombucha Artisanal
               </p>
-              <h1 className="font-[var(--font-league-spartan)] text-6xl font-normal leading-none tracking-tight text-[#000000] text-balance md:text-7xl lg:text-8xl">
+              <h1 className="font-[var(--font-league-spartan)] text-6xl font-bold leading-none tracking-tight text-[#000000] text-balance md:text-7xl lg:text-8xl">
                 DT<span className="text-[#be2c34]">&Ouml;</span>X
               </h1>
             </div>

@@ -343,7 +343,7 @@ p {
   margin-bottom: 2rem;
   font-family: "League Spartan", var(--dtox-font);
   font-size: clamp(5rem, 15vw, 13rem);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0;
   text-transform: uppercase;
 }

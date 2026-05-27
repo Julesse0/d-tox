@@ -112,6 +112,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .leaflet-container {
   background: #fff9eb;
   font-family: var(--font-montserrat), 'Montserrat', sans-serif;

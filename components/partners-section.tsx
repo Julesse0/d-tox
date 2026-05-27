@@ -32,13 +32,13 @@ export default function PartnersSection({
 
   return (
     <section className={`${sectionClassName} ${sectionPaddingClassName}`}>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className={panelClassName}>
-          <div className="mb-14 flex flex-col gap-4 text-center">
+          <div className="mb-10 flex flex-col gap-4 text-center sm:mb-14">
             <p className={`font-sans text-xs uppercase tracking-[0.3em] ${eyebrowColor} font-medium`}>
               {eyebrow}
             </p>
-            <h2 className={`font-serif text-4xl md:text-5xl font-extrabold ${headingColor} text-balance`}>
+            <h2 className={`font-serif text-3xl font-extrabold sm:text-4xl md:text-5xl ${headingColor} text-balance`}>
               {title}
             </h2>
             {description ? (
@@ -48,16 +48,16 @@ export default function PartnersSection({
             ) : null}
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3">
             {partners.map((partner) => (
               <a
                 key={partner.name}
                 href={partner.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex h-[86px] w-[calc(50%-0.375rem)] items-center justify-center rounded-lg border border-black/10 bg-white p-4 shadow-[0_12px_34px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_46px_rgba(0,0,0,0.1)] sm:h-[94px] sm:w-[calc(33.333%-0.5rem)] lg:h-[98px] lg:w-[calc(20%-0.6rem)] 2xl:h-[84px] 2xl:w-[calc(12.5%-0.65625rem)] 2xl:p-3"
+                className="group flex h-[76px] w-[calc(50%-0.3125rem)] items-center justify-center rounded-lg border border-black/10 bg-white p-3 shadow-[0_12px_34px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_46px_rgba(0,0,0,0.1)] sm:h-[94px] sm:w-[calc(33.333%-0.5rem)] sm:p-4 lg:h-[98px] lg:w-[calc(20%-0.6rem)] 2xl:h-[84px] 2xl:w-[calc(12.5%-0.65625rem)] 2xl:p-3"
               >
-                <div className="relative mx-auto h-12 w-full max-w-[132px] sm:h-14 sm:max-w-[150px] 2xl:h-11 2xl:max-w-[118px]">
+                <div className="relative mx-auto h-10 w-full max-w-[112px] sm:h-14 sm:max-w-[150px] 2xl:h-11 2xl:max-w-[118px]">
                   <Image
                     src={partner.logo}
                     alt={`Logo ${partner.name}`}

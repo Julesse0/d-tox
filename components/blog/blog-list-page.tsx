@@ -17,7 +17,7 @@ export default function BlogListPage({ section = "all" }: { section?: BlogSectio
     <main className="min-h-screen bg-[var(--brand-cream)]">
       <Navigation variant="light" />
 
-      <section className="px-6 pb-10 pt-32 lg:px-8">
+      <section className="px-4 pb-10 pt-24 sm:px-6 sm:pt-32 lg:px-8">
         <div className="mx-auto max-w-7xl">
           {section !== "all" && (
             <Link
@@ -33,11 +33,11 @@ export default function BlogListPage({ section = "all" }: { section?: BlogSectio
             <p className="mb-4 font-sans text-xs font-medium uppercase tracking-[0.3em] text-[var(--brand-rock)]">
               Éditorial
             </p>
-            <h1 className="font-serif text-5xl font-extrabold text-[var(--brand-ink)] text-balance md:text-6xl lg:text-7xl">
+            <h1 className="font-serif text-4xl font-extrabold text-[var(--brand-ink)] text-balance sm:text-5xl md:text-6xl lg:text-7xl">
               {activeMeta.title}
             </h1>
             {activeMeta.description ? (
-              <p className="mt-4 font-sans text-lg leading-relaxed text-[rgba(36,28,20,0.66)]">
+              <p className="mt-4 font-sans text-base leading-relaxed text-[rgba(36,28,20,0.66)] sm:text-lg">
                 {activeMeta.description}
               </p>
             ) : null}
@@ -46,14 +46,14 @@ export default function BlogListPage({ section = "all" }: { section?: BlogSectio
       </section>
 
       {section === "all" && (
-        <section className="px-6 pb-8 lg:px-8">
+        <section className="px-4 pb-8 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <EditorialCategoriesGrid />
           </div>
         </section>
       )}
 
-      <section className="px-6 pb-10 pt-2 lg:px-8">
+      <section className="px-4 pb-10 pt-2 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3">
           {filterKeys.map((key) => {
             const count = getBlogPosts(key as BlogSection | "all").length
@@ -63,7 +63,7 @@ export default function BlogListPage({ section = "all" }: { section?: BlogSectio
               <Link
                 key={key}
                 href={blogSectionMeta[key as keyof typeof blogSectionMeta].href}
-                className={`rounded-md px-4 py-3 font-sans text-[11px] font-medium uppercase tracking-[0.2em] transition-colors ${
+                className={`rounded-md px-3 py-2.5 font-sans text-[10px] font-medium uppercase tracking-[0.16em] transition-colors sm:px-4 sm:py-3 sm:text-[11px] sm:tracking-[0.2em] ${
                   isActive
                     ? "bg-[var(--brand-rock)] text-[var(--brand-ink)]"
                     : "border border-[rgba(190,44,52,0.12)] bg-[var(--brand-panel)] text-[var(--brand-ink)] hover:border-[rgba(190,44,52,0.3)] hover:text-[var(--brand-rock)]"
@@ -76,7 +76,7 @@ export default function BlogListPage({ section = "all" }: { section?: BlogSectio
         </div>
       </section>
 
-      <section className="px-6 pb-24 lg:px-8">
+      <section className="px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           {featured ? (
             <div className="space-y-8">

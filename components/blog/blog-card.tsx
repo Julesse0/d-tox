@@ -9,14 +9,14 @@ export default function BlogCard({ post, featured = false }: { post: BlogPost; f
     return (
       <Link
         href={`/blog/${post.slug}`}
-        className="group grid gap-6 rounded-[1.35rem] border border-[var(--brand-line)] bg-[rgba(255,250,243,0.78)] p-5 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:p-6"
+        className="group grid gap-5 rounded-lg border border-[var(--brand-line)] bg-[rgba(255,250,243,0.78)] p-4 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 sm:gap-6 sm:p-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:p-6"
       >
-        <div className="relative min-h-[320px] overflow-hidden">
+        <div className="relative min-h-[230px] overflow-hidden sm:min-h-[320px]">
           <Image
             src={post.previewImage}
             alt={post.title}
             fill
-            className="object-contain p-6 transition-transform duration-700 group-hover:scale-105"
+            className="object-contain p-4 transition-transform duration-700 group-hover:scale-105 sm:p-6"
           />
         </div>
 
@@ -31,7 +31,7 @@ export default function BlogCard({ post, featured = false }: { post: BlogPost; f
                 {post.dateLabel}
               </span>
             </div>
-            <h2 className="font-serif text-3xl font-bold text-[var(--brand-ink)] transition-colors group-hover:text-[var(--brand-rock)] md:text-4xl">
+            <h2 className="font-serif text-2xl font-bold text-[var(--brand-ink)] transition-colors group-hover:text-[var(--brand-rock)] sm:text-3xl md:text-4xl">
               {post.title}
             </h2>
             <p className="max-w-2xl font-sans text-base leading-relaxed text-[rgba(36,28,20,0.68)]">{post.excerpt}</p>
@@ -49,14 +49,14 @@ export default function BlogCard({ post, featured = false }: { post: BlogPost; f
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group flex h-full flex-col rounded-[1.15rem] border border-[var(--brand-line)] bg-[rgba(255,250,243,0.78)] p-5 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1"
+      className="group flex h-full flex-col rounded-lg border border-[var(--brand-line)] bg-[rgba(255,250,243,0.78)] p-4 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 sm:p-5"
     >
       <div className="relative mb-5 aspect-[4/3] overflow-hidden">
         <Image
           src={post.previewImage}
           alt={post.title}
           fill
-          className="object-contain p-5 transition-transform duration-700 group-hover:scale-105"
+        className="object-contain p-3 transition-transform duration-700 group-hover:scale-105 sm:p-5"
         />
       </div>
 
@@ -71,7 +71,7 @@ export default function BlogCard({ post, featured = false }: { post: BlogPost; f
           </span>
         </div>
 
-        <h3 className="font-serif text-2xl font-bold text-[var(--brand-ink)] transition-colors group-hover:text-[var(--brand-rock)]">
+        <h3 className="font-serif text-xl font-bold text-[var(--brand-ink)] transition-colors group-hover:text-[var(--brand-rock)] sm:text-2xl">
           {post.title}
         </h3>
         <p className="flex-1 font-sans text-sm leading-relaxed text-[rgba(36,28,20,0.66)]">{post.excerpt}</p>

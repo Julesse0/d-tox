@@ -6,14 +6,14 @@ import { siteContact } from "@/lib/site-content"
 
 export default function HomeContactSection() {
   return (
-    <section className="bg-white py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-8 rounded-lg border border-black/10 bg-[#FFF9EB] p-6 shadow-[0_18px_44px_rgba(0,0,0,0.06)] lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:p-8">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-8 rounded-lg border border-black/10 bg-[#FFF9EB] p-4 shadow-[0_18px_44px_rgba(0,0,0,0.06)] sm:p-6 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:p-8">
           <div className="space-y-5">
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.3em] text-[#be2c34]">
               Contact
             </p>
-            <h2 className="font-serif text-4xl font-extrabold text-[#1A1A1A] md:text-5xl">
+            <h2 className="font-serif text-3xl font-extrabold text-[#1A1A1A] sm:text-4xl md:text-5xl">
               Une question, une boutique, un projet ?
             </h2>
             <p className="max-w-xl font-sans text-base leading-relaxed text-[#1A1A1A]/68">

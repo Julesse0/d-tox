@@ -17,7 +17,7 @@ export default function HomePage() {
       <HomeContactSection />
       <PartnersSection
         sectionClassName="bg-[#FFECBC]"
-        panelClassName="rounded-lg border border-black/10 bg-white px-6 py-12 shadow-[0_18px_44px_rgba(0,0,0,0.06)] sm:px-8 lg:px-10"
+        panelClassName="rounded-lg border border-black/10 bg-white px-4 py-10 shadow-[0_18px_44px_rgba(0,0,0,0.06)] sm:px-8 sm:py-12 lg:px-10"
       />
       <CTASection />
       <Footer />

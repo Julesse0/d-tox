@@ -66,21 +66,21 @@ export default function EditorialProductShowcase({
   }
 
   return (
-    <section className="px-6 pb-24 pt-32 lg:px-8">
+    <section className="px-4 pb-16 pt-24 sm:px-6 sm:pb-24 sm:pt-32 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
+        <div className="grid items-start gap-8 sm:gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
           <div className="space-y-6 lg:sticky lg:top-28">
-            <div className="relative min-h-[520px] overflow-hidden rounded-lg border border-[#1A1A1A]/10 bg-[linear-gradient(160deg,#fffdf9_0%,#FFF9EB_46%,#FFECBC_100%)] p-8 shadow-[0_24px_56px_rgba(190,44,52,0.10)] sm:p-10">
+            <div className="relative min-h-[360px] overflow-hidden rounded-lg border border-[#1A1A1A]/10 bg-[linear-gradient(160deg,#fffdf9_0%,#FFF9EB_46%,#FFECBC_100%)] p-4 shadow-[0_24px_56px_rgba(190,44,52,0.10)] sm:min-h-[460px] sm:p-10 lg:min-h-[520px]">
               <div className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.82),transparent_72%)]" />
-              <div className="absolute left-6 top-6 inline-flex rounded-md border border-[#1A1A1A]/10 bg-white/80 px-4 py-1.5 font-sans text-[10px] uppercase tracking-[0.28em] text-[#be2c34] sm:left-8 sm:top-8">
+              <div className="absolute left-4 top-4 inline-flex max-w-[calc(100%-2rem)] rounded-md border border-[#1A1A1A]/10 bg-white/80 px-3 py-1.5 font-sans text-[10px] uppercase tracking-[0.2em] text-[#be2c34] sm:left-8 sm:top-8 sm:px-4 sm:tracking-[0.28em]">
                 {selectedVariant.tag}
               </div>
-              <div className="relative flex min-h-[440px] items-center justify-center">
+              <div className="relative flex min-h-[320px] items-center justify-center sm:min-h-[390px] lg:min-h-[440px]">
                 <Image
                   src={selectedVariant.image}
                   alt={selectedVariant.imageAlt}
                   fill
-                  className="object-contain p-8 sm:p-12"
+                  className="object-contain p-7 sm:p-12"
                   priority
                 />
               </div>
@@ -110,7 +110,7 @@ export default function EditorialProductShowcase({
               <p className="font-sans text-xs uppercase tracking-[0.32em] text-[#be2c34] font-medium">
                 {eyebrow}
               </p>
-              <h1 className="font-serif text-5xl font-extrabold text-[#1A1A1A] text-balance md:text-6xl lg:text-7xl">
+              <h1 className="font-serif text-4xl font-extrabold text-[#1A1A1A] text-balance sm:text-5xl md:text-6xl lg:text-7xl">
                 {title}
               </h1>
               {intro ? (
@@ -121,7 +121,7 @@ export default function EditorialProductShowcase({
             </div>
 
             {variants.length > 1 && (
-              <div className="rounded-lg border border-[#1A1A1A]/10 bg-white/70 p-6">
+              <div className="rounded-lg border border-[#1A1A1A]/10 bg-white/70 p-4 sm:p-6">
                 <p className="mb-4 font-sans text-[10px] uppercase tracking-[0.3em] text-[#be2c34]/70">
                   Formats
                 </p>
@@ -143,7 +143,7 @@ export default function EditorialProductShowcase({
                         <span className="block font-sans text-[10px] uppercase tracking-[0.28em] opacity-70">
                           Format
                         </span>
-                        <span className="mt-2 block font-serif text-2xl">{variant.buttonLabel}</span>
+                        <span className="mt-2 block font-serif text-xl sm:text-2xl">{variant.buttonLabel}</span>
                       </button>
                     )
                   })}
@@ -151,11 +151,11 @@ export default function EditorialProductShowcase({
               </div>
             )}
 
-            <div className="rounded-lg border border-[#be2c34]/14 bg-[linear-gradient(160deg,rgba(255,250,243,0.94),rgba(255,236,188,0.58))] p-8 text-[#1A1A1A] shadow-[0_18px_44px_rgba(190,44,52,0.08)] sm:p-10">
+            <div className="rounded-lg border border-[#be2c34]/14 bg-[linear-gradient(160deg,rgba(255,250,243,0.94),rgba(255,236,188,0.58))] p-5 text-[#1A1A1A] shadow-[0_18px_44px_rgba(190,44,52,0.08)] sm:p-10">
               <p className="mb-3 font-sans text-[10px] uppercase tracking-[0.3em] text-[#be2c34]">
                 {presentationLabel}
               </p>
-              <h2 className="font-serif text-3xl font-bold text-balance sm:text-4xl">
+              <h2 className="font-serif text-2xl font-bold text-balance sm:text-3xl md:text-4xl">
                 {selectedVariant.name}
               </h2>
               {selectedVariant.description ? (
@@ -165,7 +165,7 @@ export default function EditorialProductShowcase({
               ) : null}
 
               {selectedVariant.awardImage ? (
-                <div className="mt-6 flex items-center gap-4 rounded-md border border-[#be2c34]/14 bg-white/54 p-4">
+                <div className="mt-6 flex flex-col gap-4 rounded-md border border-[#be2c34]/14 bg-white/54 p-4 sm:flex-row sm:items-center">
                   <div className="relative h-20 w-20 shrink-0">
                     <Image
                       src={selectedVariant.awardImage}
@@ -182,7 +182,7 @@ export default function EditorialProductShowcase({
               ) : null}
 
               {selectedVariant.detailItems && selectedVariant.detailItems.length > 0 ? (
-                <div className="mt-8 rounded-md border border-[#be2c34]/14 bg-white/54 p-6">
+                <div className="mt-8 rounded-md border border-[#be2c34]/14 bg-white/54 p-4 sm:p-6">
                   <div className="grid gap-3">
                     {selectedVariant.detailItems.map((item) => (
                       <div key={item} className="flex gap-3">
@@ -225,10 +225,10 @@ export default function EditorialProductShowcase({
               </div>
             ) : null}
 
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <Link
                 href={primaryCta.href}
-                className="inline-flex items-center justify-center gap-2 bg-[#be2c34] px-7 py-4 font-sans text-sm font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#9f2229]"
+                className="inline-flex items-center justify-center gap-2 bg-[#be2c34] px-6 py-4 font-sans text-xs font-medium uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#9f2229] sm:px-7 sm:text-sm sm:tracking-[0.18em]"
               >
                 {primaryCta.label}
                 <ArrowRight className="h-4 w-4" />
@@ -237,7 +237,7 @@ export default function EditorialProductShowcase({
               {secondaryCta && (
                 <Link
                   href={secondaryCta.href}
-                  className="inline-flex items-center justify-center gap-2 border border-[#1A1A1A]/12 px-7 py-4 font-sans text-sm font-medium uppercase tracking-[0.18em] text-[#1A1A1A] transition-colors hover:border-[#be2c34] hover:text-[#be2c34]"
+                  className="inline-flex items-center justify-center gap-2 border border-[#1A1A1A]/12 px-6 py-4 font-sans text-xs font-medium uppercase tracking-[0.14em] text-[#1A1A1A] transition-colors hover:border-[#be2c34] hover:text-[#be2c34] sm:px-7 sm:text-sm sm:tracking-[0.18em]"
                 >
                   {secondaryCta.label}
                 </Link>

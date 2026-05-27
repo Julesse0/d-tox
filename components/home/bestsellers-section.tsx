@@ -21,14 +21,14 @@ const products = [
 
 export default function BestsellersSection() {
   return (
-    <section className="bg-[#FFF9EB] py-24 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+    <section className="bg-[#FFF9EB] py-16 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-10 flex flex-col gap-6 sm:mb-14 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#be2c34] font-semibold mb-4">
               Sélection
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A1A1A] text-balance">
+            <h2 className="font-serif text-3xl font-extrabold text-[#1A1A1A] text-balance sm:text-4xl md:text-5xl lg:text-6xl">
               Nos Produits
             </h2>
           </div>
@@ -41,11 +41,11 @@ export default function BestsellersSection() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
           {products.map((product) => (
             <Link key={product.name} href={product.href} className="group">
-              <div className="flex flex-col gap-6 rounded-lg border border-black/10 bg-white p-6 shadow-[0_18px_44px_rgba(0,0,0,0.05)] md:p-8">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-[#FFF9EB]">
+              <div className="flex flex-col gap-5 rounded-lg border border-black/10 bg-white p-4 shadow-[0_18px_44px_rgba(0,0,0,0.05)] sm:p-6 md:p-8">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-[#FFF9EB] sm:aspect-[4/5]">
                   <Image
                     src={product.image}
                     alt={product.name}

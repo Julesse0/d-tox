@@ -66,9 +66,9 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 ${bgColor}/95 backdrop-blur-md`}>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="relative block h-12 w-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between sm:h-20">
+          <Link href="/" className="relative block h-10 w-20 sm:h-12 sm:w-24">
             <Image
               src={siteLogo}
               alt="DTÖX"
@@ -131,7 +131,7 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
           </div>
 
           <button
-            className={`lg:hidden ${textColor}`}
+            className={`inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 lg:hidden ${textColor}`}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
           >
@@ -141,8 +141,8 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
       </div>
 
       {mobileOpen && (
-        <div className={`lg:hidden ${bgColor} border-t border-black/10`}>
-          <div className="px-6 py-4 flex flex-col gap-2">
+        <div className={`max-h-[calc(100svh-4rem)] overflow-y-auto border-t border-black/10 lg:hidden ${bgColor}`}>
+          <div className="flex flex-col gap-2 px-4 py-4 sm:px-6">
             {navLinks.map((link) => (
               <div key={link.label}>
                 <Link

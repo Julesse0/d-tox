@@ -5,14 +5,14 @@ import EditorialCategoriesGrid from "@/components/editorial-categories-grid"
 
 export default function EditorialSection() {
   return (
-    <section className="bg-[#FFECBC] py-24 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-[#FFECBC] py-16 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.3em] text-[#be2c34]">
               Éditorial
             </p>
-            <h2 className="font-serif text-4xl font-extrabold text-[#1A1A1A] md:text-5xl lg:text-6xl">
+            <h2 className="font-serif text-3xl font-extrabold text-[#1A1A1A] sm:text-4xl md:text-5xl lg:text-6xl">
               Blog
             </h2>
           </div>

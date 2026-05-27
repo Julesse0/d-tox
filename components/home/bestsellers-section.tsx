@@ -7,14 +7,12 @@ import { siteImages } from "@/lib/site-content"
 const products = [
   {
     name: "DTÖX Original 1L",
-    description: "Le grand format signature de DTÖX, avec une lecture plus simple et une touche plus chaleureuse.",
     image: siteImages.dtoxBottle1L,
     href: "/produits/d-tox",
     imageClassName: "object-contain p-8",
   },
   {
     name: "Château de la Crau",
-    description: "La cuvée d'exception de la maison, conservée dans le même esprit mais avec une palette plus douce.",
     image: siteImages.chateauBottle,
     href: "/produits/chateau",
     imageClassName: "object-contain p-0",
@@ -60,9 +58,6 @@ export default function BestsellersSection() {
                   <h3 className="font-serif text-xl font-bold text-[#1A1A1A] uppercase tracking-wide group-hover:text-[#be2c34] transition-colors">
                     {product.name}
                   </h3>
-                  <p className="font-sans font-light text-sm leading-relaxed text-[#1A1A1A]/62">
-                    {product.description}
-                  </p>
                 </div>
               </div>
             </Link>

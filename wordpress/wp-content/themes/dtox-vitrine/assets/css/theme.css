@@ -443,12 +443,6 @@ p {
   text-transform: uppercase;
 }
 
-.product-card span:last-child {
-  color: rgba(26, 26, 26, 0.68);
-  font-size: 0.9rem;
-  line-height: 1.7;
-}
-
 .blog-section-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

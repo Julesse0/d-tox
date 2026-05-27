@@ -31,7 +31,6 @@ $display_products = $products ?: array_map(static function ($item) {
             $fallback = $defaults[$index] ?? $defaults[0];
             $image = $product->ID ? dtox_meta($product->ID, 'dtox_image', $fallback['image']) : $fallback['image'];
             $tag = $product->ID ? dtox_meta($product->ID, 'dtox_tag', $fallback['tag']) : $fallback['tag'];
-            $excerpt = $product->post_excerpt ?: $fallback['excerpt'];
             $url = $product->ID ? get_permalink($product) : dtox_get_page_url('produits/' . $product->post_name);
             ?>
             <a class="product-card product-card--large" href="<?php echo esc_url($url); ?>">
@@ -40,7 +39,6 @@ $display_products = $products ?: array_map(static function ($item) {
                 </span>
                 <span class="product-card__tag"><?php echo esc_html($tag); ?></span>
                 <strong><?php echo esc_html($product->post_title); ?></strong>
-                <span><?php echo esc_html($excerpt); ?></span>
                 <em>Découvrir</em>
             </a>
         <?php endforeach; ?>

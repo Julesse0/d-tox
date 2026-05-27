@@ -15,12 +15,21 @@ $address_lines = dtox_split_lines($address);
 $map_query = rawurlencode(implode(', ', $address_lines));
 ?>
 
+<section class="page-hero page-hero--compact contact-hero">
+    <div class="container">
+        <p class="eyebrow">Nous joindre</p>
+        <h1>Contact</h1>
+    </div>
+</section>
+
 <section class="contact-locator">
-    <div class="container contact-locator__grid">
-        <div>
-            <p class="eyebrow">Points De Vente</p>
-            <h1>Où nous trouver</h1>
-            <p>Retrouvez DTÖX chez nos partenaires et distributeurs, en ligne comme en magasin.</p>
+    <div class="container partners-section__panel">
+        <div class="section-heading section-heading--center">
+            <div>
+                <p class="eyebrow">Points de vente</p>
+                <h2>Où nous trouver</h2>
+                <p>Retrouvez DTÖX chez nos partenaires et distributeurs, en ligne comme en magasin.</p>
+            </div>
         </div>
         <div class="partners-grid partners-grid--compact">
             <?php foreach ($display_partners as $partner) :
@@ -37,48 +46,45 @@ $map_query = rawurlencode(implode(', ', $address_lines));
 </section>
 
 <section id="formulaire" class="section section--white contact-form-section">
-    <div class="container contact-grid">
-        <div class="contact-card">
-            <p class="eyebrow">Restons En Contact</p>
-            <h2>Une demande pro, une question produit ou une envie de collaborer ?</h2>
-            <p>Envoyez-nous votre message, l'équipe DTÖX vous répondra directement.</p>
-            <div class="contact-details">
-                <a href="mailto:<?php echo esc_attr(dtox_theme_option('email')); ?>"><?php echo esc_html(dtox_theme_option('email')); ?></a>
-                <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', dtox_theme_option('phone'))); ?>"><?php echo esc_html(dtox_theme_option('phone')); ?></a>
-                <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', dtox_theme_option('mobile'))); ?>"><?php echo esc_html(dtox_theme_option('mobile')); ?></a>
+    <div class="container contact-panel">
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div>
+                    <p class="eyebrow">Atelier Velaux</p>
+                    <h2>Restons en contact</h2>
+                    <p>Toutes les infos utiles pour joindre DTÖX rapidement, que ce soit pour une demande commerciale, un point de distribution ou une question produit.</p>
+                </div>
+
+                <div class="contact-info-grid">
+                    <article>
+                        <strong>Adresse</strong>
+                        <span><?php echo esc_html(dtox_theme_option('company', 'DTÖX SARL')); ?></span>
+                        <?php foreach ($address_lines as $line) : ?>
+                            <span><?php echo esc_html($line); ?></span>
+                        <?php endforeach; ?>
+                    </article>
+                    <article>
+                        <strong>Téléphone</strong>
+                        <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', dtox_theme_option('phone'))); ?>"><?php echo esc_html(dtox_theme_option('phone')); ?></a>
+                        <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', dtox_theme_option('mobile'))); ?>">Portable : <?php echo esc_html(dtox_theme_option('mobile')); ?></a>
+                    </article>
+                    <article>
+                        <strong>Contact France</strong>
+                        <span><?php echo esc_html(dtox_theme_option('contact_name', 'Eisso')); ?></span>
+                    </article>
+                    <article>
+                        <strong>E-mail</strong>
+                        <a href="mailto:<?php echo esc_attr(dtox_theme_option('email')); ?>"><?php echo esc_html(dtox_theme_option('email')); ?></a>
+                    </article>
+                </div>
             </div>
-        </div>
 
-        <div class="contact-form">
-            <?php
-            $forms = class_exists('WPCF7_ContactForm') ? get_posts([
-                'post_type' => 'wpcf7_contact_form',
-                'post_status' => 'publish',
-                'numberposts' => 1,
-            ]) : [];
-
-            if (!empty($forms)) {
-                echo do_shortcode('[contact-form-7 id="' . (int) $forms[0]->ID . '" title="' . esc_attr($forms[0]->post_title) . '"]');
-            } else {
-                ?>
-                <form action="mailto:<?php echo esc_attr(dtox_theme_option('email')); ?>" method="post" enctype="text/plain">
-                    <label>
-                        Nom
-                        <input type="text" name="nom" required>
-                    </label>
-                    <label>
-                        Email
-                        <input type="email" name="email" required>
-                    </label>
-                    <label>
-                        Message
-                        <textarea name="message" rows="6" required></textarea>
-                    </label>
-                    <button class="btn" type="submit">Envoyer</button>
-                </form>
-                <?php
-            }
-            ?>
+            <div class="contact-form">
+                <p class="eyebrow">Formulaire</p>
+                <h2>Envoyez-nous un message</h2>
+                <p>Une question sur nos saveurs, la distribution ou un partenariat ? Écrivez-nous directement ici.</p>
+                <?php dtox_render_contact_form(); ?>
+            </div>
         </div>
     </div>
 </section>
@@ -86,8 +92,9 @@ $map_query = rawurlencode(implode(', ', $address_lines));
 <section class="section find-us-section">
     <div class="container find-us-grid">
         <div>
-            <p class="eyebrow">Nous Trouver</p>
-            <h2>Le labo DTÖX</h2>
+            <p class="eyebrow">Adresse</p>
+            <h2>Nous trouver</h2>
+            <p>Notre atelier et point de contact principal restent basés à Velaux.</p>
             <address>
                 <?php foreach ($address_lines as $line) : ?>
                     <span><?php echo esc_html($line); ?></span>

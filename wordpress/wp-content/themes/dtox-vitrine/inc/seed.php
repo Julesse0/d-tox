@@ -8,7 +8,18 @@ if (!defined('ABSPATH')) {
 }
 
 add_action('after_switch_theme', function (): void {
+    dtox_seed_initial_content();
     update_option('dtox_vitrine_flush_rewrite', '1');
+});
+
+add_action('admin_init', function (): void {
+    if (!current_user_can('manage_options')) {
+        return;
+    }
+
+    if (get_option('dtox_vitrine_seeded_version') !== DTOX_THEME_VERSION) {
+        dtox_seed_initial_content();
+    }
 });
 
 add_action('admin_menu', function (): void {
@@ -77,6 +88,8 @@ function dtox_seed_initial_content(): void
     }
 
     $home_id = dtox_seed_page('accueil', 'Accueil', '');
+    dtox_seed_page('produits', 'Nos Produits', 'page-produits.php');
+    dtox_seed_page('blog', 'Blog', 'page-blog.php');
     dtox_seed_page('a-propos', 'A Propos', 'page-a-propos.php');
     dtox_seed_page('contact', 'Contact', 'page-contact.php');
     dtox_seed_page('mentions-legales', 'Mentions Legales', '');
@@ -271,30 +284,46 @@ function dtox_seed_menu(): void
         if (is_wp_error($menu_id)) {
             return;
         }
-
-        wp_update_nav_menu_item($menu_id, 0, [
-            'menu-item-title' => 'Nos Produits',
-            'menu-item-url' => home_url('/produits/'),
-            'menu-item-status' => 'publish',
-        ]);
-        wp_update_nav_menu_item($menu_id, 0, [
-            'menu-item-title' => 'Blog',
-            'menu-item-url' => home_url('/blog/'),
-            'menu-item-status' => 'publish',
-        ]);
-
-        foreach (['a-propos' => 'A Propos', 'contact' => 'Contact'] as $slug => $label) {
-            wp_update_nav_menu_item($menu_id, 0, [
-                'menu-item-title' => $label,
-                'menu-item-url' => home_url('/' . $slug . '/'),
-                'menu-item-status' => 'publish',
-            ]);
-        }
     } else {
         $menu_id = (int) $menu->term_id;
     }
 
+    $existing_items = wp_get_nav_menu_items($menu_id);
+    if (is_array($existing_items)) {
+        foreach ($existing_items as $item) {
+            wp_delete_post((int) $item->ID, true);
+        }
+    }
+
+    $products_parent = dtox_seed_menu_item($menu_id, 'Nos Produits', dtox_get_page_url('produits'));
+    dtox_seed_menu_item($menu_id, 'DTÖX Original 1L', dtox_get_page_url('produits/d-tox'), $products_parent);
+    dtox_seed_menu_item($menu_id, 'Château de la Crau', dtox_get_page_url('produits/chateau'), $products_parent);
+
+    $blog_parent = dtox_seed_menu_item($menu_id, 'Blog', dtox_get_page_url('blog'));
+    dtox_seed_menu_item($menu_id, 'News', dtox_get_page_url('blog/articles'), $blog_parent);
+    dtox_seed_menu_item($menu_id, 'Recettes', dtox_get_page_url('blog/recettes'), $blog_parent);
+    dtox_seed_menu_item($menu_id, 'On parle de nous / Presse', dtox_get_page_url('blog/reseaux'), $blog_parent);
+
+    $about_parent = dtox_seed_menu_item($menu_id, 'A Propos', dtox_get_page_url('a-propos'));
+    dtox_seed_menu_item($menu_id, 'Notre Histoire', dtox_get_page_url('a-propos#histoire'), $about_parent);
+    dtox_seed_menu_item($menu_id, 'Chronologie', dtox_get_page_url('a-propos#chronologie'), $about_parent);
+    dtox_seed_menu_item($menu_id, 'Processus', dtox_get_page_url('a-propos#processus'), $about_parent);
+
+    dtox_seed_menu_item($menu_id, 'Contact', dtox_get_page_url('contact'));
+
     $locations = get_theme_mod('nav_menu_locations', []);
     $locations['primary'] = $menu_id;
     set_theme_mod('nav_menu_locations', $locations);
+}
+
+function dtox_seed_menu_item(int $menu_id, string $title, string $url, int $parent_id = 0): int
+{
+    $item_id = wp_update_nav_menu_item($menu_id, 0, [
+        'menu-item-title' => $title,
+        'menu-item-url' => $url,
+        'menu-item-status' => 'publish',
+        'menu-item-parent-id' => $parent_id,
+    ]);
+
+    return is_wp_error($item_id) ? 0 : (int) $item_id;
 }

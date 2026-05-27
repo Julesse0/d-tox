@@ -66,7 +66,56 @@ function dtox_split_lines(string $value): array
 
 function dtox_get_page_url(string $path): string
 {
-    return home_url('/' . trim($path, '/') . '/');
+    $anchor = '';
+    if (strpos($path, '#') !== false) {
+        [$path, $anchor] = explode('#', $path, 2);
+        $anchor = '#' . sanitize_title($anchor);
+    }
+
+    $path = trim($path, '/');
+    if ($path === '') {
+        return home_url('/') . $anchor;
+    }
+
+    $parts = explode('/', $path);
+
+    if ($parts[0] === 'produits' && isset($parts[1])) {
+        $product = dtox_find_product($parts[1]);
+        if ($product instanceof WP_Post) {
+            return get_permalink($product) . $anchor;
+        }
+    }
+
+    if ($parts[0] === 'blog' && isset($parts[1])) {
+        $term = get_term_by('slug', $parts[1], 'dtox_blog_section');
+        if ($term instanceof WP_Term) {
+            $url = get_term_link($term);
+            if (!is_wp_error($url)) {
+                return $url . $anchor;
+            }
+        }
+    }
+
+    $page = get_page_by_path($path, OBJECT, 'page');
+    if ($page instanceof WP_Post) {
+        return get_permalink($page) . $anchor;
+    }
+
+    if ($path === 'produits') {
+        $archive = get_post_type_archive_link('dtox_product');
+        if ($archive) {
+            return $archive . $anchor;
+        }
+    }
+
+    if ($path === 'blog') {
+        $archive = get_post_type_archive_link('dtox_blog');
+        if ($archive) {
+            return $archive . $anchor;
+        }
+    }
+
+    return home_url('/' . $path . '/') . $anchor;
 }
 
 function dtox_find_product(string $slug): ?WP_Post
@@ -144,4 +193,39 @@ function dtox_blog_card_image(WP_Post $post): string
 function dtox_blog_hero_image(WP_Post $post): string
 {
     return dtox_media_url(dtox_meta($post->ID, 'dtox_legacy_image', 'hero.jpg'));
+}
+
+function dtox_render_contact_form(): void
+{
+    $forms = class_exists('WPCF7_ContactForm') ? get_posts([
+        'post_type' => 'wpcf7_contact_form',
+        'post_status' => 'publish',
+        'numberposts' => 1,
+    ]) : [];
+
+    if (!empty($forms)) {
+        echo do_shortcode('[contact-form-7 id="' . (int) $forms[0]->ID . '" title="' . esc_attr($forms[0]->post_title) . '"]');
+        return;
+    }
+    ?>
+    <form action="mailto:<?php echo esc_attr(dtox_theme_option('email')); ?>" method="post" enctype="text/plain">
+        <label>
+            Votre nom*
+            <input type="text" name="nom" autocomplete="name" required>
+        </label>
+        <label>
+            Votre email*
+            <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>
+            Sujet
+            <input type="text" name="sujet">
+        </label>
+        <label>
+            Votre message
+            <textarea name="message" rows="7" required></textarea>
+        </label>
+        <button class="btn" type="submit">Envoyer</button>
+    </form>
+    <?php
 }

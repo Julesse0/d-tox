@@ -1071,6 +1071,200 @@ p {
   margin-top: 1.2rem;
 }
 
+/* React parity overrides: keep the WordPress theme visually locked even when old plugins inject CSS. */
+body,
+body .site-main,
+body .site-footer {
+  background: var(--dtox-cream) !important;
+  color: var(--dtox-text) !important;
+  font-family: var(--dtox-font) !important;
+}
+
+body .site-main h1,
+body .site-main h2,
+body .site-main h3,
+body .site-footer h2,
+body .site-footer h3,
+body .site-main .product-card strong {
+  color: var(--dtox-text) !important;
+  font-family: var(--dtox-font) !important;
+  letter-spacing: 0 !important;
+}
+
+body .site-main .eyebrow,
+body .site-main .text-link,
+body .site-main .product-card em,
+body .site-footer a:hover {
+  color: var(--dtox-red) !important;
+}
+
+body .home-hero__title {
+  color: var(--dtox-ink) !important;
+  font-family: "League Spartan", var(--dtox-font) !important;
+  font-size: clamp(4rem, 10vw, 8rem) !important;
+  font-weight: 700 !important;
+  line-height: 0.9 !important;
+}
+
+body .home-hero__title span {
+  color: var(--dtox-red) !important;
+}
+
+body .home-hero__overlay {
+  background: linear-gradient(90deg, rgba(255, 249, 235, 0.74) 0%, rgba(255, 249, 235, 0.36) 42%, rgba(255, 249, 235, 0) 72%) !important;
+}
+
+body .home-hero__medals {
+  align-self: center;
+  justify-self: end;
+  padding-bottom: 0;
+  transform: translateX(8rem);
+}
+
+body .home-hero__medals img {
+  width: clamp(8rem, 13vw, 13rem);
+  height: clamp(8rem, 13vw, 13rem);
+}
+
+body .product-card,
+body .blog-section-card,
+body .blog-card,
+body .contact-form,
+body .contact-card,
+body .timeline-panel {
+  border-radius: 0.5rem;
+  background: var(--dtox-white);
+  box-shadow: var(--dtox-shadow);
+}
+
+body .product-grid {
+  gap: 2rem;
+}
+
+body .product-card__image {
+  background: var(--dtox-cream);
+}
+
+body .product-card__image img {
+  width: 86%;
+  height: 88%;
+  object-fit: contain;
+}
+
+body .section--yellow {
+  background: var(--dtox-yellow) !important;
+}
+
+body .editorial-preview .blog-section-card {
+  min-height: 24rem;
+}
+
+body .home-contact__panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--dtox-cream);
+  padding: clamp(1.5rem, 4vw, 2rem);
+  box-shadow: var(--dtox-shadow);
+}
+
+body .contact-form--compact {
+  background: var(--dtox-white);
+}
+
+body .contact-form h2,
+body .contact-form h3 {
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+}
+
+body .contact-form input,
+body .contact-form textarea,
+body .wpcf7-form-control:not(.wpcf7-submit) {
+  border-radius: 0.375rem;
+  background: var(--dtox-cream);
+}
+
+body .contact-form input:focus,
+body .contact-form textarea:focus,
+body .wpcf7-form-control:not(.wpcf7-submit):focus {
+  border-color: var(--dtox-red);
+  background: var(--dtox-white);
+  outline: none;
+}
+
+body .contact-panel {
+  border: 1px solid var(--dtox-line);
+  border-radius: 0.5rem;
+  background: var(--dtox-white);
+  padding: clamp(1rem, 3vw, 2.5rem);
+  box-shadow: var(--dtox-shadow);
+}
+
+body .contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+body .contact-info-grid article {
+  display: grid;
+  gap: 0.35rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: var(--dtox-cream);
+  padding: 1.25rem;
+  color: rgba(26, 26, 26, 0.76);
+  font-size: 0.9rem;
+}
+
+body .contact-info-grid strong {
+  color: var(--dtox-red);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+body .timeline-panel {
+  padding: clamp(2rem, 4vw, 3rem);
+}
+
+body .process-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+body .process-highlights div {
+  border-left: 1px solid rgba(190, 44, 52, 0.26);
+  padding-left: 1rem;
+}
+
+body .process-highlights strong {
+  display: block;
+  color: var(--dtox-red);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+body .process-highlights span {
+  display: block;
+  margin-top: 0.45rem;
+  color: rgba(26, 26, 26, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+body .process-quote {
+  color: rgba(26, 26, 26, 0.8) !important;
+  font-size: clamp(1.25rem, 3vw, 1.7rem) !important;
+  font-style: italic;
+}
+
 @media (max-width: 980px) {
   .container,
   .site-header__inner {
@@ -1313,5 +1507,43 @@ p {
   .timeline__card::before,
   .timeline__item:nth-child(even) .timeline__card::before {
     display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  body .home-hero__medals {
+    justify-self: start;
+    transform: none;
+  }
+
+  body .home-contact__panel,
+  body .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body .contact-info-grid,
+  body .process-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  body .home-hero__title {
+    font-size: clamp(4.5rem, 22vw, 6rem) !important;
+  }
+
+  body .home-hero__medals img {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  body .home-contact__panel,
+  body .contact-panel,
+  body .timeline-panel {
+    padding: 1rem;
+  }
+
+  body .contact-info-grid article {
+    padding: 1rem;
   }
 }

@@ -116,6 +116,12 @@ $partner_defaults = dtox_default_partners();
                 <a class="btn btn--ghost" href="mailto:<?php echo esc_attr(dtox_theme_option('email')); ?>">Écrire par email</a>
             </div>
         </div>
+        <div id="formulaire" class="contact-form contact-form--compact">
+            <p class="eyebrow">Formulaire</p>
+            <h3>Envoyez-nous un message</h3>
+            <p>Une question sur nos saveurs, la distribution ou un partenariat ? Écrivez-nous directement ici.</p>
+            <?php dtox_render_contact_form(); ?>
+        </div>
     </div>
 </section>
 

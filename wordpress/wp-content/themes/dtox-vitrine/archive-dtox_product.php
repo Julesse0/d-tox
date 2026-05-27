@@ -19,9 +19,8 @@ $display_products = $products ?: array_map(static function ($item) {
 
 <section class="page-hero page-hero--compact">
     <div class="container">
-        <p class="eyebrow">La Gamme</p>
+        <p class="eyebrow">Sélection</p>
         <h1>Nos Produits</h1>
-        <p>Deux expressions du kombucha DTÖX : une signature brute, vivante et quotidienne, et une cuvée premium plus fine et plus festive.</p>
     </div>
 </section>
 
@@ -30,14 +29,12 @@ $display_products = $products ?: array_map(static function ($item) {
         <?php foreach ($display_products as $index => $product) :
             $fallback = $defaults[$index] ?? $defaults[0];
             $image = $product->ID ? dtox_meta($product->ID, 'dtox_image', $fallback['image']) : $fallback['image'];
-            $tag = $product->ID ? dtox_meta($product->ID, 'dtox_tag', $fallback['tag']) : $fallback['tag'];
             $url = $product->ID ? get_permalink($product) : dtox_get_page_url('produits/' . $product->post_name);
             ?>
             <a class="product-card product-card--large" href="<?php echo esc_url($url); ?>">
                 <span class="product-card__image">
                     <img src="<?php echo esc_url(dtox_media_url($image)); ?>" alt="<?php echo esc_attr($product->post_title); ?>">
                 </span>
-                <span class="product-card__tag"><?php echo esc_html($tag); ?></span>
                 <strong><?php echo esc_html($product->post_title); ?></strong>
                 <em>Découvrir</em>
             </a>

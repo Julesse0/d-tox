@@ -24,7 +24,7 @@ add_action('wp_enqueue_scripts', function (): void {
     wp_enqueue_style('dtox-vitrine-fonts', 'https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;800&family=Montserrat:wght@400;600;700;800&display=swap', [], null);
     wp_enqueue_style('dtox-vitrine-theme', dtox_asset('css/theme.css'), [], DTOX_THEME_VERSION);
     wp_enqueue_script('dtox-vitrine-theme', dtox_asset('js/theme.js'), [], DTOX_THEME_VERSION, true);
-});
+}, 99);
 
 function dtox_register_content_types(): void
 {

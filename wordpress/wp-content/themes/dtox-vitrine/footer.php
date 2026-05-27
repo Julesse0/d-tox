@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-$address_lines = dtox_split_lines(dtox_theme_option('address', "D-TOX SARL\n690, Chemin de la Crau\n13880 Velaux"));
+$address_lines = dtox_split_lines(dtox_theme_option('address', "DTÖX SARL\n690, Chemin de la Crau\n13880 Velaux"));
 ?>
 </main>
 <footer class="site-footer">
@@ -25,7 +25,7 @@ $address_lines = dtox_split_lines(dtox_theme_option('address', "D-TOX SARL\n690,
         <div>
             <h3>Nos Produits</h3>
             <nav class="site-footer__links">
-                <a href="<?php echo esc_url(dtox_get_page_url('produits/d-tox')); ?>">D-tox Original 1L</a>
+                <a href="<?php echo esc_url(dtox_get_page_url('produits/d-tox')); ?>">DTÖX Original 1L</a>
                 <a href="<?php echo esc_url(dtox_get_page_url('produits/chateau')); ?>">Château de la Crau</a>
             </nav>
         </div>
@@ -51,7 +51,7 @@ $address_lines = dtox_split_lines(dtox_theme_option('address', "D-TOX SARL\n690,
     </div>
 
     <div class="container site-footer__bottom">
-        <p>© <?php echo esc_html(date('Y')); ?> D-tox. Tous droits réservés.</p>
+        <p>© <?php echo esc_html(date('Y')); ?> DTÖX. Tous droits réservés.</p>
         <div>
             <a href="<?php echo esc_url(dtox_get_page_url('mentions-legales')); ?>">Mentions Légales</a>
             <a href="#">Politique de Confidentialité</a>

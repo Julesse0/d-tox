@@ -21,7 +21,7 @@ $display_products = $products ?: array_map(static function ($item) {
     <div class="container">
         <p class="eyebrow">La Gamme</p>
         <h1>Nos Produits</h1>
-        <p>Deux expressions du kombucha D-tox : une signature brute, vivante et quotidienne, et une cuvée premium plus fine et plus festive.</p>
+        <p>Deux expressions du kombucha DTÖX : une signature brute, vivante et quotidienne, et une cuvée premium plus fine et plus festive.</p>
     </div>
 </section>
 

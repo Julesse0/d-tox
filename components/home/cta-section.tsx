@@ -7,7 +7,7 @@ export default function CTASection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
         <div className="rounded-lg border border-black/10 bg-white px-6 py-14 shadow-[0_18px_44px_rgba(0,0,0,0.05)] sm:px-8">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A1A1A] mb-6 text-balance">
-            Prêt à passer au kombucha D-tox ?
+            Prêt à passer au kombucha DTÖX ?
           </h2>
           <p className="font-sans font-light text-lg text-[#1A1A1A]/68 max-w-xl mx-auto mb-10 leading-relaxed">
             Découvrez nos produits artisanaux et retrouvez aussi nos rubriques News, Recettes et Presse.

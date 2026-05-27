@@ -48,7 +48,7 @@ export default function HeroSection() {
               <div className="relative h-32 w-32 sm:h-40 sm:w-40 lg:h-52 lg:w-52">
                 <Image
                   src={medal2023Image}
-                  alt="Médaille D-tox 2023"
+                  alt="Médaille DTÖX 2023"
                   fill
                   className="object-contain drop-shadow-[0_18px_34px_rgba(36,28,20,0.18)]"
                   priority
@@ -57,7 +57,7 @@ export default function HeroSection() {
               <div className="relative h-32 w-32 sm:h-40 sm:w-40 lg:h-52 lg:w-52">
                 <Image
                   src={reviewMedalImage}
-                  alt="Médaille D-tox review"
+                  alt="Médaille DTÖX review"
                   fill
                   className="object-contain drop-shadow-[0_18px_34px_rgba(36,28,20,0.18)]"
                   priority

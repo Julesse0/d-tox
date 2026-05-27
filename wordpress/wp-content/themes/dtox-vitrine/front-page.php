@@ -21,8 +21,8 @@ $partner_defaults = dtox_default_partners();
             <a class="btn" href="<?php echo esc_url(dtox_get_page_url('produits')); ?>">Voir Nos Produits</a>
         </div>
         <div class="home-hero__medals">
-            <img src="<?php echo esc_url(dtox_image('medal-2023-2.png')); ?>" alt="Médaille D-tox 2023">
-            <img src="<?php echo esc_url(dtox_image('review-medal.png')); ?>" alt="Médaille D-tox review">
+            <img src="<?php echo esc_url(dtox_image('medal-2023-2.png')); ?>" alt="Médaille DTÖX 2023">
+            <img src="<?php echo esc_url(dtox_image('review-medal.png')); ?>" alt="Médaille DTÖX review">
         </div>
     </div>
 </section>
@@ -79,7 +79,7 @@ $partner_defaults = dtox_default_partners();
             <?php
             $sections = [
                 ['slug' => 'articles', 'eyebrow' => 'À lire', 'title' => 'News', 'text' => 'Actus, sujets de fond et nouveautés autour de la marque.'],
-                ['slug' => 'recettes', 'eyebrow' => 'À servir', 'title' => 'Recettes', 'text' => 'Cocktails, accords et idées à partager autour de D-tox.'],
+                ['slug' => 'recettes', 'eyebrow' => 'À servir', 'title' => 'Recettes', 'text' => 'Cocktails, accords et idées à partager autour de DTÖX.'],
                 ['slug' => 'reseaux', 'eyebrow' => 'À relayer', 'title' => 'On parle de nous / Presse', 'text' => 'Prises de parole, relais de marque et future rubrique presse.'],
             ];
 
@@ -147,7 +147,7 @@ $partner_defaults = dtox_default_partners();
 
 <section class="section section--yellow final-cta">
     <div class="container final-cta__panel">
-        <h2>Prêt à passer au kombucha D-tox ?</h2>
+        <h2>Prêt à passer au kombucha DTÖX ?</h2>
         <p>Découvrez nos produits artisanaux et retrouvez aussi nos rubriques News, Recettes et Presse.</p>
         <div class="button-row button-row--center">
             <a class="btn" href="<?php echo esc_url(dtox_get_page_url('produits')); ?>">Nos Produits</a>

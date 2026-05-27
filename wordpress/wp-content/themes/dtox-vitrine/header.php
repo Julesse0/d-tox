@@ -18,11 +18,11 @@ if (!defined('ABSPATH')) {
 <?php wp_body_open(); ?>
 <header class="site-header" data-site-header>
     <div class="site-header__inner">
-        <a class="site-header__logo" href="<?php echo esc_url(home_url('/')); ?>" aria-label="D-tox">
+        <a class="site-header__logo" href="<?php echo esc_url(home_url('/')); ?>" aria-label="DTÖX">
             <?php if (has_custom_logo()) : ?>
                 <?php the_custom_logo(); ?>
             <?php else : ?>
-                <img src="<?php echo esc_url(dtox_image('logo-dtox.png')); ?>" alt="D-tox">
+                <img src="<?php echo esc_url(dtox_image('logo-dtox.png')); ?>" alt="DTÖX">
             <?php endif; ?>
         </a>
 

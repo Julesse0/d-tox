@@ -146,7 +146,7 @@ export default async function BlogArticlePage({
                   ) : (
                     <div className="space-y-4">
                       <p className="font-sans text-base leading-relaxed text-[rgba(36,28,20,0.76)]">
-                        Cette recette venait du blog historique DTOX4Life et etait surtout presentee sous forme de visuel.
+                        Cette recette venait du blog historique DTÖX4Life et etait surtout presentee sous forme de visuel.
                       </p>
                       <p className="font-sans text-base leading-relaxed text-[rgba(36,28,20,0.76)]">
                         L'affiche d'origine a été réintégrée ici pour conserver l'esprit du contenu dans une mise en page

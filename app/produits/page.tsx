@@ -8,7 +8,7 @@ import { siteImages } from "@/lib/site-content"
 
 const collections = [
   {
-    name: "D-tox Original 1L",
+    name: "DTÖX Original 1L",
     image: siteImages.dtoxBottle1L,
     href: "/produits/d-tox",
     imageClassName: "object-contain p-10",

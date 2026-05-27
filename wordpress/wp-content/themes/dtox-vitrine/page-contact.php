@@ -10,7 +10,7 @@ $partner_defaults = dtox_default_partners();
 $display_partners = $partners ?: array_map(static function ($item) {
     return (object) ['post_title' => $item['name'], 'ID' => 0, 'fallback' => $item];
 }, $partner_defaults);
-$address = dtox_theme_option('address', "D-TOX SARL\n690, Chemin de la Crau\n13880 Velaux");
+$address = dtox_theme_option('address', "DTÖX SARL\n690, Chemin de la Crau\n13880 Velaux");
 $address_lines = dtox_split_lines($address);
 $map_query = rawurlencode(implode(', ', $address_lines));
 ?>
@@ -20,7 +20,7 @@ $map_query = rawurlencode(implode(', ', $address_lines));
         <div>
             <p class="eyebrow">Points De Vente</p>
             <h1>Où nous trouver</h1>
-            <p>Retrouvez D-tox chez nos partenaires et distributeurs, en ligne comme en magasin.</p>
+            <p>Retrouvez DTÖX chez nos partenaires et distributeurs, en ligne comme en magasin.</p>
         </div>
         <div class="partners-grid partners-grid--compact">
             <?php foreach ($display_partners as $partner) :
@@ -41,7 +41,7 @@ $map_query = rawurlencode(implode(', ', $address_lines));
         <div class="contact-card">
             <p class="eyebrow">Restons En Contact</p>
             <h2>Une demande pro, une question produit ou une envie de collaborer ?</h2>
-            <p>Envoyez-nous votre message, l'équipe D-tox vous répondra directement.</p>
+            <p>Envoyez-nous votre message, l'équipe DTÖX vous répondra directement.</p>
             <div class="contact-details">
                 <a href="mailto:<?php echo esc_attr(dtox_theme_option('email')); ?>"><?php echo esc_html(dtox_theme_option('email')); ?></a>
                 <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', dtox_theme_option('phone'))); ?>"><?php echo esc_html(dtox_theme_option('phone')); ?></a>
@@ -87,7 +87,7 @@ $map_query = rawurlencode(implode(', ', $address_lines));
     <div class="container find-us-grid">
         <div>
             <p class="eyebrow">Nous Trouver</p>
-            <h2>Le labo D-tox</h2>
+            <h2>Le labo DTÖX</h2>
             <address>
                 <?php foreach ($address_lines as $line) : ?>
                     <span><?php echo esc_html($line); ?></span>
@@ -95,7 +95,7 @@ $map_query = rawurlencode(implode(', ', $address_lines));
             </address>
         </div>
         <iframe
-            title="Carte D-tox"
+            title="Carte DTÖX"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps?q=<?php echo esc_attr($map_query); ?>&output=embed">

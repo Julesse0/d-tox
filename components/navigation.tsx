@@ -18,7 +18,7 @@ const navLinks: NavLink[] = [
     label: "Nos Produits",
     href: "/produits",
     children: [
-      { label: "D-tox Original 1L", href: "/produits/d-tox" },
+      { label: "DTÖX Original 1L", href: "/produits/d-tox" },
       { label: "Château de la Crau", href: "/produits/chateau" },
     ],
   },
@@ -71,7 +71,7 @@ export default function Navigation({ variant = "dark" }: { variant?: "dark" | "l
           <Link href="/" className="relative block h-12 w-24">
             <Image
               src={siteLogo}
-              alt="D-tox"
+              alt="DTÖX"
               fill
               priority
               className="object-contain"

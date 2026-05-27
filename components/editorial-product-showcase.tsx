@@ -52,7 +52,7 @@ export default function EditorialProductShowcase({
   variants,
   specs,
   presentationLabel = "Présentation",
-  imageFooterLabel = "Collection D-tox",
+  imageFooterLabel = "Collection DTÖX",
   primaryCta,
   secondaryCta,
 }: EditorialProductShowcaseProps) {
@@ -169,7 +169,7 @@ export default function EditorialProductShowcase({
                   <div className="relative h-20 w-20 shrink-0">
                     <Image
                       src={selectedVariant.awardImage}
-                  alt={selectedVariant.awardAlt ?? "Médaille D-tox"}
+                  alt={selectedVariant.awardAlt ?? "Médaille DTÖX"}
                       fill
                       className="object-contain"
                     />

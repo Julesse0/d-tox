@@ -31,7 +31,7 @@ export default function ContactPage() {
       <PartnersSection
         eyebrow="Points de vente"
         title="Où nous trouver"
-        description="Retrouvez D-tox chez nos partenaires et distributeurs, en ligne comme en magasin."
+        description="Retrouvez DTÖX chez nos partenaires et distributeurs, en ligne comme en magasin."
         sectionClassName="bg-[var(--brand-cream)]"
         sectionPaddingClassName="pb-16 pt-0"
         panelClassName="rounded-lg border border-black/10 bg-[#FFECBC] px-6 py-12 shadow-[0_18px_44px_rgba(0,0,0,0.06)] sm:px-8 lg:px-10"
@@ -47,7 +47,7 @@ export default function ContactPage() {
                 </p>
                 <h2 className="font-serif text-4xl font-extrabold text-[var(--brand-ink)] sm:text-5xl">Restons en contact</h2>
                 <p className="max-w-md font-sans text-base leading-relaxed text-[rgba(36,28,20,0.68)]">
-                  Toutes les infos utiles pour joindre D-tox rapidement, que ce soit pour une demande commerciale, un
+                  Toutes les infos utiles pour joindre DTÖX rapidement, que ce soit pour une demande commerciale, un
                   point de distribution ou une question produit.
                 </p>
               </div>
@@ -174,7 +174,7 @@ export default function ContactPage() {
           <div className="overflow-hidden rounded-[1rem] border border-[rgba(190,44,52,0.12)]">
             <div className="h-[280px] w-full sm:h-[340px] lg:h-[380px]">
               <iframe
-                title="Carte D-tox Velaux"
+                title="Carte DTÖX Velaux"
                 src={siteContact.mapEmbedUrl}
                 className="h-full w-full border-0"
                 loading="lazy"

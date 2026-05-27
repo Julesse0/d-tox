@@ -46,7 +46,7 @@ export default function Footer() {
             <h4 className="font-sans text-xs uppercase tracking-widest font-semibold text-[#1A1A1A]">Nos Produits</h4>
             <nav className="flex flex-col gap-2">
               <Link href="/produits/d-tox" className="font-sans font-light text-sm text-[#1A1A1A]/60 hover:text-[#be2c34] transition-colors">
-                D-tox Original 1L
+                DTÖX Original 1L
               </Link>
               <Link href="/produits/chateau" className="font-sans font-light text-sm text-[#1A1A1A]/60 hover:text-[#be2c34] transition-colors">
                 Château de la Crau
@@ -98,7 +98,7 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-black/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-sans font-light text-xs text-[#1A1A1A]/45">
-            {"(c) 2026 D-tox. Tous droits reserves."}
+            {"(c) 2026 DTÖX. Tous droits reserves."}
           </p>
           <div className="flex items-center gap-6">
             <Link href="#" className="font-sans font-light text-xs text-[#1A1A1A]/45 hover:text-[#be2c34] transition-colors">

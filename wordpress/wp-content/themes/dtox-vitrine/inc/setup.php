@@ -30,8 +30,8 @@ function dtox_register_content_types(): void
 {
     register_post_type('dtox_product', [
         'labels' => [
-            'name' => 'Produits D-tox',
-            'singular_name' => 'Produit D-tox',
+            'name' => 'Produits DTÖX',
+            'singular_name' => 'Produit DTÖX',
             'add_new_item' => 'Ajouter un produit',
             'edit_item' => 'Modifier le produit',
         ],
@@ -45,8 +45,8 @@ function dtox_register_content_types(): void
 
     register_post_type('dtox_blog', [
         'labels' => [
-            'name' => 'Blog D-tox',
-            'singular_name' => 'Article D-tox',
+            'name' => 'Blog DTÖX',
+            'singular_name' => 'Article DTÖX',
             'add_new_item' => 'Ajouter un article',
             'edit_item' => 'Modifier l’article',
         ],
@@ -60,8 +60,8 @@ function dtox_register_content_types(): void
 
     register_taxonomy('dtox_blog_section', ['dtox_blog'], [
         'labels' => [
-            'name' => 'Rubriques D-tox',
-            'singular_name' => 'Rubrique D-tox',
+            'name' => 'Rubriques DTÖX',
+            'singular_name' => 'Rubrique DTÖX',
         ],
         'public' => true,
         'hierarchical' => true,
@@ -71,8 +71,8 @@ function dtox_register_content_types(): void
 
     register_post_type('dtox_partner', [
         'labels' => [
-            'name' => 'Partenaires D-tox',
-            'singular_name' => 'Partenaire D-tox',
+            'name' => 'Partenaires DTÖX',
+            'singular_name' => 'Partenaire DTÖX',
         ],
         'public' => false,
         'show_ui' => true,
@@ -107,7 +107,7 @@ function dtox_register_content_types(): void
 add_action('init', 'dtox_register_content_types');
 
 add_action('add_meta_boxes', function (): void {
-    add_meta_box('dtox_details', 'Détails D-tox', 'dtox_render_details_metabox', ['dtox_product', 'dtox_partner', 'dtox_blog'], 'normal', 'default');
+    add_meta_box('dtox_details', 'Détails DTÖX', 'dtox_render_details_metabox', ['dtox_product', 'dtox_partner', 'dtox_blog'], 'normal', 'default');
 });
 
 function dtox_render_details_metabox(WP_Post $post): void

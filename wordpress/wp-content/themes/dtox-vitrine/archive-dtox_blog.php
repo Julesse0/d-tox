@@ -6,7 +6,7 @@
 get_header();
 
 $sections = [
-    'articles' => ['label' => 'News', 'text' => 'Actualités, prises de parole et sujets de fond autour de D-tox.'],
+    'articles' => ['label' => 'News', 'text' => 'Actualités, prises de parole et sujets de fond autour de DTÖX.'],
     'recettes' => ['label' => 'Recettes', 'text' => 'Cocktails, accords et idées à partager avec le kombucha.'],
     'reseaux' => ['label' => 'On parle de nous / Presse', 'text' => 'Relais de marque, presse et contenus de découverte.'],
 ];

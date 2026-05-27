@@ -6,8 +6,8 @@ import { siteImages } from "@/lib/site-content"
 
 const products = [
   {
-    name: "D-tox Original 1L",
-    description: "Le grand format signature de D-tox, avec une lecture plus simple et une touche plus chaleureuse.",
+    name: "DTÖX Original 1L",
+    description: "Le grand format signature de DTÖX, avec une lecture plus simple et une touche plus chaleureuse.",
     image: siteImages.dtoxBottle1L,
     href: "/produits/d-tox",
     imageClassName: "object-contain p-8",

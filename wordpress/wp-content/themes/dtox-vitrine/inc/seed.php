@@ -13,8 +13,8 @@ add_action('after_switch_theme', function (): void {
 
 add_action('admin_menu', function (): void {
     add_theme_page(
-        'Import D-tox',
-        'Import D-tox',
+        'Import DTÖX',
+        'Import DTÖX',
         'manage_options',
         'dtox-vitrine-import',
         'dtox_render_import_page'
@@ -32,7 +32,7 @@ add_action('admin_notices', function (): void {
     }
 
     $url = admin_url('themes.php?page=dtox-vitrine-import');
-    echo '<div class="notice notice-info"><p><strong>D-tox Vitrine :</strong> le thème est actif. <a href="' . esc_url($url) . '">Lancer l\'import des pages et contenus D-tox</a>.</p></div>';
+    echo '<div class="notice notice-info"><p><strong>DTÖX Vitrine :</strong> le thème est actif. <a href="' . esc_url($url) . '">Lancer l\'import des pages et contenus DTÖX</a>.</p></div>';
 });
 
 add_action('init', function (): void {
@@ -56,7 +56,7 @@ function dtox_render_import_page(): void
     }
     ?>
     <div class="wrap">
-        <h1>Import D-tox</h1>
+        <h1>Import DTÖX</h1>
         <?php if ($message !== '') : ?>
             <div class="notice notice-success"><p><?php echo esc_html($message); ?></p></div>
         <?php endif; ?>
@@ -64,7 +64,7 @@ function dtox_render_import_page(): void
         <p>À utiliser sur le staging uniquement.</p>
         <form method="post">
             <?php wp_nonce_field('dtox_seed_content', 'dtox_seed_nonce'); ?>
-            <?php submit_button('Lancer l’import D-tox'); ?>
+            <?php submit_button('Lancer l’import DTÖX'); ?>
         </form>
     </div>
     <?php
@@ -263,7 +263,7 @@ function dtox_seed_blog_posts(): void
 
 function dtox_seed_menu(): void
 {
-    $menu_name = 'Navigation D-tox';
+    $menu_name = 'Navigation DTÖX';
     $menu = wp_get_nav_menu_object($menu_name);
 
     if (!$menu) {

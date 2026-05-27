@@ -47,7 +47,7 @@ export default function RoutineSection() {
                 Notre Savoir-Faire
               </p>
               <h2 className="font-serif text-4xl md:text-5xl font-extrabold text-[#F9D9B9] text-balance">
-                Les Étapes D-tox
+                Les Étapes DTÖX
               </h2>
             </div>
 

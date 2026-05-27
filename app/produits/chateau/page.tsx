@@ -24,11 +24,11 @@ export default function ChateauPage() {
             imageAlt: "Bouteille Château de la Crau",
             tag: "Cuvée Premium",
             description:
-              "Une cuvée premium issue du savoir-faire D-TOX, travaillée avec une fermentation plus longue, une texture plus fine et une présentation à la hauteur de son caractère.",
+              "Une cuvée premium issue du savoir-faire DTÖX, travaillée avec une fermentation plus longue, une texture plus fine et une présentation à la hauteur de son caractère.",
             styleNote: "",
             tastingNote: "",
             detailItems: [
-              "Base de recette et process fidèles au D-TOX classique, avec une fermentation prolongée de 30%.",
+              "Base de recette et process fidèles au DTÖX classique, avec une fermentation prolongée de 30%.",
               "Profil plus mature, plus stable et naturellement riche en bénéfices de fermentation.",
               "Filtration totale des levures pour obtenir une robe claire et élégante.",
               "Stabilité optimale à température ambiante avec une DLUO jusqu'à J + 18 mois.",

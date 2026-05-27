@@ -26,7 +26,7 @@ const sectionConfig: Record<
   recettes: {
     icon: UtensilsCrossed,
     eyebrow: "À servir",
-    shortDescription: "Cocktails, accords et idées à partager autour de D-tox.",
+    shortDescription: "Cocktails, accords et idées à partager autour de DTÖX.",
   },
   reseaux: {
     icon: Megaphone,

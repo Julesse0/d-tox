@@ -53,7 +53,7 @@ export const siteImages = {
 } satisfies Record<string, SiteImage>
 
 export const siteContact = {
-  company: "D-TOX SARL",
+  company: "DTÖX SARL",
   contactName: "Eisso Weert jr",
   email: "eisso@dtox4life.fr",
   phone: "04 42 02 65 91",
@@ -160,11 +160,11 @@ export const partners = [
 export const partnerMapLocations: PartnerMapLocation[] = [
   {
     id: "dtox-lille",
-    name: "D-tox",
+    name: "DTÖX",
     city: "Lille",
     country: "France",
     role: "Atelier",
-    note: "Base D-tox",
+    note: "Base DTÖX",
     position: [50.6365654, 3.0635282],
     zoom: 7,
   },

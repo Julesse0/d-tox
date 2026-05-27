@@ -23,7 +23,7 @@ function dtox_default_products(): array
     return [
         [
             'slug' => 'd-tox',
-            'title' => 'D-tox Original',
+            'title' => 'DTÖX Original',
             'excerpt' => 'Un kombucha brut, vivant et non pasteurisé, fermenté 8 à 15 jours sur des souches sélectionnées de A à Z.',
             'image' => 'dtox-1l.png',
             'gallery_image' => 'dtox-33cl.png',
@@ -42,12 +42,12 @@ function dtox_default_products(): array
         [
             'slug' => 'chateau',
             'title' => 'Château de la Crau',
-            'excerpt' => 'Une cuvée premium issue du savoir-faire D-TOX, travaillée avec une fermentation plus longue.',
+            'excerpt' => 'Une cuvée premium issue du savoir-faire DTÖX, travaillée avec une fermentation plus longue.',
             'image' => 'chateau-crau.png',
             'gallery_image' => '',
             'tag' => 'Édition Premium',
             'items' => [
-                'Base de recette et process fidèles au D-TOX classique, avec une fermentation prolongée de 30%.',
+                'Base de recette et process fidèles au DTÖX classique, avec une fermentation prolongée de 30%.',
                 'Profil plus mature, plus stable et naturellement riche en bénéfices de fermentation.',
                 'Filtration totale des levures pour obtenir une robe claire et élégante.',
                 'Stabilité optimale à température ambiante avec une DLUO jusqu’à J + 18 mois.',
@@ -85,12 +85,12 @@ function dtox_timeline(): array
 {
     return [
         ['year' => '2006', 'title' => 'Premier Engouement', 'text' => "La demande explose à Aix, alors qu'Eisso ne produit encore que 110L par mois."],
-        ['year' => '2007', 'title' => 'Naissance De D-TOX', 'text' => "Création de l'entreprise et dépôt officiel de la marque."],
+        ['year' => '2007', 'title' => 'Naissance De DTÖX', 'text' => "Création de l'entreprise et dépôt officiel de la marque."],
         ['year' => '2009', 'title' => 'Labo À Velaux', 'text' => 'Construction du labo et installation des deux premières cuves.'],
         ['year' => '2010', 'title' => 'Premiers Magasins', 'text' => 'Les premières bouteilles arrivent en magasins bio à Aix-en-Provence.'],
-        ['year' => '2019', 'title' => 'Reconnaissance UE', 'text' => "D-TOX devient le premier kombucha reconnu complément alimentaire dans l'UE."],
+        ['year' => '2019', 'title' => 'Reconnaissance UE', 'text' => "DTÖX devient le premier kombucha reconnu complément alimentaire dans l'UE."],
         ['year' => '2022', 'title' => 'Médaille De Bronze', 'text' => 'Premier concours européen de kombucha, à Bruxelles.'],
-        ['year' => '2023', 'title' => 'Double Or', 'text' => "D-TOX et Château de la Crau remportent chacun l'or à l'Aurore Taste Challenge."],
+        ['year' => '2023', 'title' => 'Double Or', 'text' => "DTÖX et Château de la Crau remportent chacun l'or à l'Aurore Taste Challenge."],
         ['year' => '2023', 'title' => 'Concentré Ultra-Actif', 'text' => "Lancement du développement d'un concentré pour la nutrition et la cosmétique."],
     ];
 }

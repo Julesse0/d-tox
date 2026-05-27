@@ -7,7 +7,7 @@ get_header();
 ?>
 <section class="section page-hero">
     <div class="container">
-        <p class="eyebrow">D-tox</p>
+        <p class="eyebrow">DTÖX</p>
         <h1><?php single_post_title(); ?></h1>
     </div>
 </section>

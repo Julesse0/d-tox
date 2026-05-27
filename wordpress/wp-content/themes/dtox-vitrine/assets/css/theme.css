@@ -716,7 +716,7 @@ p {
 .timeline {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(8, minmax(9rem, 1fr));
+  grid-template-columns: repeat(8, minmax(10.5rem, 1fr));
   gap: 1.25rem;
   overflow-x: auto;
   padding: 2rem 0 1rem;
@@ -727,7 +727,7 @@ p {
   position: absolute;
   left: 0;
   right: 0;
-  top: 17.625rem;
+  top: 15.625rem;
   height: 1px;
   background: rgba(190, 44, 52, 0.25);
 }
@@ -736,7 +736,7 @@ p {
   position: relative;
   display: grid;
   grid-template-rows: 14rem 3.25rem 14rem;
-  min-width: 10rem;
+  min-width: 10.5rem;
 }
 
 .timeline__item:nth-child(even) {
@@ -767,7 +767,7 @@ p {
   min-height: 14rem;
   border: 1px solid rgba(0, 0, 0, 0.12);
   background: var(--dtox-cream);
-  padding: 1.5rem 1.25rem;
+  padding: 1.35rem 1rem;
   text-align: center;
   box-shadow: var(--dtox-shadow);
 }
@@ -794,11 +794,13 @@ p {
 
 .timeline__card h3 {
   color: var(--dtox-red);
-  font-size: 0.92rem;
-  line-height: 1.55;
-  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 .timeline__card p {

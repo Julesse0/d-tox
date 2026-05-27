@@ -11,7 +11,7 @@ export default function DtoxPage() {
       <Navigation variant="light" />
       <EditorialProductShowcase
         eyebrow="Produit Signature"
-        title="D-tox Original"
+        title="DTÖX Original"
         intro=""
         story=""
         presentationLabel="Infos Produit"
@@ -19,15 +19,15 @@ export default function DtoxPage() {
         variants={[
           {
             id: "dtox-1l",
-            name: "D-tox Original 1L",
+            name: "DTÖX Original 1L",
             buttonLabel: "Version 1L",
             image: siteImages.dtoxBottle1L,
-            imageAlt: "Bouteille D-tox Original 1L",
+            imageAlt: "Bouteille DTÖX Original 1L",
             tag: "Format Hero",
             description:
               "Un kombucha brut, vivant et non pasteurisé, fermenté 8 à 15 jours sur des souches sélectionnées de A à Z, dans un esprit artisanal proche du fait maison.",
             awardImage: medal2023Image,
-            awardAlt: "Médaille D-tox 2023",
+            awardAlt: "Médaille DTÖX 2023",
             styleNote: "",
             tastingNote: "",
             detailItems: [
@@ -43,15 +43,15 @@ export default function DtoxPage() {
           },
           {
             id: "dtox-33cl",
-            name: "D-tox Original 33cl",
+            name: "DTÖX Original 33cl",
             buttonLabel: "Voir la version 33cl",
             image: siteImages.dtoxBottle33,
-            imageAlt: "Bouteille D-tox Original 33cl",
+            imageAlt: "Bouteille DTÖX Original 33cl",
             tag: "Petit Format",
             description:
-              "Le même kombucha brut et vivant que le format 1L, dans une version plus nomade, fermenté 8 à 15 jours selon le process D-TOX.",
+              "Le même kombucha brut et vivant que le format 1L, dans une version plus nomade, fermenté 8 à 15 jours selon le process DTÖX.",
             awardImage: medal2023Image,
-            awardAlt: "Médaille D-tox 2023",
+            awardAlt: "Médaille DTÖX 2023",
             styleNote: "",
             tastingNote: "",
             detailItems: [

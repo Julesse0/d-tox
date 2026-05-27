@@ -10,7 +10,7 @@ get_header();
     <div class="container">
         <p class="eyebrow">À Propos</p>
         <h1>Une histoire de fermentation, de patience et de goût.</h1>
-        <p>D-tox défend un kombucha vivant, brut et accessible, fabriqué avec exigence près d'Aix-en-Provence.</p>
+        <p>DTÖX défend un kombucha vivant, brut et accessible, fabriqué avec exigence près d'Aix-en-Provence.</p>
     </div>
 </section>
 
@@ -20,10 +20,10 @@ get_header();
             <p class="eyebrow">Notre Histoire</p>
             <h2>Du brassage artisanal à une marque reconnue.</h2>
             <p>La maison s'est construite autour d'une conviction simple : proposer un kombucha authentique, sans surpromesse, avec une fermentation réelle et des ingrédients choisis avec soin.</p>
-            <p>Au fil des années, D-tox a grandi avec ses partenaires, ses points de vente et une communauté fidèle, tout en gardant le même cap : goût, exigence, lisibilité.</p>
+            <p>Au fil des années, DTÖX a grandi avec ses partenaires, ses points de vente et une communauté fidèle, tout en gardant le même cap : goût, exigence, lisibilité.</p>
         </div>
         <figure class="split-story__image">
-            <img src="<?php echo esc_url(dtox_image('mission.jpg')); ?>" alt="Préparation D-tox">
+            <img src="<?php echo esc_url(dtox_image('mission.jpg')); ?>" alt="Préparation DTÖX">
         </figure>
     </div>
 </section>
@@ -31,7 +31,7 @@ get_header();
 <section class="section section--white split-story">
     <div class="container split-story__grid split-story__grid--reverse">
         <figure class="split-story__image split-story__image--small">
-            <img src="<?php echo esc_url(dtox_image('process-deck-01.jpg')); ?>" alt="Contrôle du brassage D-tox">
+            <img src="<?php echo esc_url(dtox_image('process-deck-01.jpg')); ?>" alt="Contrôle du brassage DTÖX">
         </figure>
         <div class="split-story__content">
             <p class="eyebrow">Le Processus</p>

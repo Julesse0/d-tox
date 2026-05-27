@@ -27,7 +27,7 @@ $items = dtox_split_lines(dtox_meta(get_the_ID(), 'dtox_items', implode("\n", $f
         <div class="product-detail__media">
             <img src="<?php echo esc_url(dtox_media_url($image)); ?>" alt="<?php the_title_attribute(); ?>">
             <?php if ($slug === 'd-tox') : ?>
-                <img class="product-detail__medal" src="<?php echo esc_url(dtox_image('medal-2023-2.png')); ?>" alt="Médaille 2023 D-tox">
+                <img class="product-detail__medal" src="<?php echo esc_url(dtox_image('medal-2023-2.png')); ?>" alt="Médaille 2023 DTÖX">
             <?php endif; ?>
         </div>
 
@@ -56,7 +56,7 @@ $items = dtox_split_lines(dtox_meta(get_the_ID(), 'dtox_items', implode("\n", $f
             <div>
                 <p class="eyebrow">Format</p>
                 <h2>Une boisson vivante, pensée pour le quotidien.</h2>
-                <p>D-tox conserve un esprit brut et accessible, avec une fermentation maîtrisée et une présentation claire pour les boutiques comme pour les consommateurs.</p>
+                <p>DTÖX conserve un esprit brut et accessible, avec une fermentation maîtrisée et une présentation claire pour les boutiques comme pour les consommateurs.</p>
             </div>
             <img src="<?php echo esc_url(dtox_media_url($gallery_image)); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
         </div>

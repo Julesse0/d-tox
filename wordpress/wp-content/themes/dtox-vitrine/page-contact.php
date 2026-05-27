@@ -57,7 +57,7 @@ $map_query = rawurlencode(implode(', ', $address_lines));
 
                 <div class="contact-info-grid">
                     <article>
-                        <span class="contact-info-icon contact-info-icon--red" aria-hidden="true"></span>
+                        <span class="contact-info-icon contact-info-icon--red"><?php echo dtox_svg_icon('map-pin'); ?></span>
                         <strong>Adresse</strong>
                         <span><?php echo esc_html(dtox_theme_option('company', 'DTÖX SARL')); ?></span>
                         <?php foreach ($address_lines as $line) : ?>
@@ -65,18 +65,18 @@ $map_query = rawurlencode(implode(', ', $address_lines));
                         <?php endforeach; ?>
                     </article>
                     <article>
-                        <span class="contact-info-icon contact-info-icon--dark" aria-hidden="true"></span>
+                        <span class="contact-info-icon contact-info-icon--dark"><?php echo dtox_svg_icon('phone'); ?></span>
                         <strong>Téléphone</strong>
                         <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', dtox_theme_option('phone'))); ?>"><?php echo esc_html(dtox_theme_option('phone')); ?></a>
                         <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', dtox_theme_option('mobile'))); ?>">Portable : <?php echo esc_html(dtox_theme_option('mobile')); ?></a>
                     </article>
                     <article>
-                        <span class="contact-info-icon contact-info-icon--red" aria-hidden="true"></span>
+                        <span class="contact-info-icon contact-info-icon--red"><?php echo dtox_svg_icon('user'); ?></span>
                         <strong>Contact France</strong>
                         <span><?php echo esc_html(dtox_theme_option('contact_name', 'Eisso')); ?></span>
                     </article>
                     <article>
-                        <span class="contact-info-icon contact-info-icon--dark" aria-hidden="true"></span>
+                        <span class="contact-info-icon contact-info-icon--dark"><?php echo dtox_svg_icon('mail'); ?></span>
                         <strong>E-mail</strong>
                         <a href="mailto:<?php echo esc_attr(dtox_theme_option('email')); ?>"><?php echo esc_html(dtox_theme_option('email')); ?></a>
                     </article>
@@ -87,9 +87,9 @@ $map_query = rawurlencode(implode(', ', $address_lines));
                     <h3>Suivez-nous</h3>
                     <p>Retrouvez nos actualités, nos produits et nos prises de parole sur les réseaux de la marque.</p>
                     <div class="contact-social-links">
-                        <a href="<?php echo esc_url(dtox_theme_option('instagram')); ?>" target="_blank" rel="noreferrer" aria-label="Instagram">IG</a>
-                        <a href="<?php echo esc_url(dtox_theme_option('facebook')); ?>" target="_blank" rel="noreferrer" aria-label="Facebook">FB</a>
-                        <a href="<?php echo esc_url(dtox_theme_option('linkedin')); ?>" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+                        <a href="<?php echo esc_url(dtox_theme_option('instagram')); ?>" target="_blank" rel="noreferrer" aria-label="Instagram"><?php echo dtox_svg_icon('instagram'); ?></a>
+                        <a href="<?php echo esc_url(dtox_theme_option('facebook')); ?>" target="_blank" rel="noreferrer" aria-label="Facebook"><?php echo dtox_svg_icon('facebook'); ?></a>
+                        <a href="<?php echo esc_url(dtox_theme_option('linkedin')); ?>" target="_blank" rel="noreferrer" aria-label="LinkedIn"><?php echo dtox_svg_icon('linkedin'); ?></a>
                     </div>
                 </div>
             </div>

@@ -23,7 +23,7 @@ function dtox_default_products(): array
     return [
         [
             'slug' => 'd-tox',
-            'title' => 'DTÖX Original',
+            'title' => 'DTÖX Original 1L',
             'excerpt' => 'Un kombucha brut, vivant et non pasteurisé, fermenté 8 à 15 jours sur des souches sélectionnées de A à Z.',
             'image' => 'dtox-1l.png',
             'gallery_image' => 'dtox-33cl.png',

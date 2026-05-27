@@ -14,10 +14,12 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize): 
     ]);
 
     $settings = [
+        'company' => ['Société', 'DTÖX SARL'],
+        'contact_name' => ['Contact France', 'Eisso Weert jr'],
         'email' => ['E-mail', 'eisso@dtox4life.fr'],
         'phone' => ['Téléphone', '04 42 02 65 91'],
         'mobile' => ['Portable', '06 31 55 22 60'],
-        'address' => ['Adresse', "DTÖX SARL\n690, Chemin de la Crau\n13880 Velaux"],
+        'address' => ['Adresse', "690, Chemin de la Crau\n13880 Velaux"],
         'instagram' => ['Instagram', 'https://www.instagram.com/dtox4life.kombucha/?hl=fr'],
         'facebook' => ['Facebook', 'https://www.facebook.com/Eisdude?fref=ts#'],
         'linkedin' => ['LinkedIn', 'https://www.linkedin.com/in/d-tox-kombucha-06178320b/'],

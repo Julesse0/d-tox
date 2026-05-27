@@ -31,7 +31,7 @@ $display_products = $products ?: array_map(static function ($item) {
             $image = $product->ID ? dtox_meta($product->ID, 'dtox_image', $fallback['image']) : $fallback['image'];
             $url = $product->ID ? get_permalink($product) : dtox_get_page_url('produits/' . $product->post_name);
             ?>
-            <a class="product-card product-card--large" href="<?php echo esc_url($url); ?>">
+            <a class="product-card product-card--large product-card--<?php echo esc_attr($product->post_name); ?>" href="<?php echo esc_url($url); ?>">
                 <span class="product-card__image">
                     <img src="<?php echo esc_url(dtox_media_url($image)); ?>" alt="<?php echo esc_attr($product->post_title); ?>">
                 </span>

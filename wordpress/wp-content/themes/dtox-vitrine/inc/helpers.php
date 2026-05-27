@@ -49,6 +49,22 @@ function dtox_media_url(string $path, string $fallback = ''): string
 
 function dtox_theme_option(string $key, string $fallback = ''): string
 {
+    $defaults = [
+        'company' => 'DTÖX SARL',
+        'contact_name' => 'Eisso Weert jr',
+        'email' => 'eisso@dtox4life.fr',
+        'phone' => '04 42 02 65 91',
+        'mobile' => '06 31 55 22 60',
+        'address' => "690, Chemin de la Crau\n13880 Velaux",
+        'instagram' => 'https://www.instagram.com/dtox4life.kombucha/?hl=fr',
+        'facebook' => 'https://www.facebook.com/Eisdude?fref=ts#',
+        'linkedin' => 'https://www.linkedin.com/in/d-tox-kombucha-06178320b/',
+    ];
+
+    if ($fallback === '' && isset($defaults[$key])) {
+        $fallback = $defaults[$key];
+    }
+
     $value = get_theme_mod('dtox_' . $key, $fallback);
     return is_string($value) && $value !== '' ? $value : $fallback;
 }

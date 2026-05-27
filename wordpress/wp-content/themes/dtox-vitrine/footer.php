@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-$address_lines = dtox_split_lines(dtox_theme_option('address', "DTÖX SARL\n690, Chemin de la Crau\n13880 Velaux"));
+$address_lines = dtox_split_lines(dtox_theme_option('address'));
 ?>
 </main>
 <footer class="site-footer">
